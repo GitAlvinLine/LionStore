@@ -8,27 +8,46 @@
 import SwiftUI
 
 struct OnboardingOptionButton: View {
-    let option: OnboardingOptions
-    let select: (OnboardingOptions) -> Void
+    let option: OnboardingOption
+    let select: (OnboardingOption) -> Void
     
     var body: some View {
         Button {
             select(option)
         } label: {
             Text(option.rawValue)
-                .foregroundColor(option.textColor)
+                .foregroundColor(textColor)
                 .bold()
                 .frame(width: 135, height: 50)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(option.textColor, lineWidth: 2)
+                        .stroke(textColor, lineWidth: 2)
                 )
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(option.bg)
+                        .foregroundColor(bg)
                 )
         }
     }
+    
+    private var bg: Color {
+        switch option {
+        case .signUp:
+            return Color.blue
+        case .signIn:
+            return Color.white
+        }
+    }
+    
+    private var textColor: Color {
+        switch option {
+        case .signUp:
+            return Color.white
+        case .signIn:
+            return Color.blue
+        }
+    }
+    
 }
 
 struct OnboardingOptionButton_Previews: PreviewProvider {

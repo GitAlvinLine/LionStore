@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct OnboardingSelectPath: View {
-    let pathOptions: [OnboardingOptions]
-    let selected: (OnboardingOptions) -> Void
+    let pathOptions: [OnboardingOption]
+    let selected: (OnboardingOption) -> Void
     
-    init(_ pathOptions: [OnboardingOptions], _ selected: @escaping (OnboardingOptions) -> Void ) {
+    init(_ pathOptions: [OnboardingOption], _ selected: @escaping (OnboardingOption) -> Void ) {
         self.pathOptions = pathOptions
         self.selected = selected
     }

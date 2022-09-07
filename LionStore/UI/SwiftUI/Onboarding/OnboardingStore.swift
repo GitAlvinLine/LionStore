@@ -8,14 +8,14 @@
 import Foundation
 
 enum OnboardingOption: String {
-    case signUp
-    case signIn
+    case signUp = "Sign Up"
+    case signIn = "Sign In"
 }
 
 struct OnboardingStore {
     let options: [OnboardingOption]
     
-    private let handler: (OnboardingOption) -> Void
+    let handler: (OnboardingOption) -> Void
     
     internal init(options: [OnboardingOption], handler: @escaping (OnboardingOption) -> Void) {
         self.options = options
