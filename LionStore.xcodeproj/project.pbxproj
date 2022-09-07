@@ -20,6 +20,7 @@
 		DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */; };
 		DB51F91328C82252002D6A35 /* OnboadingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91228C82252002D6A35 /* OnboadingOptions.swift */; };
 		DB51F91828C825C5002D6A35 /* OnboardingStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */; };
+		DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOptionButton.swift; sourceTree = "<group>"; };
 		DB51F91228C82252002D6A35 /* OnboadingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboadingOptions.swift; sourceTree = "<group>"; };
 		DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoreTests.swift; sourceTree = "<group>"; };
+		DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				DB51F90328C7D857002D6A35 /* OnboardingScreen.swift */,
 				DB51F90828C81E7B002D6A35 /* Components */,
+				DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB51F91328C82252002D6A35 /* OnboadingOptions.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
