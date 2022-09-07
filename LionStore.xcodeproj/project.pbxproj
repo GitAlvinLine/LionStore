@@ -18,6 +18,7 @@
 		DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90B28C81F85002D6A35 /* OnboardingImage.swift */; };
 		DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90D28C81FF3002D6A35 /* OnboardingSelectPath.swift */; };
 		DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */; };
+		DB51F91328C82252002D6A35 /* OnboadingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91228C82252002D6A35 /* OnboadingOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		DB51F90B28C81F85002D6A35 /* OnboardingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImage.swift; sourceTree = "<group>"; };
 		DB51F90D28C81FF3002D6A35 /* OnboardingSelectPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSelectPath.swift; sourceTree = "<group>"; };
 		DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOptionButton.swift; sourceTree = "<group>"; };
+		DB51F91228C82252002D6A35 /* OnboadingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboadingOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */,
+				DB51F91128C8223E002D6A35 /* TempUtils */,
 				DB51F90128C7D7BE002D6A35 /* UI */,
 				DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */,
 				DB51F8DD28C7AE3B002D6A35 /* Preview Content */,
@@ -169,6 +172,14 @@
 				DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DB51F91128C8223E002D6A35 /* TempUtils */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F91228C82252002D6A35 /* OnboadingOptions.swift */,
+			);
+			path = TempUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
+				DB51F91328C82252002D6A35 /* OnboadingOptions.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,

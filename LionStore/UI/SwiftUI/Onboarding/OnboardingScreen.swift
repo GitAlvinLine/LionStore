@@ -7,29 +7,6 @@
 
 import SwiftUI
 
-enum OnboardingOptions: String {
-    case signUp = "Sign Up"
-    case signIn = "Sign In"
-    
-    var bg: Color {
-        switch self {
-        case .signUp:
-            return Color.blue
-        case .signIn:
-            return Color.white
-        }
-    }
-    
-    var textColor: Color {
-        switch self {
-        case .signUp:
-            return Color.white
-        case .signIn:
-            return Color.blue
-        }
-    }
-}
-
 struct OnboardingScreen: View {
     let title: String
     let firstHeaderLine: String
