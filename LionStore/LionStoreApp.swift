@@ -11,7 +11,7 @@ import SwiftUI
 struct LionStoreApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingScreen(title: "Simply", firstHeaderLine: "Select your photographer,", secondHeaderLine: "then go to session!", illustration: Image("Illustration"), pathOptions: [.signUp, .signIn], selected: { option in })
         }
     }
 }
