@@ -51,21 +51,6 @@ struct OnboardingScreen: View {
     }
 }
 
-struct OnboardingImage: View {
-    let illustrationImage: Image
-    
-    init(_ image: Image) {
-        self.illustrationImage = image
-    }
-    
-    var body: some View {
-            illustrationImage
-            .resizable()
-            .scaledToFit()
-            .frame(width: 250, height: 280)
-    }
-}
-
 struct OnboardingSelectPath: View {
     let pathOptions: [OnboardingOptions]
     let selected: (OnboardingOptions) -> Void
