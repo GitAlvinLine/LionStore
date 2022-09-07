@@ -51,26 +51,6 @@ struct OnboardingScreen: View {
     }
 }
 
-struct OnboardingSelectPath: View {
-    let pathOptions: [OnboardingOptions]
-    let selected: (OnboardingOptions) -> Void
-    
-    init(_ pathOptions: [OnboardingOptions], _ selected: @escaping (OnboardingOptions) -> Void ) {
-        self.pathOptions = pathOptions
-        self.selected = selected
-    }
-    
-    var body: some View {
-        HStack {
-            ForEach(pathOptions, id: \.self) { option in
-                OnboardingOptionButton(option: option) { option in
-                    selected(option)
-                }
-            }
-        }
-    }
-}
-
 struct OnboardingOptionButton: View {
     let option: OnboardingOptions
     let select: (OnboardingOptions) -> Void
