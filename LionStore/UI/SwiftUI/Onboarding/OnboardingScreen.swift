@@ -41,40 +41,12 @@ struct OnboardingScreen: View {
     
     var body: some View {
         VStack(spacing: 80) {
-            OnboardingTitle(title, firstHeaderLine, secondHeaderLine)
+            OnboardingTitle(title,
+                            firstHeaderLine,
+                            secondHeaderLine)
             OnboardingImage(illustration)
             OnboardingSelectPath(pathOptions, selected)
 
-        }
-    }
-}
-
-struct OnboardingTitle: View {
-    let title: String
-    let firstHeaderLine: String
-    let secondHeaderLine: String
-    
-    init(_ title: String, _ firstHeaderLine: String, _ secondHeaderLine: String) {
-        self.title = title
-        self.firstHeaderLine = firstHeaderLine
-        self.secondHeaderLine = secondHeaderLine
-    }
-    
-    var body: some View {
-        VStack(spacing: 20) {
-            Text(title)
-                .font(.title)
-                .bold()
-            VStack(spacing: 5) {
-                Text(firstHeaderLine)
-                    .font(.callout)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color(UIColor.darkGray))
-                Text(secondHeaderLine)
-                    .font(.callout)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color(UIColor.darkGray))
-            }
         }
     }
 }
