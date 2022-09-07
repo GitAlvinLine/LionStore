@@ -138,9 +138,17 @@
 		DB51F90228C7D815002D6A35 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F90328C7D857002D6A35 /* OnboardingScreen.swift */,
+				DB51F90528C817E2002D6A35 /* Onboarding */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		DB51F90528C817E2002D6A35 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F90328C7D857002D6A35 /* OnboardingScreen.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
