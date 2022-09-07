@@ -12,8 +12,7 @@ struct OnboardingScreen: View {
     let firstHeaderLine: String
     let secondHeaderLine: String
     let illustration: Image
-    let pathOptions: [OnboardingOptions]
-    let selected: (OnboardingOptions) -> Void
+    let store: OnboardingStore
     
     
     var body: some View {
@@ -22,7 +21,7 @@ struct OnboardingScreen: View {
                             firstHeaderLine,
                             secondHeaderLine)
             OnboardingImage(illustration)
-            OnboardingSelectPath(pathOptions, selected)
+            OnboardingSelectPath(store.options, store.handler)
 
         }
     }
@@ -36,8 +35,9 @@ struct OnboardingScreen_Previews: PreviewProvider {
                 firstHeaderLine: "Select your photographer,",
                 secondHeaderLine: "then go to session!",
                 illustration: Image("Illustration"),
-                pathOptions: [.signUp, .signIn],
-                selected: { _ in }
+                store: .init(
+                    options: [.signUp, .signIn],
+                    handler: { _ in })
             )
             
             OnboardingScreen(
@@ -45,8 +45,9 @@ struct OnboardingScreen_Previews: PreviewProvider {
                 firstHeaderLine: "Select your photographer,",
                 secondHeaderLine: "then go to session!",
                 illustration: Image("Illustration"),
-                pathOptions: [.signUp, .signIn],
-                selected: { _ in }
+                store: .init(
+                    options: [.signUp, .signIn],
+                    handler: { _ in })
             )
             .preferredColorScheme(.dark)
         }
