@@ -51,37 +51,28 @@ struct OnboardingScreen: View {
     }
 }
 
-struct OnboardingOptionButton: View {
-    let option: OnboardingOptions
-    let select: (OnboardingOptions) -> Void
-    
-    var body: some View {
-        Button {
-            select(option)
-        } label: {
-            Text(option.rawValue)
-                .foregroundColor(option.textColor)
-                .bold()
-                .frame(width: 135, height: 50)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(option.textColor, lineWidth: 2)
-                )
-                .background(
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(option.bg)
-                )
-        }
-    }
-}
-
 struct OnboardingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreen(title: "Simply",
-                         firstHeaderLine: "Select your photographer,",
-                         secondHeaderLine: "then go to session!",
-                         illustration: Image("Illustration"),
-                         pathOptions: [.signUp, .signIn],
-                         selected: { _ in })
+        Group {
+            OnboardingScreen(
+                title: "Simply",
+                firstHeaderLine: "Select your photographer,",
+                secondHeaderLine: "then go to session!",
+                illustration: Image("Illustration"),
+                pathOptions: [.signUp, .signIn],
+                selected: { _ in }
+            )
+            
+            OnboardingScreen(
+                title: "Simply",
+                firstHeaderLine: "Select your photographer,",
+                secondHeaderLine: "then go to session!",
+                illustration: Image("Illustration"),
+                pathOptions: [.signUp, .signIn],
+                selected: { _ in }
+            )
+            .preferredColorScheme(.dark)
+        }
+        
     }
 }
