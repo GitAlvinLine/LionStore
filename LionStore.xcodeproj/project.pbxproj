@@ -19,6 +19,7 @@
 		DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90D28C81FF3002D6A35 /* OnboardingSelectPath.swift */; };
 		DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */; };
 		DB51F91328C82252002D6A35 /* OnboadingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91228C82252002D6A35 /* OnboadingOptions.swift */; };
+		DB51F91828C825C5002D6A35 /* OnboardingStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		DB51F90D28C81FF3002D6A35 /* OnboardingSelectPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSelectPath.swift; sourceTree = "<group>"; };
 		DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOptionButton.swift; sourceTree = "<group>"; };
 		DB51F91228C82252002D6A35 /* OnboadingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboadingOptions.swift; sourceTree = "<group>"; };
+		DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		DB51F8E728C7AE3B002D6A35 /* LionStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB51F91428C82566002D6A35 /* UI */,
 				DB51F8E828C7AE3B002D6A35 /* LionStoreTests.swift */,
 			);
 			path = LionStoreTests;
@@ -180,6 +183,30 @@
 				DB51F91228C82252002D6A35 /* OnboadingOptions.swift */,
 			);
 			path = TempUtils;
+			sourceTree = "<group>";
+		};
+		DB51F91428C82566002D6A35 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F91528C8256D002D6A35 /* SwiftUI */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DB51F91528C8256D002D6A35 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F91628C82576002D6A35 /* Onboarding */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		DB51F91628C82576002D6A35 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB51F91828C825C5002D6A35 /* OnboardingStoreTests.swift in Sources */,
 				DB51F8E928C7AE3B002D6A35 /* LionStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
