@@ -10,7 +10,7 @@ import SwiftUI
 enum AppImages {
     case email
     
-    var image: Image {
+    var icon: Image {
         switch self {
         case .email:
             return Image("email_Icon")

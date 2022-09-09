@@ -14,7 +14,7 @@ struct EmailTextField: View {
     
     var body: some View {
         HStack {
-            image.image
+            image.icon
                 .resizable()
                 .scaledToFit()
                 .frame(width: 25, height: 25)
