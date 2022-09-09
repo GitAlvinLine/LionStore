@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct EmailTextField: View {
-    let image: Image
+    let image: AppImages
     @State var email: String
     let placeholder: String
     
     var body: some View {
         HStack {
-            image
+            image.image
                 .resizable()
                 .scaledToFit()
                 .frame(width: 25, height: 25)
@@ -48,7 +48,7 @@ struct EmailTextField: View {
 
 struct emailTextField_Previews: PreviewProvider {
     static var previews: some View {
-        EmailTextField(image: Image("email_Icon"),
+        EmailTextField(image: .email,
                        email: "",
                        placeholder: "Email")
     }

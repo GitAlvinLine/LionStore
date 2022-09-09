@@ -19,7 +19,7 @@ struct SignUpScreen: View {
             
             Spacer()
             
-            EmailTextField(image: Image("email_Icon"),
+            EmailTextField(image: .email,
                            email: email,
                            placeholder: "Email")
             
