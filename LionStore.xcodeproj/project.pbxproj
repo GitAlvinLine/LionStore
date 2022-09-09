@@ -21,6 +21,7 @@
 		DB51F91828C825C5002D6A35 /* OnboardingStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */; };
 		DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */; };
 		DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */; };
+		DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93B28CB91D9002D6A35 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoreTests.swift; sourceTree = "<group>"; };
 		DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStore.swift; sourceTree = "<group>"; };
 		DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		DB51F93B28CB91D9002D6A35 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +155,9 @@
 		DB51F90228C7D815002D6A35 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F93628CAA9AE002D6A35 /* SignUp */,
+				DB51F93A28CB91CB002D6A35 /* ReuseableViews */,
 				DB51F90528C817E2002D6A35 /* Onboarding */,
+				DB51F93628CAA9AE002D6A35 /* SignUp */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -207,9 +210,25 @@
 		DB51F93628CAA9AE002D6A35 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */,
+				DB51F93928CB9189002D6A35 /* Components */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		DB51F93928CB9189002D6A35 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DB51F93A28CB91CB002D6A35 /* ReuseableViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F93B28CB91D9002D6A35 /* CustomButton.swift */,
+			);
+			path = ReuseableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +363,7 @@
 			files = (
 				DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
+				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
