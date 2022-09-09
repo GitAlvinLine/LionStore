@@ -33,10 +33,6 @@ struct SignUpScreen: View {
     }
 }
 
-enum ScreenSize {
-    static let width: CGFloat = UIScreen.main.bounds.width
-}
-
 struct SignUpScreen_Previews: PreviewProvider {
     static var previews: some View {
         SignUpScreen()

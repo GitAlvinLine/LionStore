@@ -23,6 +23,7 @@
 		DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */; };
 		DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93B28CB91D9002D6A35 /* CustomButton.swift */; };
 		DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */; };
+		DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		DB51F93B28CB91D9002D6A35 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		DB51F90228C7D815002D6A35 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DB51F94028CBA0D9002D6A35 /* Utils */,
 				DB51F93D28CB92E1002D6A35 /* App */,
 				DB51F93A28CB91CB002D6A35 /* ReuseableViews */,
 			);
@@ -240,6 +243,14 @@
 				DB51F93628CAA9AE002D6A35 /* SignUp */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		DB51F94028CBA0D9002D6A35 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +389,7 @@
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
+				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
 				DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
