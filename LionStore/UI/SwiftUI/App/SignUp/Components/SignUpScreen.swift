@@ -12,10 +12,7 @@ struct SignUpScreen: View {
     
     var body: some View {
         VStack {
-            Image("logo")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
+            AppLogo(image: .appLogo)
             
             Spacer()
             
