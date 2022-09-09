@@ -21,6 +21,9 @@ struct EmailTextField: View {
                 .padding(.leading, 15)
             ZStack {
                 TextField("", text: $email)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                     .padding(.leading, 10)
                     .padding(.trailing, 5)
                 HStack {
