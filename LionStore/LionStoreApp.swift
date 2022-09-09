@@ -11,15 +11,16 @@ import SwiftUI
 struct LionStoreApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingScreen(
-                title: "Simply",
-                firstHeaderLine: "Select your photographer,",
-                secondHeaderLine: "then go to session!",
-                illustration: Image("Illustration"),
-                store: OnboardingStore(
-                    options: [.signUp, .signIn],
-                    handler: { _ in })
-            )
+//            OnboardingScreen(
+//                title: "Simply",
+//                firstHeaderLine: "Select your photographer,",
+//                secondHeaderLine: "then go to session!",
+//                illustration: Image("Illustration"),
+//                store: OnboardingStore(
+//                    options: [.signUp, .signIn],
+//                    handler: { _ in })
+//            )
+            SignUpScreen()
         }
     }
 }

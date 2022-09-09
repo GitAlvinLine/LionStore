@@ -22,6 +22,7 @@
 		DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */; };
 		DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */; };
 		DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93B28CB91D9002D6A35 /* CustomButton.swift */; };
+		DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStore.swift; sourceTree = "<group>"; };
 		DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		DB51F93B28CB91D9002D6A35 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				DB51F93B28CB91D9002D6A35 /* CustomButton.swift */,
+				DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */,
 			);
 			path = ReuseableViews;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
+				DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,
