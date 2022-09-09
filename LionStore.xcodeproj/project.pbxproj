@@ -155,9 +155,8 @@
 		DB51F90228C7D815002D6A35 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DB51F93D28CB92E1002D6A35 /* App */,
 				DB51F93A28CB91CB002D6A35 /* ReuseableViews */,
-				DB51F90528C817E2002D6A35 /* Onboarding */,
-				DB51F93628CAA9AE002D6A35 /* SignUp */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -229,6 +228,15 @@
 				DB51F93B28CB91D9002D6A35 /* CustomButton.swift */,
 			);
 			path = ReuseableViews;
+			sourceTree = "<group>";
+		};
+		DB51F93D28CB92E1002D6A35 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F90528C817E2002D6A35 /* Onboarding */,
+				DB51F93628CAA9AE002D6A35 /* SignUp */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
