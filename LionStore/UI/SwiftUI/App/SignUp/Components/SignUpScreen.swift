@@ -20,6 +20,13 @@ struct SignUpScreen: View {
                            email: email,
                            placeholder: "Email")
             
+            HStack {
+                Image("mobile_Icon")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+            }
+            
             CustomButton(text: "Create an account",
                          textColor: .white,
                          bg: .darkBlue) {
