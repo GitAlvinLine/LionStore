@@ -28,6 +28,7 @@
 		DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */; };
 		DB51F94828CBA773002D6A35 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94728CBA773002D6A35 /* AppImages.swift */; };
 		DB51F94A28CBA906002D6A35 /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94928CBA906002D6A35 /* AppLogo.swift */; };
+		DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAccountButton.swift; sourceTree = "<group>"; };
 		DB51F94728CBA773002D6A35 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		DB51F94928CBA906002D6A35 /* AppLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
+		DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,9 +169,10 @@
 		DB51F90228C7D815002D6A35 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F94028CBA0D9002D6A35 /* Utils */,
 				DB51F93D28CB92E1002D6A35 /* App */,
+				DB51F94028CBA0D9002D6A35 /* Utils */,
 				DB51F93A28CB91CB002D6A35 /* ReuseableViews */,
+				DB51F94B28CBAEAB002D6A35 /* Modifiers */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -263,6 +266,14 @@
 				DB51F94728CBA773002D6A35 /* AppImages.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB51F94B28CBAEAB002D6A35 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +413,7 @@
 				DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
+				DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
 				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
 				DB51F94828CBA773002D6A35 /* AppImages.swift in Sources */,

@@ -36,16 +36,7 @@ struct EmailTextField: View {
                 }
             }
         }
-        .padding(.leading, 45)
-        .padding(.trailing, 45)
-        .frame(width: ScreenSize.width, height: 50)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.init(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1/10)), lineWidth: 2)
-                .padding(.leading, 45)
-                .padding(.trailing, 45)
-                .frame(width: ScreenSize.width, height: 50)
-        )
+        .textFieldBorder(.textFieldBorder)
     }
 }
 
