@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomButton: View {
     let text: String
     let textColor: Color
-    let bg: Color
+    let bg: AppColor
     let action: () -> Void
     
     var body: some View {
@@ -22,7 +22,7 @@ struct CustomButton: View {
                 .frame(width: UIScreen.main.bounds.width, height: 50)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(bg)
+                        .foregroundColor(bg.value)
                         .padding(.leading, 45)
                         .padding(.trailing, 45)
                 )
@@ -34,6 +34,7 @@ struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
         CustomButton(text: "Create an account",
                      textColor: .white,
-                     bg: .blue, action: {print()})
+                     bg: .darkBlue,
+                     action: {print()})
     }
 }

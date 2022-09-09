@@ -24,6 +24,7 @@
 		DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93B28CB91D9002D6A35 /* CustomButton.swift */; };
 		DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */; };
 		DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */; };
+		DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94328CBA3BE002D6A35 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		DB51F93B28CB91D9002D6A35 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		DB51F94328CBA3BE002D6A35 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */,
+				DB51F94328CBA3BE002D6A35 /* AppColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
+				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
 				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
 				DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */,

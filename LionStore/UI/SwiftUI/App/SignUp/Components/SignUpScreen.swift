@@ -25,13 +25,14 @@ struct SignUpScreen: View {
             
             CustomButton(text: "Create an account",
                          textColor: .white,
-                         bg: .blue) {
+                         bg: .darkBlue) {
                 print()
             }
             
             Spacer()
 
-            AskAccountButton(text: "Already have an account?")
+            AskAccountButton(text: "Already have an account?",
+                             textColor: .darkBlue)
 
         }
     }
@@ -39,13 +40,14 @@ struct SignUpScreen: View {
 
 struct AskAccountButton: View {
     let text: String
+    let textColor: AppColor
     
     var body: some View {
         Button {
             print()
         } label: {
             Text(text)
-                .foregroundColor(Color.init(UIColor(red: 88/255, green: 107/255, blue: 202/255, alpha: 1)))
+                .foregroundColor(textColor.value)
                 .bold()
         }
     }
