@@ -25,6 +25,7 @@
 		DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */; };
 		DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */; };
 		DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94328CBA3BE002D6A35 /* AppColor.swift */; };
+		DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 		DB51F94328CBA3BE002D6A35 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAccountButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			children = (
 				DB51F93B28CB91D9002D6A35 /* CustomButton.swift */,
 				DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */,
+				DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */,
 			);
 			path = ReuseableViews;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
+				DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,

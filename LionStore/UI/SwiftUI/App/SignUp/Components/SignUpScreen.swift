@@ -32,23 +32,10 @@ struct SignUpScreen: View {
             Spacer()
 
             AskAccountButton(text: "Already have an account?",
-                             textColor: .darkBlue)
+                             textColor: .darkBlue) {
+                print()
+            }
 
-        }
-    }
-}
-
-struct AskAccountButton: View {
-    let text: String
-    let textColor: AppColor
-    
-    var body: some View {
-        Button {
-            print()
-        } label: {
-            Text(text)
-                .foregroundColor(textColor.value)
-                .bold()
         }
     }
 }
