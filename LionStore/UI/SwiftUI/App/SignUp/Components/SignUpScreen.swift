@@ -28,7 +28,25 @@ struct SignUpScreen: View {
                          bg: .blue) {
                 print()
             }
+            
+            Spacer()
 
+            AskAccountButton(text: "Already have an account?")
+
+        }
+    }
+}
+
+struct AskAccountButton: View {
+    let text: String
+    
+    var body: some View {
+        Button {
+            print()
+        } label: {
+            Text(text)
+                .foregroundColor(Color.init(UIColor(red: 88/255, green: 107/255, blue: 202/255, alpha: 1)))
+                .bold()
         }
     }
 }
