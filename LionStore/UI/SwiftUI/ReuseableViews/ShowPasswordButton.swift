@@ -18,7 +18,7 @@ struct ShowPasswordButton: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 20, height: 20)
-                .foregroundColor(AppColor.darkBlue.value)
+                .foregroundColor(AppColor.lightPurple.value)
                 .padding(.trailing, 15)
         }
     }
