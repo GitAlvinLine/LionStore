@@ -23,28 +23,9 @@ struct SignUpScreen: View {
                            placeholder: "Email",
                            email: $email)
             
-            HStack {
-                Image("mobile_Icon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 25, height: 25)
-                    .padding(.leading, 15)
-                ZStack {
-                    HStack {
-                        Text(phoneNumber.isEmpty ? "Mobile Number" : "")
-                            .bold()
-                            .foregroundColor(Color.init(UIColor(red: 27/255, green: 42/255, blue: 59/255, alpha: 1)))
-                            .opacity(0.4)
-                        Spacer()
-                    }
-                    .padding(.leading, 10)
-                    TextField("", text: $phoneNumber)
-                        .padding(.leading, 10)
-                        .keyboardType(.numberPad)
-                        .disableAutocorrection(true)
-                }
-            }
-            .textFieldBorder(.textFieldBorder)
+            PhoneTextField(image: .mobilePhone,
+                           placeholder: "Mobile Number",
+                           phoneNumber: $phoneNumber)
             
             PasswordTextField(image: .passwordLock,
                               showPassword: $showPassword,

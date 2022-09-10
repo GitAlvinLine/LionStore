@@ -31,6 +31,7 @@
 		DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */; };
 		DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */; };
 		DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */; };
+		DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883428CC46AB00B7887B /* PhoneTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBorder.swift; sourceTree = "<group>"; };
 		DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordButton.swift; sourceTree = "<group>"; };
+		DB9F883428CC46AB00B7887B /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				DB51F94928CBA906002D6A35 /* AppLogo.swift */,
 				DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */,
 				DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */,
+				DB9F883428CC46AB00B7887B /* PhoneTextField.swift */,
 			);
 			path = ReuseableViews;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
+				DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */,
 				DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
 				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
