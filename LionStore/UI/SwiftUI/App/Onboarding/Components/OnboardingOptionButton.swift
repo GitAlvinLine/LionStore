@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OnboardingOptionButton: View {
     let option: OnboardingOption
+    let textColor: AppColor
+    let bgColor: AppColor
     let select: (OnboardingOption) -> Void
     
     var body: some View {
@@ -16,35 +18,17 @@ struct OnboardingOptionButton: View {
             select(option)
         } label: {
             Text(option.rawValue)
-                .foregroundColor(textColor)
+                .foregroundColor(textColor.value)
                 .bold()
                 .frame(width: 135, height: 50)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(textColor, lineWidth: 2)
+                        .stroke(textColor.value, lineWidth: 2)
                 )
                 .background(
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(bg)
+                        .foregroundColor(bgColor.value)
                 )
-        }
-    }
-    
-    private var bg: Color {
-        switch option {
-        case .signUp:
-            return Color.blue
-        case .signIn:
-            return Color.white
-        }
-    }
-    
-    private var textColor: Color {
-        switch option {
-        case .signUp:
-            return Color.white
-        case .signIn:
-            return Color.blue
         }
     }
     
@@ -55,6 +39,8 @@ struct OnboardingOptionButton_Previews: PreviewProvider {
         Group {
             OnboardingOptionButton(
                 option: .signUp,
+                textColor: .white,
+                bgColor: .lightPurple,
                 select: { option in }
             )
             .previewLayout(.sizeThatFits)
@@ -62,6 +48,8 @@ struct OnboardingOptionButton_Previews: PreviewProvider {
             
             OnboardingOptionButton(
                 option: .signIn,
+                textColor: .lightPurple,
+                bgColor: .white,
                 select: { option in }
             )
             .previewLayout(.sizeThatFits)

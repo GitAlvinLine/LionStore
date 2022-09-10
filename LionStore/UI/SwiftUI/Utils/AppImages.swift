@@ -18,7 +18,7 @@ enum AppImages {
         case .email:
             return Image("email_Icon")
         case .mobilePhone:
-            return Image("mobile")
+            return Image("mobile_Icon")
         case .appLogo:
             return Image("logo")
         case .passwordLock:

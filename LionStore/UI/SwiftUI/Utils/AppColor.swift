@@ -10,6 +10,7 @@ import SwiftUI
 enum AppColor{
     case lightPurple
     case textFieldBorder
+    case white
     
     var value: Color {
         switch self {
@@ -17,6 +18,8 @@ enum AppColor{
             return Color.init(UIColor(red: 88/255, green: 107/255, blue: 202/255, alpha: 1))
         case .textFieldBorder:
             return Color.init(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1/10))
+        case .white:
+            return Color.white
         }
     }
 }
