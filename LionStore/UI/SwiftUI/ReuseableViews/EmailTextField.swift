@@ -9,8 +9,8 @@ import SwiftUI
 
 struct EmailTextField: View {
     let image: AppImages
-    @State var email: String
     let placeholder: String
+    @Binding var email: String
     
     var body: some View {
         HStack {
@@ -20,12 +20,6 @@ struct EmailTextField: View {
                 .frame(width: 25, height: 25)
                 .padding(.leading, 15)
             ZStack {
-                TextField("", text: $email)
-                    .keyboardType(.emailAddress)
-                    .autocapitalization(.none)
-                    .disableAutocorrection(true)
-                    .padding(.leading, 10)
-                    .padding(.trailing, 5)
                 HStack {
                     Text(email.isEmpty ? placeholder : "")
                         .bold()
@@ -34,6 +28,12 @@ struct EmailTextField: View {
                         .padding(.leading, 10)
                     Spacer()
                 }
+                TextField("", text: $email)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 5)
             }
         }
         .textFieldBorder(.textFieldBorder)
@@ -43,7 +43,7 @@ struct EmailTextField: View {
 struct emailTextField_Previews: PreviewProvider {
     static var previews: some View {
         EmailTextField(image: .email,
-                       email: "",
-                       placeholder: "Email")
+                       placeholder: "Email",
+                       email: .constant(""))
     }
 }

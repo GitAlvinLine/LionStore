@@ -20,8 +20,8 @@ struct SignUpScreen: View {
             Spacer()
             
             EmailTextField(image: .email,
-                           email: email,
-                           placeholder: "Email")
+                           placeholder: "Email",
+                           email: $email)
             
             HStack {
                 Image("mobile_Icon")
