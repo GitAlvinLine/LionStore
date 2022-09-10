@@ -11,7 +11,7 @@ struct OnboardingScreen: View {
     let title: String
     let firstHeaderLine: String
     let secondHeaderLine: String
-    let illustration: Image
+    let illustration: AppImages
     let store: OnboardingStore
     
     
@@ -34,7 +34,7 @@ struct OnboardingScreen_Previews: PreviewProvider {
                 title: "Simply",
                 firstHeaderLine: "Select your photographer,",
                 secondHeaderLine: "then go to session!",
-                illustration: Image("Illustration"),
+                illustration: .onboardIllustration,
                 store: .init(
                     options: [.signUp, .signIn],
                     handler: { _ in })
@@ -44,7 +44,7 @@ struct OnboardingScreen_Previews: PreviewProvider {
                 title: "Simply",
                 firstHeaderLine: "Select your photographer,",
                 secondHeaderLine: "then go to session!",
-                illustration: Image("Illustration"),
+                illustration: .onboardIllustration,
                 store: .init(
                     options: [.signUp, .signIn],
                     handler: { _ in })
