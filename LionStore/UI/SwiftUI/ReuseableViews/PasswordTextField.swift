@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct PasswordTextField: View {
+    let image: AppImages
     @Binding var showPassword: Bool
     @Binding var password: String
     
     var body: some View {
         HStack {
-            Image("password_Icon")
+            image.icon
                 .resizable()
                 .scaledToFit()
                 .frame(width: 25, height: 25)
@@ -52,7 +53,8 @@ struct PasswordTextField: View {
 
 struct PasswordTextField_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordTextField(showPassword: .constant(false),
+        PasswordTextField(image: .passwordLock,
+                          showPassword: .constant(false),
                           password: .constant(""))
     }
 }

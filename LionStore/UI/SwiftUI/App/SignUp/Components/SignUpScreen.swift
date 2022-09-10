@@ -46,7 +46,8 @@ struct SignUpScreen: View {
             }
             .textFieldBorder(.textFieldBorder)
             
-            PasswordTextField(showPassword: $showPassword,
+            PasswordTextField(image: .passwordLock,
+                              showPassword: $showPassword,
                               password: $password)
             
             CustomButton(text: "Create an account",
