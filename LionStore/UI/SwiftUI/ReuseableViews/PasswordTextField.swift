@@ -33,16 +33,7 @@ struct PasswordTextField: View {
                         .disableAutocorrection(true)
                         .opacity(showPassword ? 0 : 1)
                     Spacer()
-                    Button {
-                        showPassword.toggle()
-                    } label: {
-                        Image(systemName: showPassword ? "eye" : "eye.slash.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(AppColor.darkBlue.value)
-                            .padding(.trailing, 15)
-                    }
+                    ShowPasswordButton(showPassword: $showPassword)
                 }
                 
                 HStack {
@@ -51,16 +42,7 @@ struct PasswordTextField: View {
                         .disableAutocorrection(true)
                         .opacity(showPassword ? 1 : 0)
                     Spacer()
-                    Button {
-                        showPassword.toggle()
-                    } label: {
-                        Image(systemName: showPassword ? "eye" : "eye.slash.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(AppColor.darkBlue.value)
-                            .padding(.trailing, 15)
-                    }
+                    ShowPasswordButton(showPassword: $showPassword)
                 }
             }
         }

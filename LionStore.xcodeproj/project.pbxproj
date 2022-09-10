@@ -30,6 +30,7 @@
 		DB51F94A28CBA906002D6A35 /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94928CBA906002D6A35 /* AppLogo.swift */; };
 		DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */; };
 		DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */; };
+		DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		DB51F94928CBA906002D6A35 /* AppLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
 		DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBorder.swift; sourceTree = "<group>"; };
 		DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 				DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */,
 				DB51F94928CBA906002D6A35 /* AppLogo.swift */,
 				DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */,
+				DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */,
 			);
 			path = ReuseableViews;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
 				DB51F94828CBA773002D6A35 /* AppImages.swift in Sources */,
 				DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */,
+				DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,
