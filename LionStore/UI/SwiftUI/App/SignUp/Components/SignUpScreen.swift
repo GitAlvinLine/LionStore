@@ -52,14 +52,14 @@ struct SignUpScreen: View {
             
             CustomButton(text: "Create an account",
                          textColor: .white,
-                         bg: .darkBlue) {
+                         bg: .lightPurple) {
                 print()
             }
             
             Spacer()
 
             AskAccountButton(text: "Already have an account?",
-                             textColor: .darkBlue) {
+                             textColor: .lightPurple) {
                 print()
             }
 

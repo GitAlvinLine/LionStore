@@ -26,7 +26,7 @@ struct AskAccountButton: View {
 struct AskAccountButton_Previews: PreviewProvider {
     static var previews: some View {
         AskAccountButton(text: "Already have an account?",
-                         textColor: .darkBlue,
+                         textColor: .lightPurple,
                          action: {print()})
     }
 }

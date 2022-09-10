@@ -34,7 +34,7 @@ struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
         CustomButton(text: "Create an account",
                      textColor: .white,
-                     bg: .darkBlue,
+                     bg: .lightPurple,
                      action: {print()})
     }
 }
