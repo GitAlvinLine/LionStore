@@ -33,6 +33,7 @@
 		DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */; };
 		DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883428CC46AB00B7887B /* PhoneTextField.swift */; };
 		DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883728CC4F6E00B7887B /* SignInScreen.swift */; };
+		DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883A28CC50D600B7887B /* ResetPasswordScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordButton.swift; sourceTree = "<group>"; };
 		DB9F883428CC46AB00B7887B /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		DB9F883728CC4F6E00B7887B /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		DB9F883A28CC50D600B7887B /* ResetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,9 +265,10 @@
 		DB51F93D28CB92E1002D6A35 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				DB9F883628CC4F6300B7887B /* SignIn */,
 				DB51F90528C817E2002D6A35 /* Onboarding */,
 				DB51F93628CAA9AE002D6A35 /* SignUp */,
+				DB9F883628CC4F6300B7887B /* SignIn */,
+				DB9F883928CC50BD00B7887B /* ResetPasswordScreen */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -294,6 +297,14 @@
 				DB9F883728CC4F6E00B7887B /* SignInScreen.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		DB9F883928CC50BD00B7887B /* ResetPasswordScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DB9F883A28CC50D600B7887B /* ResetPasswordScreen.swift */,
+			);
+			path = ResetPasswordScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +440,7 @@
 				DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */,
 				DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
+				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */,
