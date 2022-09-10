@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct OnboardingImage: View {
-    let illustrationImage: Image
+    let image: AppImages
     
-    init(_ image: Image) {
-        self.illustrationImage = image
+    init(_ image: AppImages) {
+        self.image = image
     }
     
     var body: some View {
-            illustrationImage
+        image.icon
             .resizable()
             .scaledToFit()
             .frame(width: 250, height: 280)
@@ -26,13 +26,13 @@ struct OnboardingImage_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             OnboardingImage(
-                Image("Illustration")
+                .onboardIllustration
             )
             .previewLayout(.sizeThatFits)
             .padding()
             
             OnboardingImage(
-                Image("Illustration")
+                .onboardIllustration
             )
             .previewLayout(.sizeThatFits)
             .padding()

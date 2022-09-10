@@ -20,6 +20,18 @@
 		DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */; };
 		DB51F91828C825C5002D6A35 /* OnboardingStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */; };
 		DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */; };
+		DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */; };
+		DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93B28CB91D9002D6A35 /* CustomButton.swift */; };
+		DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */; };
+		DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */; };
+		DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94328CBA3BE002D6A35 /* AppColor.swift */; };
+		DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */; };
+		DB51F94828CBA773002D6A35 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94728CBA773002D6A35 /* AppImages.swift */; };
+		DB51F94A28CBA906002D6A35 /* AppLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94928CBA906002D6A35 /* AppLogo.swift */; };
+		DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */; };
+		DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */; };
+		DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */; };
+		DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883428CC46AB00B7887B /* PhoneTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +68,18 @@
 		DB51F90F28C8207C002D6A35 /* OnboardingOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOptionButton.swift; sourceTree = "<group>"; };
 		DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStoreTests.swift; sourceTree = "<group>"; };
 		DB51F91928C84CCC002D6A35 /* OnboardingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStore.swift; sourceTree = "<group>"; };
+		DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		DB51F93B28CB91D9002D6A35 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		DB51F94328CBA3BE002D6A35 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskAccountButton.swift; sourceTree = "<group>"; };
+		DB51F94728CBA773002D6A35 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
+		DB51F94928CBA906002D6A35 /* AppLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
+		DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBorder.swift; sourceTree = "<group>"; };
+		DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordButton.swift; sourceTree = "<group>"; };
+		DB9F883428CC46AB00B7887B /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +175,10 @@
 		DB51F90228C7D815002D6A35 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F90528C817E2002D6A35 /* Onboarding */,
+				DB51F93D28CB92E1002D6A35 /* App */,
+				DB51F94028CBA0D9002D6A35 /* Utils */,
+				DB51F93A28CB91CB002D6A35 /* ReuseableViews */,
+				DB51F94B28CBAEAB002D6A35 /* Modifiers */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -199,6 +226,63 @@
 				DB51F91728C825C5002D6A35 /* OnboardingStoreTests.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DB51F93628CAA9AE002D6A35 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F93928CB9189002D6A35 /* Components */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		DB51F93928CB9189002D6A35 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DB51F93A28CB91CB002D6A35 /* ReuseableViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F93B28CB91D9002D6A35 /* CustomButton.swift */,
+				DB51F93E28CB9E6B002D6A35 /* EmailTextField.swift */,
+				DB51F94528CBA6B4002D6A35 /* AskAccountButton.swift */,
+				DB51F94928CBA906002D6A35 /* AppLogo.swift */,
+				DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */,
+				DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */,
+				DB9F883428CC46AB00B7887B /* PhoneTextField.swift */,
+			);
+			path = ReuseableViews;
+			sourceTree = "<group>";
+		};
+		DB51F93D28CB92E1002D6A35 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F90528C817E2002D6A35 /* Onboarding */,
+				DB51F93628CAA9AE002D6A35 /* SignUp */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DB51F94028CBA0D9002D6A35 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */,
+				DB51F94328CBA3BE002D6A35 /* AppColor.swift */,
+				DB51F94728CBA773002D6A35 /* AppImages.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB51F94B28CBAEAB002D6A35 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,11 +417,23 @@
 			files = (
 				DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
+				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
+				DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */,
+				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
+				DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */,
+				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
+				DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */,
+				DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
+				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
+				DB51F94828CBA773002D6A35 /* AppImages.swift in Sources */,
+				DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */,
+				DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,
+				DB51F94A28CBA906002D6A35 /* AppLogo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

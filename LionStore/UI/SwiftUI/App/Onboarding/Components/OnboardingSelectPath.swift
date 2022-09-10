@@ -18,10 +18,18 @@ struct OnboardingSelectPath: View {
     
     var body: some View {
         HStack {
-            ForEach(pathOptions, id: \.self) { option in
-                OnboardingOptionButton(option: option) { option in
-                    selected(option)
-                }
+            OnboardingOptionButton(
+                option: .signUp,
+                textColor: .white,
+                bgColor: .lightPurple) { option in
+                selected(option)
+            }
+            
+            OnboardingOptionButton(
+                option: .signIn,
+                textColor: .lightPurple,
+                bgColor: .white) { option in
+                selected(option)
             }
         }
     }
