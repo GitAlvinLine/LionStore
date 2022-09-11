@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */; };
 		DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */; };
 		DB51F8DC28C7AE3B002D6A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */; };
 		DB51F8DF28C7AE3B002D6A35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBar.swift; sourceTree = "<group>"; };
 		DB51F8D428C7AE3B002D6A35 /* LionStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreApp.swift; sourceTree = "<group>"; };
 		DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB3ADC3B28CE7E2C00CFEC78 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
 		DB51F8CB28C7AE3B002D6A35 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +286,7 @@
 				DB51F93628CAA9AE002D6A35 /* SignUp */,
 				DB9F883628CC4F6300B7887B /* SignIn */,
 				DB9F883928CC50BD00B7887B /* ResetPasswordScreen */,
+				DB3ADC3B28CE7E2C00CFEC78 /* TabView */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -457,6 +468,7 @@
 				DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */,
 				DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */,
 				DB9F884528CD886200B7887B /* BackButton.swift in Sources */,
+				DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
