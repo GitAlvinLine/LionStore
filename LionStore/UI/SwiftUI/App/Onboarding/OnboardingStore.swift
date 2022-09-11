@@ -10,6 +10,7 @@ import Foundation
 enum OnboardingOption: String {
     case signUp = "Sign Up"
     case signIn = "Sign In"
+    case homeScreen = "Home Screen"
 }
 
 struct OnboardingStore {
