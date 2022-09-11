@@ -22,7 +22,7 @@ struct LionStoreApp: App {
                     illustration: .onboardIllustration,
                     store: OnboardingStore(
                         options: [.signUp, .signIn],
-                        handler: { option ing
+                        handler: { option in
                             screen = option
                         })
                 )
