@@ -32,9 +32,11 @@ struct SignInScreen: View {
                     
                     HStack {
                         Spacer()
-                        AskAccountButton(text: "Forgot Password?",
-                                         textColor: .lightPurple) {
-                            print()
+                        NavigationLink {
+                            ResetPasswordScreen()
+                        } label: {
+                            Text("Forgot Password?")
+                                .font(.system(size: 16, weight: .bold, design: .default))
                         }
                     }
                     .padding(.trailing, 45)
