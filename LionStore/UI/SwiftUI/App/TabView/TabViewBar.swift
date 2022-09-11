@@ -7,9 +7,38 @@
 
 import SwiftUI
 
+enum TabText: String {
+    case Home
+    case Cart
+    case Favorite
+    case Profile
+}
+
 struct TabViewBar: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            TabView(image: .passwordLock, text: .Home)
+        }
+    }
+}
+
+struct TabView: View {
+    let image: AppImages
+    let text:  TabText
+    
+    var body: some View {
+        Button {
+            print()
+        } label: {
+            VStack {
+                Image(systemName: "house")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                Text(text.rawValue)
+            }
+        }
+
     }
 }
 
