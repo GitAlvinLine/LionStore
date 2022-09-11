@@ -7,6 +7,37 @@
 
 import SwiftUI
 
+enum ProfileCellImage {
+    case notification
+    case orders
+    case address
+    case payment
+    case heart
+    case settings
+    case arrowIndicator
+}
+
+enum ProfileCellText: String {
+    case Notifications
+    case MyOrders = "My Orders"
+    case Address
+    case Payment
+    case Favorites
+    case Settings
+}
+
+struct ProfileRowCell {
+    let image: ProfileCellImage
+    let text: ProfileCellText
+    let arrowIndicator: ProfileCellImage
+    
+    init(image: ProfileCellImage, text: ProfileCellText, _ arrowIndictior: ProfileCellImage = .arrowIndicator) {
+        self.image = image
+        self.text = text
+        self.arrowIndicator = arrowIndictior
+    }
+}
+
 struct ProfileTabScreen: View {
     let signOut: (OnboardingOption) -> Void
     
@@ -28,6 +59,8 @@ struct ProfileTabScreen: View {
                         ProfilePicture()
                         ProfileName()
                     }
+                    
+                    
 
                     Spacer()
                     CustomButton(text: "Log Out", textColor: .white, bg: .lightPurple) {
