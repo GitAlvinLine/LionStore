@@ -64,6 +64,11 @@ struct SignInScreen: View {
 
 struct SignInScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SignInScreen()
+        NavigationView {
+            ZStack {
+                SignInScreen()
+                    .navigationBarHidden(true)
+            }
+        }
     }
 }
