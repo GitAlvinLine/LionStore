@@ -13,6 +13,11 @@ struct ProfileTabScreen: View {
     var body: some View {
         ZStack {
             VStack {
+                Image(systemName: "pencil")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(AppColor.lightPurple.value)
                 Spacer()
                 CustomButton(text: "Log Out", textColor: .white, bg: .lightPurple) {
                     signOut(.signIn)
