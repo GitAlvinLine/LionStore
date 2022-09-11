@@ -13,50 +13,62 @@ struct SignInScreen: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            AppLogo(image: .appLogo)
-            
-            Spacer()
-            
-            VStack(spacing: 20) {
-                EmailTextField(image: .email,
-                               placeholder: "Email",
-                               email: $email)
-                
-                PasswordTextField(image: .passwordLock,
-                                  showPassword: $showPassword,
-                                  password: $password)
-            }
-            
-            HStack {
-                Spacer()
-                AskAccountButton(text: "Forgot Password?",
-                                 textColor: .lightPurple) {
-                    print()
+        NavigationView {
+            ZStack {
+                VStack {
+                    AppLogo(image: .appLogo)
+                    
+                    Spacer()
+                    
+                    VStack(spacing: 20) {
+                        EmailTextField(image: .email,
+                                       placeholder: "Email",
+                                       email: $email)
+                        
+                        PasswordTextField(image: .passwordLock,
+                                          showPassword: $showPassword,
+                                          password: $password)
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        NavigationLink {
+                            ResetPasswordScreen()
+                        } label: {
+                            Text("Forgot Password?")
+                                .font(.system(size: 16, weight: .bold, design: .default))
+                        }
+                    }
+                    .padding(.trailing, 45)
+                    .padding(.bottom, 40)
+                    
+                    CustomButton(text: "Sign In",
+                                 textColor: .white,
+                                 bg: .lightPurple) {
+                        print()
+                    }
+                    
+                    Spacer()
+                    
+                    AskAccountButton(text: "Create an account?",
+                                     textColor: .lightPurple) {
+                        print()
+                    }
+
                 }
             }
-            .padding(.trailing, 45)
-            .padding(.bottom, 40)
-            
-            CustomButton(text: "Sign In",
-                         textColor: .white,
-                         bg: .lightPurple) {
-                print()
-            }
-            
-            Spacer()
-            
-            AskAccountButton(text: "Create an account?",
-                             textColor: .lightPurple) {
-                print()
-            }
-
+            .navigationBarHidden(true)
         }
     }
 }
 
 struct SignInScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SignInScreen()
+        NavigationView {
+            ZStack {
+                SignInScreen()
+                    .navigationBarHidden(true)
+            }
+        }
     }
 }

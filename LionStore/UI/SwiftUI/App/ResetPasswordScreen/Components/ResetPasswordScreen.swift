@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ResetPasswordScreen: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var text: String = ""
     
     var body: some View {
         ZStack {
             VStack {
                 BackButton(foregroundColor: .lightPurple) {
-                    print()
+                    presentationMode.wrappedValue.dismiss()
                 }
                 
                 RecoverAccountText()
@@ -37,6 +38,7 @@ struct ResetPasswordScreen: View {
                 Spacer()
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
