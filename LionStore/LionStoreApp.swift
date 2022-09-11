@@ -23,8 +23,6 @@ struct LionStoreApp: App {
                     store: OnboardingStore(
                         options: [.signUp, .signIn],
                         handler: { option in
-                            print("You selected an option")
-                            print(option.rawValue)
                             screen = option
                         })
                 )
@@ -37,7 +35,9 @@ struct LionStoreApp: App {
                     screen = option
                 }
             case .homeScreen:
-                TabScreen()
+                TabScreen { option in
+                    screen = option
+                }
             }
         }
     }
