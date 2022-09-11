@@ -31,7 +31,7 @@ struct LionStoreApp: App {
             case .signUp:
                 SignUpScreen()
             case .signIn:
-                SignUpScreen()
+                SignInScreen()
             }
         }
     }
