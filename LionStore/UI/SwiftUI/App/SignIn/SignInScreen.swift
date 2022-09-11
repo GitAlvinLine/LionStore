@@ -47,7 +47,7 @@ struct SignInScreen: View {
                     CustomButton(text: "Sign In",
                                  textColor: .white,
                                  bg: .lightPurple) {
-                        print()
+                        optionCompletion(.homeScreen)
                     }
                     
                     Spacer()
