@@ -43,12 +43,18 @@ struct ProfileTabScreen: View {
     let signOut: (OnboardingOption) -> Void
     
     private let cells: [ProfileCellModel] = [
-        ProfileCellModel(image: .notification, text: .Notifications),
-        ProfileCellModel(image: .orders, text: .MyOrders),
-        ProfileCellModel(image: .address, text: .Address),
-        ProfileCellModel(image: .payment, text: .Payment),
-        ProfileCellModel(image: .heart, text: .Favorites),
-        ProfileCellModel(image: .settings, text: .Settings)
+        ProfileCellModel(image: .notification,
+                         text: .Notifications),
+        ProfileCellModel(image: .orders,
+                         text: .MyOrders),
+        ProfileCellModel(image: .address,
+                         text: .Address),
+        ProfileCellModel(image: .payment,
+                         text: .Payment),
+        ProfileCellModel(image: .heart,
+                         text: .Favorites),
+        ProfileCellModel(image: .settings,
+                         text: .Settings)
     ]
     
     var body: some View {
