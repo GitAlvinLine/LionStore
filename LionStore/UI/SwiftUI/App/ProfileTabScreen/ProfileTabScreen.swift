@@ -19,12 +19,7 @@ struct ProfileTabScreen: View {
                         NavigationLink {
                             EmptyView()
                         } label: {
-                            Image("edit")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 25, height: 25)
-                                .padding()
-                                .foregroundColor(AppColor.lightPurple.value)
+                            EditProfileImage()
                         }
                     }
                     .padding(.trailing, 30)
