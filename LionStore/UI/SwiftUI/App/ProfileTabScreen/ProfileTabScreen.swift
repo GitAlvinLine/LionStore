@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-enum ProfileCellImage {
+enum ProfileCellImage: String {
     case notification
     case orders
     case address
     case payment
     case heart
     case settings
-    case arrowIndicator
+    case arrowIndicator = "chevron.right"
 }
 
 enum ProfileCellText: String {
@@ -26,7 +26,8 @@ enum ProfileCellText: String {
     case Settings
 }
 
-struct ProfileRowCell {
+struct ProfileCellModel: Identifiable {
+    var id = UUID()
     let image: ProfileCellImage
     let text: ProfileCellText
     let arrowIndicator: ProfileCellImage
@@ -40,6 +41,15 @@ struct ProfileRowCell {
 
 struct ProfileTabScreen: View {
     let signOut: (OnboardingOption) -> Void
+    
+    private let cells: [ProfileCellModel] = [
+        ProfileCellModel(image: .notification, text: .Notifications),
+        ProfileCellModel(image: .orders, text: .MyOrders),
+        ProfileCellModel(image: .address, text: .Address),
+        ProfileCellModel(image: .payment, text: .Payment),
+        ProfileCellModel(image: .heart, text: .Favorites),
+        ProfileCellModel(image: .settings, text: .Settings)
+    ]
     
     var body: some View {
         NavigationView {
@@ -60,7 +70,17 @@ struct ProfileTabScreen: View {
                         ProfileName()
                     }
                     
+                    Spacer()
                     
+                    VStack {
+                        ForEach(cells) { cell in
+                            NavigationLink {
+                                EmptyView()
+                            } label: {
+                                ProfileCellView(model: cell)
+                            }
+                        }
+                    }
 
                     Spacer()
                     CustomButton(text: "Log Out", textColor: .white, bg: .lightPurple) {
@@ -88,6 +108,30 @@ struct ProfileName: View {
     var body: some View {
         Text("Tanya Robinson")
             .font(.system(size: 20, weight: .bold, design: .default))
+    }
+}
+
+struct ProfileCellView: View {
+    let model: ProfileCellModel
+    
+    var body: some View {
+        HStack(alignment: .center) {
+            Image(model.image.rawValue)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 25, height: 25)
+            Text(model.text.rawValue)
+                .foregroundColor(.black)
+                .font(.system(size: 15, weight: .semibold, design: .default))
+                .padding(.leading, 20)
+            Spacer()
+            Image(systemName: model.arrowIndicator.rawValue)
+                .font(Font.subheadline.weight(.bold))
+                .foregroundColor(AppColor.lightPurple.value)
+        }
+        .padding()
+        .padding(.leading, 40)
+        .padding(.trailing, 40)
     }
 }
 
