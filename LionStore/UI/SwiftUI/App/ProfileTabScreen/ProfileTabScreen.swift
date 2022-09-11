@@ -81,12 +81,7 @@ struct ProfileTabScreen: View {
                             }
                         }
                     }
-
-                    Spacer()
-                    CustomButton(text: "Log Out", textColor: .white, bg: .lightPurple) {
-                        signOut(.signIn)
-                    }
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 20)
                 }
             }
             .navigationBarHidden(true)
