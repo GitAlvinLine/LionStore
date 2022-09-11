@@ -54,6 +54,7 @@ struct ProfileTabScreen: View {
     var body: some View {
         NavigationView {
             ZStack {
+                Color.init(UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1)).ignoresSafeArea()
                 VStack {
                     HStack {
                         Spacer()
@@ -64,6 +65,7 @@ struct ProfileTabScreen: View {
                         }
                     }
                     .padding(.trailing, 30)
+                    .padding(.top, 10)
 
                     VStack(spacing: 20) {
                         ProfilePicture()
@@ -72,16 +74,23 @@ struct ProfileTabScreen: View {
                     
                     Spacer()
                     
-                    VStack {
-                        ForEach(cells) { cell in
-                            NavigationLink {
-                                EmptyView()
-                            } label: {
-                                ProfileCellView(model: cell)
+                    ScrollView {
+                        VStack(spacing: 10) {
+                            ForEach(cells) { cell in
+                                NavigationLink {
+                                    EmptyView()
+                                } label: {
+                                    ProfileCellView(model: cell)
+                                }
                             }
                         }
                     }
-                    .padding(.bottom, 20)
+                    .frame(width: ScreenSize.width, height: UIScreen.main.bounds.height * 0.4)
+                    .background(
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .padding(.top, -30)
+                    )
                 }
             }
             .navigationBarHidden(true)
@@ -110,23 +119,26 @@ struct ProfileCellView: View {
     let model: ProfileCellModel
     
     var body: some View {
-        HStack(alignment: .center) {
-            Image(model.image.rawValue)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 25, height: 25)
-            Text(model.text.rawValue)
-                .foregroundColor(.black)
-                .font(.system(size: 15, weight: .semibold, design: .default))
-                .padding(.leading, 20)
-            Spacer()
-            Image(systemName: model.arrowIndicator.rawValue)
-                .font(Font.subheadline.weight(.bold))
-                .foregroundColor(AppColor.lightPurple.value)
+        VStack(spacing: 20) {
+            HStack(alignment: .center) {
+                Image(model.image.rawValue)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 15, height: 20)
+                Text(model.text.rawValue)
+                    .foregroundColor(.black)
+                    .font(.system(size: 15, weight: .semibold, design: .default))
+                    .padding(.leading, 20)
+                Spacer()
+                Image(systemName: model.arrowIndicator.rawValue)
+                    .font(Font.subheadline.weight(.bold))
+                    .foregroundColor(AppColor.lightPurple.value)
+            }
+            Divider()
         }
-        .padding()
         .padding(.leading, 40)
         .padding(.trailing, 40)
+        .frame(width: ScreenSize.width, height: 50)
     }
 }
 
