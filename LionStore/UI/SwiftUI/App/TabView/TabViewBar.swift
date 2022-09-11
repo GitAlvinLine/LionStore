@@ -33,7 +33,7 @@ struct Tab: Identifiable {
 }
 
 struct TabViewBar: View {
-    @State private var selection: TabText = .Home
+    @Binding var selection: TabText
     
     private let tabs: [Tab] = [
         Tab(image: .home,
@@ -101,7 +101,7 @@ struct TabView: View {
 
 struct TabViewBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabViewBar()
+        TabViewBar(selection: .constant(.Profile))
             .previewLayout(.sizeThatFits)
             .padding()
     }

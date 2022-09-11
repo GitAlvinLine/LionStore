@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct TabScreen: View {
+    @State private var selection: TabText = .Profile
+    
+    let signOut: (OnboardingOption) -> Void
+    
     var body: some View {
         ZStack {
             VStack {
+                switch selection {
+                case .Home:
+                    EmptyView()
+                case .Cart:
+                    EmptyView()
+                case .Favorite:
+                    EmptyView()
+                case .Profile:
+                    ProfileTabScreen { option in
+                        signOut(option)
+                    }
+                }
                 Spacer()
-                TabViewBar()
+                TabViewBar(selection: $selection)
             }
             .ignoresSafeArea()
         }
@@ -21,6 +37,6 @@ struct TabScreen: View {
 
 struct TabScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TabScreen()
+        TabScreen(signOut: { _ in })
     }
 }

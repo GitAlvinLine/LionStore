@@ -37,7 +37,9 @@ struct LionStoreApp: App {
                     screen = option
                 }
             case .homeScreen:
-                TabScreen()
+                TabScreen { option in
+                    screen = option
+                }
             }
         }
     }
