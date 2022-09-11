@@ -17,8 +17,8 @@ struct RecoverAccountText: View {
             .font(.system(size: 25, weight: .bold, design: .default))
             Spacer()
         }
-        .padding(.leading, 35)
-        .padding(.top, 35)
+        .padding(.leading, 45)
+        .padding(.top, 45)
     }
 }
 
