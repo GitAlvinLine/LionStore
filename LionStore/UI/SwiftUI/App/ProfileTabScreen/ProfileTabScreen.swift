@@ -24,6 +24,10 @@ struct ProfileTabScreen: View {
                     }
                     .padding(.trailing, 30)
 
+                    VStack(spacing: 20) {
+                        ProfilePicture()
+                        ProfileName()
+                    }
 
                     Spacer()
                     CustomButton(text: "Log Out", textColor: .white, bg: .lightPurple) {
@@ -34,6 +38,23 @@ struct ProfileTabScreen: View {
             }
             .navigationBarHidden(true)
         }
+    }
+}
+
+struct ProfilePicture: View {
+    var body: some View {
+        Image(systemName: "person.circle")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 100, height: 100)
+            .clipShape(Circle())
+    }
+}
+
+struct ProfileName: View {
+    var body: some View {
+        Text("Tanya Robinson")
+            .font(.system(size: 20, weight: .bold, design: .default))
     }
 }
 
