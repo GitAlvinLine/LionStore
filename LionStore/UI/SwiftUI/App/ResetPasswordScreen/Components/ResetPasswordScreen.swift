@@ -14,6 +14,8 @@ struct ResetPasswordScreen: View {
                 BackButton(foregroundColor: .lightPurple) {
                     print()
                 }
+                
+                RecoverAccountText()
 
                 Spacer()
             }
