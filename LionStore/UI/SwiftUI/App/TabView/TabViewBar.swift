@@ -57,6 +57,7 @@ struct TabViewBar: View {
             }
         }
         .padding()
+        .padding(.bottom, 30)
         .background(
             Rectangle()
                 .foregroundColor(.white)
