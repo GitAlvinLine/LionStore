@@ -34,6 +34,7 @@
 		DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883428CC46AB00B7887B /* PhoneTextField.swift */; };
 		DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883728CC4F6E00B7887B /* SignInScreen.swift */; };
 		DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883A28CC50D600B7887B /* ResetPasswordScreen.swift */; };
+		DB9F884528CD886200B7887B /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F884428CD886200B7887B /* BackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		DB9F883428CC46AB00B7887B /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		DB9F883728CC4F6E00B7887B /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		DB9F883A28CC50D600B7887B /* ResetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordScreen.swift; sourceTree = "<group>"; };
+		DB9F884428CD886200B7887B /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 				DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */,
 				DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */,
 				DB9F883428CC46AB00B7887B /* PhoneTextField.swift */,
+				DB9F884428CD886200B7887B /* BackButton.swift */,
 			);
 			path = ReuseableViews;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			files = (
 				DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */,
 				DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */,
+				DB9F884528CD886200B7887B /* BackButton.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,

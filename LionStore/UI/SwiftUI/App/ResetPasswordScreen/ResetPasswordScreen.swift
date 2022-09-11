@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ResetPasswordScreen: View {
     var body: some View {
-        Text("Reset password screen")
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    print()
+                }
+
+                Spacer()
+            }
+        }
     }
 }
 
