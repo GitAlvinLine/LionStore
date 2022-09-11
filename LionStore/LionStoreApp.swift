@@ -22,9 +22,7 @@ struct LionStoreApp: App {
                     illustration: .onboardIllustration,
                     store: OnboardingStore(
                         options: [.signUp, .signIn],
-                        handler: { option in
-                            print("You selected an option")
-                            print(option.rawValue)
+                        handler: { option ing
                             screen = option
                         })
                 )
