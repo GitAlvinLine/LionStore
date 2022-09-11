@@ -12,6 +12,8 @@ struct SignInScreen: View {
     @State private var showPassword: Bool = false
     @State private var password: String = ""
     
+    let optionCompletion: (OnboardingOption) -> Void
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -52,7 +54,7 @@ struct SignInScreen: View {
                     
                     AskAccountButton(text: "Create an account?",
                                      textColor: .lightPurple) {
-                        print()
+                        optionCompletion(.signUp)
                     }
 
                 }
@@ -66,7 +68,7 @@ struct SignInScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ZStack {
-                SignInScreen()
+                SignInScreen { _ in }
                     .navigationBarHidden(true)
             }
         }
