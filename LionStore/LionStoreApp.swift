@@ -29,9 +29,13 @@ struct LionStoreApp: App {
                         })
                 )
             case .signUp:
-                SignUpScreen()
+                SignUpScreen { option in
+                    screen = option
+                }
             case .signIn:
-                SignInScreen()
+                SignInScreen { option in
+                    screen = option
+                }
             }
         }
     }

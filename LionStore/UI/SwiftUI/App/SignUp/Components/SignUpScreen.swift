@@ -13,6 +13,8 @@ struct SignUpScreen: View {
     @State private var password: String = ""
     @State private var showPassword: Bool = false
     
+    let optionCompletion: (OnboardingOption) -> Void
+    
     var body: some View {
         VStack {
             AppLogo(image: .appLogo)
@@ -41,7 +43,7 @@ struct SignUpScreen: View {
 
             AskAccountButton(text: "Already have an account?",
                              textColor: .lightPurple) {
-                print()
+                optionCompletion(.signIn)
             }
 
         }
@@ -50,6 +52,6 @@ struct SignUpScreen: View {
 
 struct SignUpScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpScreen()
+        SignUpScreen(optionCompletion: { _ in})
     }
 }
