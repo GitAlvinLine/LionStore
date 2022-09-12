@@ -42,48 +42,131 @@ struct ProfileCellModel: Identifiable {
 }
 
 struct NotificationScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack {
-            Text("Notifications View")
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding(.top, 10)
+                
+                Spacer()
+                
+                Text("Notifications View")
+                
+                Spacer()
+            }
         }
+        .navigationBarHidden(true)
     }
 }
 
 struct OrdersScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack { Text("Orders View") }
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding(.top, 10)
+                
+                Text("Orders View")
+                
+                Spacer()
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 
 struct AddressScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack { Text("Address View") }
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding(.top, 10)
+                
+                Text("Address View")
+                
+                Spacer()
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 
 struct PaymentScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack { Text("Payment View") }
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding(.top, 10)
+                
+                Text("Payment View")
+                
+                Spacer()
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 
 struct FavoritesScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack { Text("Favorites View") }
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding(.top, 10)
+                
+                Text("Favorites View")
+                
+                Spacer()
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 
 struct SettingsScreen: View {
+    @Environment(\.presentationMode) var presentationMode
     let signOut: (OnboardingOption) -> Void
     
     var body: some View {
-        VStack {
-            CustomButton(text: "Log Out",
-                         textColor: .white,
-                         bg: .lightPurple) {
-                signOut(.signIn)
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .padding(.top, 10)
+                
+                Text("Settings View")
+                
+                Spacer()
+                
+                CustomButton(text: "Log Out",
+                             textColor: .white,
+                             bg: .lightPurple) {
+                    signOut(.signIn)
+                }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
