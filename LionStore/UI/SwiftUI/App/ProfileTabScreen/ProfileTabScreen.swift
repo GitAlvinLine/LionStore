@@ -32,10 +32,58 @@ struct ProfileCellModel: Identifiable {
     let text: ProfileCellText
     let arrowIndicator: ProfileCellImage
     
-    init(image: ProfileCellImage, text: ProfileCellText, _ arrowIndictior: ProfileCellImage = .arrowIndicator) {
+    init(image: ProfileCellImage,
+         text: ProfileCellText,
+         _ arrowIndictior: ProfileCellImage = .arrowIndicator) {
         self.image = image
         self.text = text
         self.arrowIndicator = arrowIndictior
+    }
+}
+
+struct NotificationScreen: View {
+    var body: some View {
+        VStack {
+            Text("Notifications View")
+        }
+    }
+}
+
+struct OrdersScreen: View {
+    var body: some View {
+        VStack { Text("Orders View") }
+    }
+}
+
+struct AddressScreen: View {
+    var body: some View {
+        VStack { Text("Address View") }
+    }
+}
+
+struct PaymentScreen: View {
+    var body: some View {
+        VStack { Text("Payment View") }
+    }
+}
+
+struct FavoritesScreen: View {
+    var body: some View {
+        VStack { Text("Favorites View") }
+    }
+}
+
+struct SettingsScreen: View {
+    let signOut: (OnboardingOption) -> Void
+    
+    var body: some View {
+        VStack {
+            CustomButton(text: "Log Out",
+                         textColor: .white,
+                         bg: .lightPurple) {
+                signOut(.signIn)
+            }
+        }
     }
 }
 
@@ -45,14 +93,19 @@ struct ProfileTabScreen: View {
     private let cells: [ProfileCellModel] = [
         ProfileCellModel(image: .notification,
                          text: .Notifications),
+                         
         ProfileCellModel(image: .orders,
                          text: .MyOrders),
+                         
         ProfileCellModel(image: .address,
                          text: .Address),
+                         
         ProfileCellModel(image: .payment,
                          text: .Payment),
+                         
         ProfileCellModel(image: .heart,
                          text: .Favorites),
+                         
         ProfileCellModel(image: .settings,
                          text: .Settings)
     ]
@@ -84,7 +137,22 @@ struct ProfileTabScreen: View {
                         VStack(spacing: 10) {
                             ForEach(cells) { cell in
                                 NavigationLink {
-                                    EmptyView()
+                                    switch cell.text {
+                                    case .Notifications:
+                                        NotificationScreen()
+                                    case .MyOrders:
+                                        OrdersScreen()
+                                    case .Address:
+                                        AddressScreen()
+                                    case .Payment:
+                                        PaymentScreen()
+                                    case .Favorites:
+                                        FavoritesScreen()
+                                    case .Settings:
+                                        SettingsScreen { option in
+                                            signOut(option)
+                                        }
+                                    }
                                 } label: {
                                     ProfileCellView(model: cell)
                                 }
