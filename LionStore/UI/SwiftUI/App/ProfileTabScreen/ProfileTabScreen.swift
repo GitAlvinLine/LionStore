@@ -201,7 +201,7 @@ struct ProfileTabScreen: View {
                     HStack {
                         Spacer()
                         NavigationLink {
-                            EmptyView()
+                            EditProfileScreen()
                         } label: {
                             EditProfileImage()
                         }
@@ -252,6 +252,27 @@ struct ProfileTabScreen: View {
             }
             .navigationBarHidden(true)
         }
+    }
+}
+
+struct EditProfileScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        ZStack {
+            VStack {
+                BackButton(foregroundColor: .lightPurple) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                
+                Spacer()
+                
+                Text("Edit Profile page")
+                
+                Spacer()
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 
