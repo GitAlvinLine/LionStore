@@ -10,6 +10,8 @@
 		DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */; };
 		DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */; };
 		DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */; };
+		DB3ADC4428CE96A200CFEC78 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4328CE96A200CFEC78 /* TabView.swift */; };
+		DB3ADC4728CE9BF200CFEC78 /* EditProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4628CE9BF200CFEC78 /* EditProfileImage.swift */; };
 		DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */; };
 		DB51F8DC28C7AE3B002D6A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */; };
 		DB51F8DF28C7AE3B002D6A35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBar.swift; sourceTree = "<group>"; };
 		DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScreen.swift; sourceTree = "<group>"; };
 		DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabScreen.swift; sourceTree = "<group>"; };
+		DB3ADC4328CE96A200CFEC78 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		DB3ADC4628CE9BF200CFEC78 /* EditProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileImage.swift; sourceTree = "<group>"; };
 		DB51F8D428C7AE3B002D6A35 /* LionStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreApp.swift; sourceTree = "<group>"; };
 		DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			children = (
 				DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */,
 				DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */,
+				DB3ADC4328CE96A200CFEC78 /* TabView.swift */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -136,8 +141,17 @@
 			isa = PBXGroup;
 			children = (
 				DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */,
+				DB3ADC4528CE9BD900CFEC78 /* Components */,
 			);
 			path = ProfileTabScreen;
+			sourceTree = "<group>";
+		};
+		DB3ADC4528CE9BD900CFEC78 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DB3ADC4628CE9BF200CFEC78 /* EditProfileImage.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		DB51F8CB28C7AE3B002D6A35 = {
@@ -493,10 +507,12 @@
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
 				DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */,
 				DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */,
+				DB3ADC4728CE9BF200CFEC78 /* EditProfileImage.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
 				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
 				DB9F884828CD899300B7887B /* RecoverAccountText.swift in Sources */,
 				DB51F94828CBA773002D6A35 /* AppImages.swift in Sources */,
+				DB3ADC4428CE96A200CFEC78 /* TabView.swift in Sources */,
 				DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */,
 				DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
