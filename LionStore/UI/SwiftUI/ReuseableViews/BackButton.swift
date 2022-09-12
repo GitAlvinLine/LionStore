@@ -31,7 +31,7 @@ struct BackButton: View {
             }
             Spacer()
         }
-        .padding(.leading, 35)
+        .padding(.leading, 25)
     }
 }
 
