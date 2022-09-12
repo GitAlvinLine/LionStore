@@ -12,6 +12,7 @@
 		DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */; };
 		DB3ADC4428CE96A200CFEC78 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4328CE96A200CFEC78 /* TabView.swift */; };
 		DB3ADC4728CE9BF200CFEC78 /* EditProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4628CE9BF200CFEC78 /* EditProfileImage.swift */; };
+		DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4928CEDB8B00CFEC78 /* EditProfileScreen.swift */; };
 		DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */; };
 		DB51F8DC28C7AE3B002D6A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */; };
 		DB51F8DF28C7AE3B002D6A35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabScreen.swift; sourceTree = "<group>"; };
 		DB3ADC4328CE96A200CFEC78 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		DB3ADC4628CE9BF200CFEC78 /* EditProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileImage.swift; sourceTree = "<group>"; };
+		DB3ADC4928CEDB8B00CFEC78 /* EditProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileScreen.swift; sourceTree = "<group>"; };
 		DB51F8D428C7AE3B002D6A35 /* LionStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreApp.swift; sourceTree = "<group>"; };
 		DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 				DB3ADC4628CE9BF200CFEC78 /* EditProfileImage.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DB3ADC4928CEDB8B00CFEC78 /* EditProfileScreen.swift */,
+			);
+			path = EditProfileScreen;
 			sourceTree = "<group>";
 		};
 		DB51F8CB28C7AE3B002D6A35 = {
@@ -315,6 +325,7 @@
 				DB9F883928CC50BD00B7887B /* ResetPasswordScreen */,
 				DB3ADC3B28CE7E2C00CFEC78 /* TabView */,
 				DB3ADC4028CE91E700CFEC78 /* ProfileTabScreen */,
+				DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -498,6 +509,7 @@
 				DB9F884528CD886200B7887B /* BackButton.swift in Sources */,
 				DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
+				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
 				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,

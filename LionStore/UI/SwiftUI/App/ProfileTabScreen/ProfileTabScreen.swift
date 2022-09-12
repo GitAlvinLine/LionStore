@@ -255,27 +255,6 @@ struct ProfileTabScreen: View {
     }
 }
 
-struct EditProfileScreen: View {
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        ZStack {
-            VStack {
-                BackButton(foregroundColor: .lightPurple) {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                
-                Spacer()
-                
-                Text("Edit Profile page")
-                
-                Spacer()
-            }
-        }
-        .navigationBarHidden(true)
-    }
-}
-
 struct ProfilePicture: View {
     var body: some View {
         Image(systemName: "person.circle")
