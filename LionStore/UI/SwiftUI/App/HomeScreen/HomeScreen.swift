@@ -16,12 +16,35 @@ struct Category: Identifiable {
     }
 }
 
+struct Product: Identifiable {
+    var id = UUID()
+    let imageURL: String
+    let category: Category
+    let name: String
+    let retailPrice: Double
+    let currentPrice: Double
+    var isFavorited: Bool
+    
+    init(imageURL: String, category: Category, name: String, retailPrice: Double, currentPrice: Double, isFavorited: Bool = false) {
+        self.imageURL = imageURL
+        self.category = category
+        self.name = name
+        self.retailPrice = retailPrice
+        self.currentPrice = currentPrice
+        self.isFavorited = isFavorited
+    }
+}
+
 struct HomeScreen: View {
     private let categories: [Category] = [
         Category("Watches"),
         Category("Bracelets"),
         Category("Straps"),
         Category("Set")
+    ]
+    
+    private let mostSellingList: [Product] = [
+        
     ]
     
     var body: some View {
@@ -81,6 +104,8 @@ struct HomeScreen: View {
                     .padding(.leading, 35)
                     .padding(.trailing, 35)
                     .padding(.top, 30)
+                    
+                    
                     
                     Spacer()
                 }
