@@ -17,7 +17,7 @@ struct TabScreen: View {
             VStack {
                 switch selection {
                 case .Home:
-                    EmptyView()
+                    HomeScreen()
                 case .Cart:
                     EmptyView()
                 case .Favorite:
