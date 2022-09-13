@@ -70,25 +70,6 @@ struct HomeScreen: View {
     }
 }
 
-struct CategoryCell: View {
-    let category: Category
-    let textColor: AppColor
-    let borderColor: AppColor
-    
-    var body: some View {
-        Text(category.name)
-            .font(.system(size: 16, weight: .heavy, design: .default))
-            .minimumScaleFactor(0.5)
-            .lineLimit(nil)
-            .padding()
-            .foregroundColor(textColor.value)
-            .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(borderColor.value, lineWidth: 2)
-            )
-    }
-}
-
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
