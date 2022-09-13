@@ -25,6 +25,7 @@ struct ProductCell: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 120, height: 120)
+                    .foregroundColor(.black)
                 Button {
                     product.isFavorited.toggle()
                 } label: {
@@ -49,6 +50,7 @@ struct ProductCell: View {
                     .font(.system(size: 14, weight: .semibold, design: .default))
                     .minimumScaleFactor(0.5)
                     .lineLimit(nil)
+                    .foregroundColor(.black)
                 
                 HStack {
                     Text("USD\(product.currentPrice)")
@@ -69,6 +71,10 @@ struct ProductCell: View {
 
 struct ProductCell_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCell(.constant(Product(imageURL: "applewatch", category: Category("Watches"), name: "Kinsale Watch", retailPrice: 185, currentPrice: 230)))
+        ProductCell(.constant(Product(imageURL: "applewatch",
+                                      category: Category("Watches"),
+                                      name: "Kinsale Watch",
+                                      retailPrice: 185,
+                                      currentPrice: 230)))
     }
 }

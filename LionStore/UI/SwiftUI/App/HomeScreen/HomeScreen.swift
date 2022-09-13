@@ -127,11 +127,35 @@ struct HomeScreen: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach($mostSellingProducts) { $product in
-                                ProductCell($product)
+                                NavigationLink {
+                                    EmptyView()
+                                } label: {
+                                    ProductCell($product)
+                                }
                             }
                         }
                     }
                     .padding(.leading, 35)
+                    
+                    HStack {
+                        Text("Recently Added")
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .minimumScaleFactor(0.5)
+                            .lineLimit(nil)
+                        Spacer()
+                        Button {
+                            print()
+                        } label: {
+                            Text("View All")
+                                .font(.system(size: 16, weight: .bold, design: .default))
+                                .minimumScaleFactor(0.5)
+                                .lineLimit(nil)
+                        }
+
+                    }
+                    .padding(.leading, 35)
+                    .padding(.trailing, 35)
+                    .padding(.top, 30)
                     
                     Spacer()
                 }
