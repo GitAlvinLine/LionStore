@@ -157,6 +157,19 @@ struct HomeScreen: View {
                     .padding(.trailing, 35)
                     .padding(.top, 30)
                     
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach($mostSellingProducts) { $product in
+                                NavigationLink {
+                                    EmptyView()
+                                } label: {
+                                    ProductCell($product)
+                                }
+                            }
+                        }
+                    }
+                    .padding(.leading, 35)
+                    
                     Spacer()
                 }
             }
