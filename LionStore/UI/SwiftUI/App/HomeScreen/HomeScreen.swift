@@ -7,7 +7,23 @@
 
 import SwiftUI
 
+struct Category: Identifiable {
+    var id = UUID()
+    let name: String
+    
+    init(_ name: String) {
+        self.name = name
+    }
+}
+
 struct HomeScreen: View {
+    private let categories: [Category] = [
+        Category("Watches"),
+        Category("Bracelets"),
+        Category("Straps"),
+        Category("Set")
+    ]
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -31,11 +47,45 @@ struct HomeScreen: View {
                     .padding(.leading, 35)
                     .padding(.trailing, 35)
                     
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(categories) { category in
+                                CategoryCell(category: category,
+                                             textColor: .lightPurple,
+                                             borderColor: .lightPurple)
+                            }
+                        }
+                        .padding(.leading, 5)
+                        .padding(.top, 10)
+                        .padding(.bottom, 10)
+                    }
+                    .padding(.leading, 30)
+                    .padding(.trailing, 35)
+                    
                     Spacer()
                 }
             }
             .navigationBarHidden(true)
         }
+    }
+}
+
+struct CategoryCell: View {
+    let category: Category
+    let textColor: AppColor
+    let borderColor: AppColor
+    
+    var body: some View {
+        Text(category.name)
+            .font(.system(size: 16, weight: .heavy, design: .default))
+            .minimumScaleFactor(0.5)
+            .lineLimit(nil)
+            .padding()
+            .foregroundColor(textColor.value)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(borderColor.value, lineWidth: 2)
+            )
     }
 }
 
