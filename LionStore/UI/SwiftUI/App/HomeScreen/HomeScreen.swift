@@ -62,6 +62,26 @@ struct HomeScreen: View {
                     .padding(.leading, 30)
                     .padding(.trailing, 35)
                     
+                    HStack {
+                        Text("Most Selling")
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .minimumScaleFactor(0.5)
+                            .lineLimit(nil)
+                        Spacer()
+                        Button {
+                            print()
+                        } label: {
+                            Text("View All")
+                                .font(.system(size: 16, weight: .bold, design: .default))
+                                .minimumScaleFactor(0.5)
+                                .lineLimit(nil)
+                        }
+
+                    }
+                    .padding(.leading, 35)
+                    .padding(.trailing, 35)
+                    .padding(.top, 30)
+                    
                     Spacer()
                 }
             }
