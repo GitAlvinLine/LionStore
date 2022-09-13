@@ -12,7 +12,26 @@ struct HomeScreen: View {
         NavigationView {
             ZStack {
                 VStack {
+                    HStack {
+                        Text("Select from categories")
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .minimumScaleFactor(0.5)
+                            .lineLimit(nil)
+                        Spacer()
+                        Button {
+                            print()
+                        } label: {
+                            Image(systemName: "magnifyingglass")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(AppColor.lightPurple.value)
+                        }
+                    }
+                    .padding(.leading, 35)
+                    .padding(.trailing, 35)
                     
+                    Spacer()
                 }
             }
             .navigationBarHidden(true)
