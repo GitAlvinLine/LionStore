@@ -143,6 +143,8 @@
 				DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */,
 				DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */,
 				DB3ADC4328CE96A200CFEC78 /* TabView.swift */,
+				DB3ADC7B28D0201900CFEC78 /* HomeScreen */,
+				DB3ADC4028CE91E700CFEC78 /* ProfileTabScreen */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -150,6 +152,7 @@
 		DB3ADC4028CE91E700CFEC78 /* ProfileTabScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */,
 				DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */,
 				DB3ADC4528CE9BD900CFEC78 /* Components */,
 			);
@@ -359,9 +362,6 @@
 				DB9F883628CC4F6300B7887B /* SignIn */,
 				DB9F883928CC50BD00B7887B /* ResetPasswordScreen */,
 				DB3ADC3B28CE7E2C00CFEC78 /* TabView */,
-				DB3ADC7B28D0201900CFEC78 /* HomeScreen */,
-				DB3ADC4028CE91E700CFEC78 /* ProfileTabScreen */,
-				DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */,
 			);
 			path = App;
 			sourceTree = "<group>";
