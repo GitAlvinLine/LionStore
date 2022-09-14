@@ -16,6 +16,7 @@
 		DB3ADC7D28D0204600CFEC78 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC7C28D0204600CFEC78 /* HomeScreen.swift */; };
 		DB3ADC8028D0263500CFEC78 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC7F28D0263500CFEC78 /* CategoryCell.swift */; };
 		DB3ADC8228D02FB700CFEC78 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC8128D02FB700CFEC78 /* ProductCell.swift */; };
+		DB3ADC8528D26B0500CFEC78 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC8428D26B0500CFEC78 /* ProductDetailScreen.swift */; };
 		DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */; };
 		DB51F8DC28C7AE3B002D6A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */; };
 		DB51F8DF28C7AE3B002D6A35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		DB3ADC7C28D0204600CFEC78 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		DB3ADC7F28D0263500CFEC78 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		DB3ADC8128D02FB700CFEC78 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		DB3ADC8428D26B0500CFEC78 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
 		DB51F8D428C7AE3B002D6A35 /* LionStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreApp.swift; sourceTree = "<group>"; };
 		DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +188,14 @@
 				DB3ADC8128D02FB700CFEC78 /* ProductCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DB3ADC8328D26AF500CFEC78 /* ProductDetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DB3ADC8428D26B0500CFEC78 /* ProductDetailScreen.swift */,
+			);
+			path = ProductDetailScreen;
 			sourceTree = "<group>";
 		};
 		DB51F8CB28C7AE3B002D6A35 = {
@@ -349,6 +359,7 @@
 				DB9F883928CC50BD00B7887B /* ResetPasswordScreen */,
 				DB3ADC3B28CE7E2C00CFEC78 /* TabView */,
 				DB3ADC7B28D0201900CFEC78 /* HomeScreen */,
+				DB3ADC8328D26AF500CFEC78 /* ProductDetailScreen */,
 				DB3ADC4028CE91E700CFEC78 /* ProfileTabScreen */,
 				DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */,
 			);
@@ -559,6 +570,7 @@
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB3ADC7D28D0204600CFEC78 /* HomeScreen.swift in Sources */,
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,
+				DB3ADC8528D26B0500CFEC78 /* ProductDetailScreen.swift in Sources */,
 				DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */,
 				DB9F884A28CD8DE800B7887B /* ResetPasswordTextField.swift in Sources */,
 				DB51F94A28CBA906002D6A35 /* AppLogo.swift in Sources */,

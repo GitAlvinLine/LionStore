@@ -128,7 +128,7 @@ struct HomeScreen: View {
                         HStack {
                             ForEach($mostSellingProducts) { $product in
                                 NavigationLink {
-                                    EmptyView()
+                                    ProductDetailScreen(product: $product)
                                 } label: {
                                     ProductCell($product)
                                 }
@@ -161,7 +161,7 @@ struct HomeScreen: View {
                         HStack {
                             ForEach($mostSellingProducts) { $product in
                                 NavigationLink {
-                                    EmptyView()
+                                    ProductDetailScreen(product: $product)
                                 } label: {
                                     ProductCell($product)
                                 }
