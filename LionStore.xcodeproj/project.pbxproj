@@ -175,6 +175,7 @@
 		DB3ADC7B28D0201900CFEC78 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DB3ADC8328D26AF500CFEC78 /* ProductDetailScreen */,
 				DB3ADC7C28D0204600CFEC78 /* HomeScreen.swift */,
 				DB3ADC7E28D0262900CFEC78 /* Components */,
 			);
@@ -359,7 +360,6 @@
 				DB9F883928CC50BD00B7887B /* ResetPasswordScreen */,
 				DB3ADC3B28CE7E2C00CFEC78 /* TabView */,
 				DB3ADC7B28D0201900CFEC78 /* HomeScreen */,
-				DB3ADC8328D26AF500CFEC78 /* ProductDetailScreen */,
 				DB3ADC4028CE91E700CFEC78 /* ProfileTabScreen */,
 				DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */,
 			);
