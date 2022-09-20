@@ -30,6 +30,7 @@ struct TabScreen: View {
                 Spacer()
                 TabViewBar(selection: $selection)
             }
+            .ignoresSafeArea()
         }
     }
 }

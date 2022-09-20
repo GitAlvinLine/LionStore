@@ -55,6 +55,7 @@ struct FavoriteScreen: View {
                 .padding(.trailing, 25)
                 Spacer()
             }
+            .padding(.top, 20)
         }
     }
 }
@@ -62,5 +63,6 @@ struct FavoriteScreen: View {
 struct FavoriteScreen_Previews: PreviewProvider {
     static var previews: some View {
         FavoriteScreen()
+            .ignoresSafeArea()
     }
 }
