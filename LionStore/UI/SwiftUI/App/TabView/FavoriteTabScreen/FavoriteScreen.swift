@@ -43,10 +43,11 @@ struct FavoriteScreen: View {
 
 
                     } label: {
-                        Image(systemName: "gearshape")
+                        Image("optionsIcon")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 30, height: 30)
+                            .padding(10)
                     }
                     .foregroundColor(AppColor.lightPurple.value)
                     
