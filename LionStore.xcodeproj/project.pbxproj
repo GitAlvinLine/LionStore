@@ -41,6 +41,7 @@
 		DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */; };
 		DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */; };
 		DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */; };
+		DB9BA89328DA188200693AD1 /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9BA89228DA188200693AD1 /* FavoriteScreen.swift */; };
 		DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883428CC46AB00B7887B /* PhoneTextField.swift */; };
 		DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883728CC4F6E00B7887B /* SignInScreen.swift */; };
 		DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F883A28CC50D600B7887B /* ResetPasswordScreen.swift */; };
@@ -104,6 +105,7 @@
 		DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBorder.swift; sourceTree = "<group>"; };
 		DB51F96928CC3FE9002D6A35 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordButton.swift; sourceTree = "<group>"; };
+		DB9BA89228DA188200693AD1 /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
 		DB9F883428CC46AB00B7887B /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		DB9F883728CC4F6E00B7887B /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		DB9F883A28CC50D600B7887B /* ResetPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordScreen.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		DB3ADC3B28CE7E2C00CFEC78 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
+				DB9BA89128DA185D00693AD1 /* FavoriteTabScreen */,
 				DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */,
 				DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */,
 				DB3ADC4328CE96A200CFEC78 /* TabView.swift */,
@@ -384,6 +387,14 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		DB9BA89128DA185D00693AD1 /* FavoriteTabScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DB9BA89228DA188200693AD1 /* FavoriteScreen.swift */,
+			);
+			path = FavoriteTabScreen;
+			sourceTree = "<group>";
+		};
 		DB9F883628CC4F6300B7887B /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +555,7 @@
 				DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */,
 				DB9F884528CD886200B7887B /* BackButton.swift in Sources */,
 				DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */,
+				DB9BA89328DA188200693AD1 /* FavoriteScreen.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
 				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
