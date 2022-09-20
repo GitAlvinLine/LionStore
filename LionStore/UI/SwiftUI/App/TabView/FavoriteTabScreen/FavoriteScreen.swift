@@ -55,7 +55,7 @@ struct FavoriteScreen: View {
                 .padding(.trailing, 25)
                 Spacer()
             }
-            .padding(.top, 20)
+            .padding(.top, 60)
         }
     }
 }
