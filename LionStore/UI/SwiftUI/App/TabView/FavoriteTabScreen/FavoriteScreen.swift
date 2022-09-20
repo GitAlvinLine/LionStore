@@ -9,7 +9,52 @@ import SwiftUI
 
 struct FavoriteScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                HStack {
+                    Spacer()
+                    Menu {
+                        Button {
+                            print("sort by price")
+                        } label: {
+                            Text("Sort by price")
+                        }
+                        
+                        Button {
+                            print("sort by date")
+                        } label: {
+                            Text("Sort by date")
+                        }
+                        
+                        if #available(iOS 15.0, *) {
+                            Button(role: .destructive) {
+                                print("remove all items")
+                            } label: {
+                                Text("Remove all items")
+                            }
+                        } else {
+                            // Fallback on earlier versions
+                            Button {
+                                print("remove all items")
+                            } label: {
+                                Text("Remove all items")
+                            }
+                        }
+
+
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                    }
+                    .foregroundColor(AppColor.lightPurple.value)
+                    
+                }
+                .padding(.trailing, 25)
+                Spacer()
+            }
+        }
     }
 }
 
