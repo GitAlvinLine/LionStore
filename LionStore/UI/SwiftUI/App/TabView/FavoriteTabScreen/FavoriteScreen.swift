@@ -32,6 +32,9 @@ struct FavoriteScreen: View {
                 }
                 .padding(.trailing, 25)
                 Spacer()
+                
+                FavoriteListDetails(4, 266.08)
+                Spacer()
             }
             .padding(.top, 60)
         }
@@ -96,6 +99,28 @@ struct MenuSortOptionButton: View {
             action(sortOption.type)
         } label: {
             Label(sortOption.text, systemImage: sortOption.type == $selectedSortType.wrappedValue ? "checkmark" : "")
+        }
+    }
+}
+
+struct FavoriteListDetails: View {
+    let totalItems: Int
+    let totalPrice: Double
+    
+    init(_ totalItems: Int, _ totalPrice: Double) {
+        self.totalItems = totalItems
+        self.totalPrice = totalPrice
+    }
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Total Items: \(totalItems) items")
+                .font(.system(size: 16, weight: .semibold, design: .default))
+                .foregroundColor(Color.init(UIColor(red: 143/255, green: 161/255, blue: 180/255, alpha: 1)))
+            
+            Text("Total Price: $\(String(format: "%.2f", totalPrice))")
+                .font(.system(size: 18, weight: .bold, design: .default))
+                .foregroundColor(.black)
         }
     }
 }
