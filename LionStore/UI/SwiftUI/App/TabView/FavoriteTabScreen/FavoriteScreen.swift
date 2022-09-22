@@ -31,9 +31,23 @@ struct FavoriteScreen: View {
                     
                 }
                 .padding(.trailing, 25)
+                
+                List {
+                    ForEach(0..<25, id: \.self) { _ in
+                        FavoriteCellRow()
+                            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                RemoveCartButton {
+                                    print("Remove Cart Item")
+                                }
+                            }
+                    }
+                }
+                .listStyle(.plain)
                 Spacer()
                 
                 FavoriteListDetails(4, 266.08)
+                    .padding(.top, 20)
+                    .padding(.bottom, 20)
                 Spacer()
             }
             .padding(.top, 60)
@@ -122,6 +136,80 @@ struct FavoriteListDetails: View {
                 .font(.system(size: 18, weight: .bold, design: .default))
                 .foregroundColor(.black)
         }
+    }
+}
+
+struct FavoriteCellRow: View {
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "applewatch")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 120, height: 120)
+                .padding(.leading, 20)
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Brown Stone Bracelet")
+                    .font(.system(size: 18, weight: .semibold, design: .default))
+                
+                HStack(spacing: 10) {
+                    Text("USD24")
+                        .font(.system(size: 14, weight: .semibold, design: .default))
+                        .foregroundColor(Color.init(UIColor(red: 143/255, green: 161/255, blue: 180/255, alpha: 1)))
+                    Text("USD40")
+                        .font(.system(size: 14, weight: .semibold, design: .default))
+                        .foregroundColor(.red)
+                }
+                
+                HStack(spacing: 10) {
+                    Button {
+                        print("add quantity")
+                    } label: {
+                        Image(systemName: "plus")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                            .padding(10)
+                    }
+                    
+                    Text("2")
+                        .font(.system(size: 16, weight: .semibold, design: .default))
+                    
+                    Button {
+                        print("subtract quantity")
+                    } label: {
+                        Image(systemName: "minus")
+                            .font(.system(size: 30, weight: .heavy, design: .default))
+                            .foregroundColor(AppColor.lightPurple.value)
+                    }
+                }
+                .padding(.leading, 5)
+                .padding(.top, 5)
+                .padding(.bottom, 5)
+                .padding(.trailing, 5)
+                .background(
+                    RoundedRectangle(cornerRadius: 4)
+                        .foregroundColor(Color.init(UIColor(red: 234/255, green: 234/255, blue: 234/255, alpha: 1)))
+                )
+            }
+            Spacer()
+        }
+        .padding(.top, 20)
+        .padding(.bottom, 20)
+        .buttonStyle(.plain)
+    }
+}
+
+struct RemoveCartButton: View {
+    let action: () -> Void
+    
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            Label("Remove from Cart", systemImage: "trash")
+        }
+        .tint(.red)
     }
 }
 
