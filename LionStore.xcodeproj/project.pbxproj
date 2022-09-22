@@ -49,6 +49,7 @@
 		DB9F884828CD899300B7887B /* RecoverAccountText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F884728CD899300B7887B /* RecoverAccountText.swift */; };
 		DB9F884A28CD8DE800B7887B /* ResetPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F884928CD8DE800B7887B /* ResetPasswordTextField.swift */; };
 		DBE6E77428DCE7D700F77C1D /* CartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77328DCE7D700F77C1D /* CartScreen.swift */; };
+		DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		DB9F884728CD899300B7887B /* RecoverAccountText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverAccountText.swift; sourceTree = "<group>"; };
 		DB9F884928CD8DE800B7887B /* ResetPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTextField.swift; sourceTree = "<group>"; };
 		DBE6E77328DCE7D700F77C1D /* CartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreen.swift; sourceTree = "<group>"; };
+		DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,8 +430,17 @@
 			isa = PBXGroup;
 			children = (
 				DBE6E77328DCE7D700F77C1D /* CartScreen.swift */,
+				DBE6E77528DD21E800F77C1D /* PaymentMethodScreen */,
 			);
 			path = CartScreen;
+			sourceTree = "<group>";
+		};
+		DBE6E77528DD21E800F77C1D /* PaymentMethodScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */,
+			);
+			path = PaymentMethodScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,6 +580,7 @@
 				DB9BA89328DA188200693AD1 /* FavoriteScreen.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
+				DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */,
 				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
 				DBE6E77428DCE7D700F77C1D /* CartScreen.swift in Sources */,
