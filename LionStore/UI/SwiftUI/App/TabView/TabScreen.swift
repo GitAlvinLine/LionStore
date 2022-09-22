@@ -21,7 +21,7 @@ struct TabScreen: View {
                 case .Cart:
                     EmptyView()
                 case .Favorite:
-                    EmptyView()
+                    FavoriteScreen()
                 case .Profile:
                     ProfileTabScreen { option in
                         signOut(option)
