@@ -72,11 +72,16 @@ struct FavoriteScreen: View {
         ZStack {
             VStack {
                 HStack {
+                    Text("Favorites")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(AppColor.lightPurple.value)
                     Spacer()
                     MenuButton(sortType: $sortType)
                     
                 }
                 .padding(.trailing, 25)
+                .padding(.leading, 25)
                 
                 List {
                     ForEach(favoriteProducts) { product in
