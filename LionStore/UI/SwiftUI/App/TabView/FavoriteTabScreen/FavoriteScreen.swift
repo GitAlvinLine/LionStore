@@ -159,6 +159,7 @@ struct FavoriteCellRow: View {
                     Text("USD40")
                         .font(.system(size: 14, weight: .semibold, design: .default))
                         .foregroundColor(.red)
+                        .strikethrough(true, color: .red)
                 }
                 
                 HStack(spacing: 10) {
