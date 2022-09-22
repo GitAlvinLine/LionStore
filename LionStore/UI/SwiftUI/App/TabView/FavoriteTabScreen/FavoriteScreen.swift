@@ -21,6 +21,7 @@ struct SortOption: Identifiable {
 struct FavoriteScreen: View {
     
     @State private var sortType: SortType = .price
+    @State private var listsCount: Int = 3
     
     var body: some View {
         ZStack {
@@ -33,11 +34,11 @@ struct FavoriteScreen: View {
                 .padding(.trailing, 25)
                 
                 List {
-                    ForEach(0..<25, id: \.self) { _ in
+                    ForEach(0..<listsCount, id: \.self) { _ in
                         FavoriteCellRow()
                             .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                 RemoveCartButton {
-                                    print("Remove Cart Item")
+                                    listsCount -= 1
                                 }
                             }
                     }
@@ -140,6 +141,7 @@ struct FavoriteListDetails: View {
 }
 
 struct FavoriteCellRow: View {
+    @State private var quantity: Int = 1
     
     var body: some View {
         HStack {
@@ -164,7 +166,7 @@ struct FavoriteCellRow: View {
                 
                 HStack(spacing: 10) {
                     Button {
-                        print("add quantity")
+                        quantity += 1
                     } label: {
                         Image(systemName: "plus")
                             .resizable()
@@ -173,11 +175,11 @@ struct FavoriteCellRow: View {
                             .padding(10)
                     }
                     
-                    Text("2")
+                    Text("\(quantity)")
                         .font(.system(size: 16, weight: .semibold, design: .default))
                     
                     Button {
-                        print("subtract quantity")
+                        quantity -= 1
                     } label: {
                         Image(systemName: "minus")
                             .font(.system(size: 30, weight: .heavy, design: .default))
