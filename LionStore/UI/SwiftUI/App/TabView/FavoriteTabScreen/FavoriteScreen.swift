@@ -88,7 +88,7 @@ struct FavoriteScreen: View {
                                     }
                                 }
                             }
-                    }g
+                    }
                 }
                 .listStyle(.plain)
                 Spacer()
