@@ -18,10 +18,55 @@ struct SortOption: Identifiable {
     var text: String
 }
 
+struct FavoriteProduct: Identifiable {
+    var id = UUID()
+    let name: String
+    let retailPrice: Int
+    let salePrice: Int
+    var quantity: Int
+    let imageName: String
+}
+
 struct FavoriteScreen: View {
     
     @State private var sortType: SortType = .price
-    @State private var listsCount: Int = 3
+    @State private var favoriteProducts: [FavoriteProduct] = [
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch")
+    ]
     
     var body: some View {
         ZStack {
@@ -34,14 +79,16 @@ struct FavoriteScreen: View {
                 .padding(.trailing, 25)
                 
                 List {
-                    ForEach(0..<listsCount, id: \.self) { _ in
+                    ForEach(favoriteProducts) { product in
                         FavoriteCellRow()
                             .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                 RemoveCartButton {
-                                    listsCount -= 1
+                                    withAnimation {
+                                        favoriteProducts.removeAll{ $0.id == product.id }
+                                    }
                                 }
                             }
-                    }
+                    }g
                 }
                 .listStyle(.plain)
                 Spacer()
