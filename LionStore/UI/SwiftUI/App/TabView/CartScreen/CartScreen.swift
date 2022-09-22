@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct CartScreen: View {
+    @State private var selectedSortOption: SortType = .price
+    
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
+                    HStack {
+                        Text("Cart")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundColor(AppColor.lightPurple.value)
+                        Spacer()
+                        MenuButton(sortType: $selectedSortOption)
+                    }
+                    .padding(.leading, 25)
+                    .padding(.trailing, 25)
+                    
                     Spacer()
                     ProceedCheckoutButton()
                 }
@@ -42,7 +55,10 @@ struct ProceedCheckoutButton: View {
 struct CartScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CartScreen()
+            ZStack {
+                CartScreen()
+            }
+            .navigationBarHidden(true)
         }
     }
 }

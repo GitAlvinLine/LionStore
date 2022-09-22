@@ -113,7 +113,7 @@ struct MenuButton: View {
     
     private let sortOptions: [SortOption] = [
         SortOption(type: .price,
-                   text: "Sort by Price"),
+                   text: "Sort by price"),
         SortOption(type: .date,
                    text: "Sort by date")
     ]
