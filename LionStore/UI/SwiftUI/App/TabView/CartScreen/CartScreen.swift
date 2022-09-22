@@ -9,6 +9,43 @@ import SwiftUI
 
 struct CartScreen: View {
     @State private var selectedSortOption: SortType = .price
+    @State private var favoriteProducts: [FavoriteProduct] = [
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch"),
+        FavoriteProduct(name: "Brown Stone Bracelet",
+                        retailPrice: 40,
+                        salePrice: 24,
+                        quantity: 1,
+                        imageName: "applewatch")
+    ]
     
     var body: some View {
         NavigationView {
@@ -25,12 +62,37 @@ struct CartScreen: View {
                     .padding(.leading, 25)
                     .padding(.trailing, 25)
                     
+                    List {
+                        ForEach(favoriteProducts) { product in
+                            FavoriteCellRow()
+                                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                    RemoveCartButton {
+                                        withAnimation {
+                                            favoriteProducts.removeAll{ $0.id == product.id }
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                    .listStyle(.plain)
+                    
                     Spacer()
+                    FavoriteListDetails(favoriteProducts.count, totalPrice)
+                        .padding(.bottom, 60)
                     ProceedCheckoutButton()
+                        .padding(.bottom, 20)
                 }
             }
             .navigationBarHidden(true)
         }
+    }
+    
+    private var totalPrice: Double {
+        let total = favoriteProducts.reduce(0) { partialResult, product in
+            partialResult + product.salePrice
+        }
+        
+        return Double(total)
     }
 }
 

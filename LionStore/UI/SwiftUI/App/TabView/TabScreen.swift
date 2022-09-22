@@ -19,7 +19,7 @@ struct TabScreen: View {
                 case .Home:
                     HomeScreen()
                 case .Cart:
-                    EmptyView()
+                    CartScreen()
                 case .Favorite:
                     FavoriteScreen()
                 case .Profile:
