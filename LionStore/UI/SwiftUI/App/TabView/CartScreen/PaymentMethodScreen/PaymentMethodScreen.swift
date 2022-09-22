@@ -8,13 +8,72 @@
 import SwiftUI
 
 struct PaymentMethodScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State private var cvv: String = ""
+    @State private var month: String = ""
+    @State private var year: String = ""
+    
     var body: some View {
-        Text("Payment Method")
+        ZStack {
+            VStack {
+                HStack {
+                    BackButton(foregroundColor: .lightPurple) {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                }
+                
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("cvv/cvc")
+                            .padding(.leading, 45)
+                        TextField("000", text: $cvv)
+                            .padding(.leading, 50)
+                            .padding(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(AppColor.lightPurple.value, lineWidth: 2)
+                                    .padding(.leading, 45)
+                                    .padding(.trailing, 20)
+                            )
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Exp. Date")
+                            .padding(.trailing, 45)
+                        HStack {
+                            TextField("00", text: $month)
+                                .padding(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(AppColor.lightPurple.value, lineWidth: 2)
+                                )
+                            TextField("00", text: $year)
+                                .padding(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(AppColor.lightPurple.value, lineWidth: 2)
+                                )
+                        }
+                    }
+                    .padding(.trailing, 45)
+                }
+                
+                Spacer()
+                CustomButton(text: "Submit Order",
+                             textColor: .white,
+                             bg: .lightPurple) {
+                    print()
+                }
+            }
+        }
+        .navigationBarHidden(true)
     }
 }
 
 struct PaymentMethodScreen_Previews: PreviewProvider {
     static var previews: some View {
         PaymentMethodScreen()
+            .navigationBarHidden(true)
     }
 }
