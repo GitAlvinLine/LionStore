@@ -78,7 +78,8 @@ struct CartScreen: View {
                     
                     Spacer()
                     FavoriteListDetails(favoriteProducts.count, totalPrice)
-                        .padding(.bottom, 60)
+                        .padding(.top, 20)
+                        .padding(.bottom, 20)
                     ProceedCheckoutButton()
                         .padding(.bottom, 20)
                 }
