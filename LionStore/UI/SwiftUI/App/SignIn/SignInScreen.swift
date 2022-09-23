@@ -11,6 +11,7 @@ struct SignInScreen: View {
     @State private var email: String = ""
     @State private var showPassword: Bool = false
     @State private var password: String = ""
+    @FocusState private var isInputActive: Bool
     
     let optionCompletion: (OnboardingOption) -> Void
     
@@ -26,10 +27,12 @@ struct SignInScreen: View {
                         EmailTextField(image: .email,
                                        placeholder: "Email",
                                        email: $email)
+                        .focused($isInputActive)
                         
                         PasswordTextField(image: .passwordLock,
                                           showPassword: $showPassword,
                                           password: $password)
+                        .focused($isInputActive)
                     }
                     
                     HStack {
@@ -43,12 +46,14 @@ struct SignInScreen: View {
                     }
                     .padding(.trailing, 45)
                     .padding(.bottom, 40)
+                    .opacity(isInputActive ? 0 : 1)
                     
                     CustomButton(text: "Sign In",
                                  textColor: .white,
                                  bg: .lightPurple) {
                         optionCompletion(.homeScreen)
                     }
+                                 .opacity(isInputActive ? 0 : 1)
                     
                     Spacer()
                     
@@ -56,8 +61,10 @@ struct SignInScreen: View {
                                      textColor: .lightPurple) {
                         optionCompletion(.signUp)
                     }
+                                     .opacity(isInputActive ? 0 : 1)
 
                 }
+                .toolBarDoneButton(_isInputActive)
             }
             .navigationBarHidden(true)
         }
