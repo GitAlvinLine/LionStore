@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabScreen: View {
     @State private var selection: TabText = .Profile
+    @State private var showCardAlert: Bool = false
     
     let signOut: (OnboardingOption) -> Void
     
@@ -19,7 +20,8 @@ struct TabScreen: View {
                 case .Home:
                     HomeScreen()
                 case .Cart:
-                    CartScreen(tabSelection: $selection)
+                    CartScreen(tabSelection: $selection,
+                               showCardAlert: $showCardAlert)
                 case .Favorite:
                     FavoriteScreen()
                 case .Profile:
@@ -31,6 +33,11 @@ struct TabScreen: View {
                 TabViewBar(selection: $selection)
             }
             .ignoresSafeArea()
+            .disabled(showCardAlert)
+            
+            if showCardAlert {
+                RemoveCardAlert(showRemoveCardAlert: $showCardAlert)
+            }
         }
     }
 }

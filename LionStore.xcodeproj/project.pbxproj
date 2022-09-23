@@ -52,6 +52,7 @@
 		DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */; };
 		DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */; };
 		DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */; };
+		DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScreen.swift; sourceTree = "<group>"; };
 		DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCartScreen.swift; sourceTree = "<group>"; };
 		DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulPurchaseScreen.swift; sourceTree = "<group>"; };
+		DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCardAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +447,7 @@
 			children = (
 				DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */,
 				DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */,
+				DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */,
 			);
 			path = PaymentMethodScreen;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */,
+				DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB3ADC7D28D0204600CFEC78 /* HomeScreen.swift in Sources */,
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,

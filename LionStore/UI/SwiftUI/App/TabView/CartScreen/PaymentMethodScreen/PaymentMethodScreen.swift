@@ -10,6 +10,7 @@ import SwiftUI
 struct PaymentMethodScreen: View {
     @Environment(\.presentationMode) var presentationMode
     let tabSelection: (TabText) -> Void
+    let showCardAlert: (Bool) -> Void
     
     @State private var cardholderName: String = ""
     @State private var cardNumber: String = ""
@@ -18,6 +19,7 @@ struct PaymentMethodScreen: View {
     @State private var year: String = ""
     
     @State private var showSuccessOrder: Bool = false
+    
     
     var body: some View {
         ZStack {
@@ -37,7 +39,7 @@ struct PaymentMethodScreen: View {
                         }
                         
                         Button(role: .destructive) {
-                            print("remove card")
+                            self.showCardAlert(true)
                         } label: {
                             Text("Remove Card")
                         }
@@ -127,7 +129,7 @@ struct PaymentMethodScreen: View {
 
 struct PaymentMethodScreen_Previews: PreviewProvider {
     static var previews: some View {
-        PaymentMethodScreen { _ in }
+        PaymentMethodScreen { _ in } showCardAlert: { _ in }
             .navigationBarHidden(true)
     }
 }

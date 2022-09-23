@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CartScreen: View {
     @Binding var tabSelection: TabText
+    @Binding var showCardAlert: Bool
     @State private var selectedSortOption: SortType = .price
     @State private var favoriteProducts: [FavoriteProduct] = [
         FavoriteProduct(name: "Brown Stone Bracelet",
@@ -115,6 +116,8 @@ struct CartScreen: View {
                         .padding(.bottom, 20)
                     ProceedCheckoutButton { tabText in
                         tabSelection = tabText
+                    } showCardAlert: { showAlert in
+                        self.showCardAlert = showAlert
                     }
                         .padding(.bottom, 20)
                 }
@@ -139,11 +142,14 @@ struct CartScreen: View {
 
 struct ProceedCheckoutButton: View {
     let tabSelection: (TabText) -> Void
+    let showCardAlert: (Bool) -> Void
     
     var body: some View {
         NavigationLink {
             PaymentMethodScreen { tabText in
                 tabSelection(tabText)
+            } showCardAlert: { showAlert in
+                showCardAlert(showAlert)
             }
         } label: {
             Text("Proceed to Checkout")
@@ -166,7 +172,8 @@ struct CartScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ZStack {
-                CartScreen(tabSelection: .constant(.Home))
+                CartScreen(tabSelection: .constant(.Home),
+                           showCardAlert: .constant(false))
             }
             .navigationBarHidden(true)
         }
