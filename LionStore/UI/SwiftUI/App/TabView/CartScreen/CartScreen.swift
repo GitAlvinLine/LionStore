@@ -47,41 +47,75 @@ struct CartScreen: View {
                         imageName: "applewatch")
     ]
     
+    private let sortOptions: [SortOption] = [
+        SortOption(type: .price,
+                   text: "Sort by price"),
+        SortOption(type: .date,
+                   text: "Sort by date")
+    ]
+    
     var body: some View {
         NavigationView {
             ZStack {
-                VStack {
-                    HStack {
-                        Text("Cart")
-                            .font(.largeTitle)
-                            .bold()
-                            .foregroundColor(AppColor.lightPurple.value)
-                        Spacer()
-                        MenuButton(sortType: $selectedSortOption)
-                    }
-                    .padding(.leading, 25)
-                    .padding(.trailing, 25)
-                    
-                    List {
-                        ForEach(favoriteProducts) { product in
-                            FavoriteCellRow()
-                                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                                    RemoveCartButton {
-                                        withAnimation {
-                                            favoriteProducts.removeAll{ $0.id == product.id }
-                                        }
+                switch favoriteProducts.isEmpty {
+                case true:
+                    EmptyCartScreen()
+                case false:
+                    VStack {
+                        HStack {
+                            Text("Cart")
+                                .font(.largeTitle)
+                                .bold()
+                                .foregroundColor(AppColor.lightPurple.value)
+                            Spacer()
+                            Menu {
+                                ForEach(sortOptions) { option in
+                                    MenuSortOptionButton(sortOption: option,
+                                                         selectedSortType: $selectedSortOption) { _ in
+                                        
                                     }
                                 }
+                                
+                                Button(role: .destructive) {
+                                    self.favoriteProducts.removeAll()
+                                } label: {
+                                    Text("Remove all items")
+                                }
+                                
+                            } label: {
+                                Image("optionsIcon")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 30, height: 30)
+                                    .padding(10)
+                            }
+                            .foregroundColor(AppColor.lightPurple.value)
+
                         }
+                        .padding(.leading, 25)
+                        .padding(.trailing, 25)
+                        
+                        List {
+                            ForEach(favoriteProducts) { product in
+                                FavoriteCellRow()
+                                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                        RemoveCartButton {
+                                            withAnimation {
+                                                favoriteProducts.removeAll{ $0.id == product.id }
+                                            }
+                                        }
+                                    }
+                            }
+                        }
+                        .listStyle(.plain)
+                        
+                        Spacer()
+                        FavoriteListDetails(favoriteProducts.count, totalPrice)
+                            .padding(.top, 20)
+                            .padding(.bottom, 20)
+                        ProceedCheckoutButton()
+                            .padding(.bottom, 20)
                     }
-                    .listStyle(.plain)
-                    
-                    Spacer()
-                    FavoriteListDetails(favoriteProducts.count, totalPrice)
-                        .padding(.top, 20)
-                        .padding(.bottom, 20)
-                    ProceedCheckoutButton()
-                        .padding(.bottom, 20)
                 }
             }
             .navigationBarHidden(true)
@@ -115,6 +149,12 @@ struct ProceedCheckoutButton: View {
                         .foregroundColor(AppColor.lightPurple.value)
                 )
         }
+    }
+}
+
+struct EmptyCartScreen: View {
+    var body: some View {
+        Text("Empty Cart")
     }
 }
 
