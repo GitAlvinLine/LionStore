@@ -51,6 +51,7 @@
 		DBE6E77428DCE7D700F77C1D /* CartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77328DCE7D700F77C1D /* CartScreen.swift */; };
 		DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */; };
 		DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */; };
+		DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		DBE6E77328DCE7D700F77C1D /* CartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreen.swift; sourceTree = "<group>"; };
 		DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScreen.swift; sourceTree = "<group>"; };
 		DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCartScreen.swift; sourceTree = "<group>"; };
+		DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulPurchaseScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */,
+				DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */,
 			);
 			path = PaymentMethodScreen;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				DB9F884528CD886200B7887B /* BackButton.swift in Sources */,
 				DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */,
 				DB9BA89328DA188200693AD1 /* FavoriteScreen.swift in Sources */,
+				DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
 				DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */,

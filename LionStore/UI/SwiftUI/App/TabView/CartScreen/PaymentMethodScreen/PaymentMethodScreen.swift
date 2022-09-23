@@ -95,18 +95,6 @@ struct PaymentMethodScreen: View {
     }
 }
 
-struct SuccessfulPurchaseScreen: View {
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        CustomButton(text: "Back to Home",
-                     textColor: .white,
-                     bg: .lightPurple) {
-            presentationMode.wrappedValue.dismiss()
-        }
-    }
-}
-
 struct PaymentMethodScreen_Previews: PreviewProvider {
     static var previews: some View {
         PaymentMethodScreen()
