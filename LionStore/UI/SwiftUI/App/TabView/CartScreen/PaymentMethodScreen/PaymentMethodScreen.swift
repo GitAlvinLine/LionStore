@@ -10,6 +10,7 @@ import SwiftUI
 struct PaymentMethodScreen: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var cardNumber: String = ""
     @State private var cvv: String = ""
     @State private var month: String = ""
     @State private var year: String = ""
@@ -23,6 +24,14 @@ struct PaymentMethodScreen: View {
                     BackButton(foregroundColor: .lightPurple) {
                         presentationMode.wrappedValue.dismiss()
                     }
+                }
+                
+                VStack(alignment: .leading) {
+                    Text("Card Number")
+                        .padding(.leading, 45)
+                    TextField("0000 0000 0000", text: $cardNumber)
+                        .padding(.leading, 10)
+                        .textFieldBorder(.lightPurple)
                 }
                 
                 HStack {
