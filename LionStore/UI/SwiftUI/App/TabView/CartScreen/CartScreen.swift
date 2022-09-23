@@ -113,7 +113,9 @@ struct CartScreen: View {
                     FavoriteListDetails(favoriteProducts.count, totalPrice)
                         .padding(.top, 20)
                         .padding(.bottom, 20)
-                    ProceedCheckoutButton()
+                    ProceedCheckoutButton { tabText in
+                        tabSelection = tabText
+                    }
                         .padding(.bottom, 20)
                 }
                 .fullScreenCover(isPresented: $cartIsEmpty) {
@@ -136,9 +138,13 @@ struct CartScreen: View {
 }
 
 struct ProceedCheckoutButton: View {
+    let tabSelection: (TabText) -> Void
+    
     var body: some View {
         NavigationLink {
-            PaymentMethodScreen()
+            PaymentMethodScreen { tabText in
+                tabSelection(tabText)
+            }
         } label: {
             Text("Proceed to Checkout")
                 .foregroundColor(.white)

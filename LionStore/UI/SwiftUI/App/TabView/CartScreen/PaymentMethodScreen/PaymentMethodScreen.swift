@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PaymentMethodScreen: View {
     @Environment(\.presentationMode) var presentationMode
+    let tabSelection: (TabText) -> Void
     
     @State private var cardholderName: String = ""
     @State private var cardNumber: String = ""
@@ -86,7 +87,10 @@ struct PaymentMethodScreen: View {
                     showSuccessOrder = true
                 }
                              .fullScreenCover(isPresented: $showSuccessOrder) {
-                                 SuccessfulPurchaseScreen()
+                                 SuccessfulPurchaseScreen { tabText in
+                                     presentationMode.wrappedValue.dismiss()
+                                     tabSelection(tabText)
+                                 }
                              }
             }
         }
@@ -97,7 +101,7 @@ struct PaymentMethodScreen: View {
 
 struct PaymentMethodScreen_Previews: PreviewProvider {
     static var previews: some View {
-        PaymentMethodScreen()
+        PaymentMethodScreen { _ in }
             .navigationBarHidden(true)
     }
 }
