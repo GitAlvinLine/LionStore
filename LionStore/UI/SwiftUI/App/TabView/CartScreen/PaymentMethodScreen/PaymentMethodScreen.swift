@@ -14,6 +14,8 @@ struct PaymentMethodScreen: View {
     @State private var month: String = ""
     @State private var year: String = ""
     
+    @State private var showSuccessOrder: Bool = false
+    
     var body: some View {
         ZStack {
             VStack {
@@ -63,11 +65,26 @@ struct PaymentMethodScreen: View {
                 CustomButton(text: "Submit Order",
                              textColor: .white,
                              bg: .lightPurple) {
-                    print()
+                    showSuccessOrder = true
                 }
+                             .fullScreenCover(isPresented: $showSuccessOrder) {
+                                 SuccessfulPurchaseScreen()
+                             }
             }
         }
         .navigationBarHidden(true)
+    }
+}
+
+struct SuccessfulPurchaseScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    var body: some View {
+        CustomButton(text: "Back to Home",
+                     textColor: .white,
+                     bg: .lightPurple) {
+            presentationMode.wrappedValue.dismiss()
+        }
     }
 }
 

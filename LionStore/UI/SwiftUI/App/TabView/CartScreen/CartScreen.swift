@@ -104,6 +104,9 @@ struct ProceedCheckoutButton: View {
         } label: {
             Text("Proceed to Checkout")
                 .foregroundColor(.white)
+                .frame(width: ScreenSize.width, height: 50)
+                .padding(.leading, -35)
+                .padding(.trailing, -35)
                 .background(
                     RoundedRectangle(cornerRadius: 10)
                         .padding(.leading, 35)
