@@ -100,7 +100,7 @@ struct CartScreen: View {
                         ForEach(cartProducts) { product in
                             FavoriteCellRow()
                                 .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                                    RemoveCartButton {
+                                    RemoveCartItemButton {
                                         withAnimation {
                                             cartProducts.removeAll{ $0.id == product.id }
                                         }

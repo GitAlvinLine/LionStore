@@ -87,7 +87,7 @@ struct FavoriteScreen: View {
                     ForEach(favoriteProducts) { product in
                         FavoriteCellRow()
                             .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                                RemoveCartButton {
+                                RemoveFavoriteItemButton {
                                     withAnimation {
                                         favoriteProducts.removeAll{ $0.id == product.id }
                                     }
@@ -255,7 +255,20 @@ struct FavoriteCellRow: View {
     }
 }
 
-struct RemoveCartButton: View {
+struct RemoveFavoriteItemButton: View {
+    let action: () -> Void
+    
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            Label("Remove from Favorites", systemImage: "trash")
+        }
+        .tint(.red)
+    }
+}
+
+struct RemoveCartItemButton: View {
     let action: () -> Void
     
     var body: some View {
