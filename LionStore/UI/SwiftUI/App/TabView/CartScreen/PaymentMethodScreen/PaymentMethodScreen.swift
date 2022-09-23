@@ -26,7 +26,33 @@ struct PaymentMethodScreen: View {
                     BackButton(foregroundColor: .lightPurple) {
                         presentationMode.wrappedValue.dismiss()
                     }
+                    
+                    Spacer()
+                    
+                    Menu {
+                        Button {
+                            print("make default")
+                        } label: {
+                            Text("Make Default")
+                        }
+                        
+                        Button(role: .destructive) {
+                            print("remove card")
+                        } label: {
+                            Text("Remove Card")
+                        }
+
+
+                    } label: {
+                        Image("optionsIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
+                            .padding(10)
+                    }
+                    .foregroundColor(AppColor.lightPurple.value)
                 }
+                .padding(.trailing, 20)
                 
                 VStack(alignment: .leading) {
                     Text("Cardholder name")
