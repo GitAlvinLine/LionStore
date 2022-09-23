@@ -53,6 +53,7 @@
 		DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */; };
 		DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */; };
 		DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */; };
+		DBE6E77F28DE6B9300F77C1D /* ToolBarDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77E28DE6B9300F77C1D /* ToolBarDoneButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCartScreen.swift; sourceTree = "<group>"; };
 		DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulPurchaseScreen.swift; sourceTree = "<group>"; };
 		DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCardAlert.swift; sourceTree = "<group>"; };
+		DBE6E77E28DE6B9300F77C1D /* ToolBarDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarDoneButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				DB51F94C28CBAEF8002D6A35 /* TextFieldBorder.swift */,
+				DBE6E77E28DE6B9300F77C1D /* ToolBarDoneButton.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB3ADC7D28D0204600CFEC78 /* HomeScreen.swift in Sources */,
+				DBE6E77F28DE6B9300F77C1D /* ToolBarDoneButton.swift in Sources */,
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,
 				DB3ADC8528D26B0500CFEC78 /* ProductDetailScreen.swift in Sources */,
 				DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */,

@@ -54,18 +54,7 @@ struct SignUpScreen: View {
                     }
                                      .opacity(isInputActive ? 0 : 1)
                 }
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
-                        
-                        Button {
-                            isInputActive = false
-                        } label: {
-                            Text("Done")
-                        }
-
-                    }
-                }
+                .toolBarDoneButton(_isInputActive)
             }
             .navigationBarHidden(true)
         }
