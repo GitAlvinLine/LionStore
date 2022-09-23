@@ -10,6 +10,7 @@ import SwiftUI
 struct ResetPasswordScreen: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var text: String = ""
+    @FocusState private var isInputActive: Bool
     
     var body: some View {
         ZStack {
@@ -27,6 +28,7 @@ struct ResetPasswordScreen: View {
                     placeholderColor: .textFieldBorder,
                     textFieldColor: .textFieldBorder,
                     text: $text)
+                .focused($isInputActive)
                 
                 CustomButton(text: "Next",
                              textColor: .white,
@@ -34,9 +36,11 @@ struct ResetPasswordScreen: View {
                     print()
                 }
                              .padding(.top, 20)
+                             .opacity(isInputActive ? 0 : 1)
 
                 Spacer()
             }
+            .toolBarDoneButton(_isInputActive)
         }
         .navigationBarHidden(true)
     }
