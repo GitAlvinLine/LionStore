@@ -48,6 +48,11 @@
 		DB9F884528CD886200B7887B /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F884428CD886200B7887B /* BackButton.swift */; };
 		DB9F884828CD899300B7887B /* RecoverAccountText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F884728CD899300B7887B /* RecoverAccountText.swift */; };
 		DB9F884A28CD8DE800B7887B /* ResetPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F884928CD8DE800B7887B /* ResetPasswordTextField.swift */; };
+		DBE6E77428DCE7D700F77C1D /* CartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77328DCE7D700F77C1D /* CartScreen.swift */; };
+		DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */; };
+		DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */; };
+		DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */; };
+		DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,11 @@
 		DB9F884428CD886200B7887B /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		DB9F884728CD899300B7887B /* RecoverAccountText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverAccountText.swift; sourceTree = "<group>"; };
 		DB9F884928CD8DE800B7887B /* ResetPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTextField.swift; sourceTree = "<group>"; };
+		DBE6E77328DCE7D700F77C1D /* CartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreen.swift; sourceTree = "<group>"; };
+		DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScreen.swift; sourceTree = "<group>"; };
+		DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCartScreen.swift; sourceTree = "<group>"; };
+		DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulPurchaseScreen.swift; sourceTree = "<group>"; };
+		DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCardAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +156,7 @@
 				DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */,
 				DB3ADC4328CE96A200CFEC78 /* TabView.swift */,
 				DB3ADC7B28D0201900CFEC78 /* HomeScreen */,
+				DBE6E77228DCE7B100F77C1D /* CartScreen */,
 				DB3ADC4028CE91E700CFEC78 /* ProfileTabScreen */,
 				DB9BA89128DA185D00693AD1 /* FavoriteTabScreen */,
 			);
@@ -421,6 +432,26 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		DBE6E77228DCE7B100F77C1D /* CartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DBE6E77328DCE7D700F77C1D /* CartScreen.swift */,
+				DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */,
+				DBE6E77528DD21E800F77C1D /* PaymentMethodScreen */,
+			);
+			path = CartScreen;
+			sourceTree = "<group>";
+		};
+		DBE6E77528DD21E800F77C1D /* PaymentMethodScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */,
+				DBE6E77A28DD400400F77C1D /* SuccessfulPurchaseScreen.swift */,
+				DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */,
+			);
+			path = PaymentMethodScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -556,14 +587,18 @@
 				DB9F884528CD886200B7887B /* BackButton.swift in Sources */,
 				DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */,
 				DB9BA89328DA188200693AD1 /* FavoriteScreen.swift in Sources */,
+				DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
+				DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */,
 				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
+				DBE6E77428DCE7D700F77C1D /* CartScreen.swift in Sources */,
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB3ADC8028D0263500CFEC78 /* CategoryCell.swift in Sources */,
+				DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */,
 				DB3ADC8228D02FB700CFEC78 /* ProductCell.swift in Sources */,
 				DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
@@ -579,6 +614,7 @@
 				DB51F96C28CC412D002D6A35 /* ShowPasswordButton.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */,
+				DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB3ADC7D28D0204600CFEC78 /* HomeScreen.swift in Sources */,
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,
@@ -744,7 +780,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"LionStore/Preview Content\"";
 				DEVELOPMENT_TEAM = 5GQA38WHMY;
 				ENABLE_PREVIEWS = YES;
@@ -777,7 +813,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"LionStore/Preview Content\"";
 				DEVELOPMENT_TEAM = 5GQA38WHMY;
 				ENABLE_PREVIEWS = YES;
