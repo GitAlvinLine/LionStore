@@ -11,7 +11,7 @@ struct CartScreen: View {
     @Binding var tabSelection: TabText
     @Binding var showCardAlert: Bool
     @State private var selectedSortOption: SortType = .price
-    @State private var favoriteProducts: [FavoriteProduct] = [
+    @State private var cartProducts: [FavoriteProduct] = [
         FavoriteProduct(name: "Brown Stone Bracelet",
                         retailPrice: 40,
                         salePrice: 24,
@@ -77,7 +77,7 @@ struct CartScreen: View {
                             }
                             
                             Button(role: .destructive) {
-                                self.favoriteProducts.removeAll()
+                                self.cartProducts.removeAll()
                                 self.cartIsEmpty = true
                             } label: {
                                 Text("Remove all items")
@@ -97,12 +97,12 @@ struct CartScreen: View {
                     .padding(.trailing, 25)
                     
                     List {
-                        ForEach(favoriteProducts) { product in
+                        ForEach(cartProducts) { product in
                             FavoriteCellRow()
                                 .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                     RemoveCartButton {
                                         withAnimation {
-                                            favoriteProducts.removeAll{ $0.id == product.id }
+                                            cartProducts.removeAll{ $0.id == product.id }
                                         }
                                     }
                                 }
@@ -111,7 +111,7 @@ struct CartScreen: View {
                     .listStyle(.plain)
                     
                     Spacer()
-                    FavoriteListDetails(favoriteProducts.count, totalPrice)
+                    FavoriteListDetails(cartProducts.count, totalPrice)
                         .padding(.top, 20)
                         .padding(.bottom, 20)
                     ProceedCheckoutButton { tabText in
@@ -132,7 +132,7 @@ struct CartScreen: View {
     }
     
     private var totalPrice: Double {
-        let total = favoriteProducts.reduce(0) { partialResult, product in
+        let total = cartProducts.reduce(0) { partialResult, product in
             partialResult + product.salePrice
         }
         
