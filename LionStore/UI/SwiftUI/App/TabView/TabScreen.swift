@@ -19,7 +19,7 @@ struct TabScreen: View {
                 case .Home:
                     HomeScreen()
                 case .Cart:
-                    CartScreen()
+                    CartScreen(tabSelection: $selection)
                 case .Favorite:
                     FavoriteScreen()
                 case .Profile:

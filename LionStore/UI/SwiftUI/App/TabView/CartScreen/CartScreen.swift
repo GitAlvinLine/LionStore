@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CartScreen: View {
+    @Binding var tabSelection: TabText
     @State private var selectedSortOption: SortType = .price
     @State private var favoriteProducts: [FavoriteProduct] = [
         FavoriteProduct(name: "Brown Stone Bracelet",
@@ -46,6 +47,8 @@ struct CartScreen: View {
                         quantity: 1,
                         imageName: "applewatch")
     ]
+    @State private var cartIsEmpty: Bool = false
+    
     
     private let sortOptions: [SortOption] = [
         SortOption(type: .price,
@@ -57,64 +60,65 @@ struct CartScreen: View {
     var body: some View {
         NavigationView {
             ZStack {
-                switch favoriteProducts.isEmpty {
-                case true:
-                    EmptyCartScreen()
-                case false:
-                    VStack {
-                        HStack {
-                            Text("Cart")
-                                .font(.largeTitle)
-                                .bold()
-                                .foregroundColor(AppColor.lightPurple.value)
-                            Spacer()
-                            Menu {
-                                ForEach(sortOptions) { option in
-                                    MenuSortOptionButton(sortOption: option,
-                                                         selectedSortType: $selectedSortOption) { _ in
-                                        
-                                    }
-                                }
-                                
-                                Button(role: .destructive) {
-                                    self.favoriteProducts.removeAll()
-                                } label: {
-                                    Text("Remove all items")
-                                }
-                                
-                            } label: {
-                                Image("optionsIcon")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 30, height: 30)
-                                    .padding(10)
-                            }
+                VStack {
+                    HStack {
+                        Text("Cart")
+                            .font(.largeTitle)
+                            .bold()
                             .foregroundColor(AppColor.lightPurple.value)
-
+                        Spacer()
+                        Menu {
+                            ForEach(sortOptions) { option in
+                                MenuSortOptionButton(sortOption: option,
+                                                     selectedSortType: $selectedSortOption) { _ in
+                                    
+                                }
+                            }
+                            
+                            Button(role: .destructive) {
+                                self.favoriteProducts.removeAll()
+                                self.cartIsEmpty = true
+                            } label: {
+                                Text("Remove all items")
+                            }
+                            
+                        } label: {
+                            Image("optionsIcon")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                                .padding(10)
                         }
-                        .padding(.leading, 25)
-                        .padding(.trailing, 25)
-                        
-                        List {
-                            ForEach(favoriteProducts) { product in
-                                FavoriteCellRow()
-                                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                                        RemoveCartButton {
-                                            withAnimation {
-                                                favoriteProducts.removeAll{ $0.id == product.id }
-                                            }
+                        .foregroundColor(AppColor.lightPurple.value)
+
+                    }
+                    .padding(.leading, 25)
+                    .padding(.trailing, 25)
+                    
+                    List {
+                        ForEach(favoriteProducts) { product in
+                            FavoriteCellRow()
+                                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                    RemoveCartButton {
+                                        withAnimation {
+                                            favoriteProducts.removeAll{ $0.id == product.id }
                                         }
                                     }
-                            }
+                                }
                         }
-                        .listStyle(.plain)
-                        
-                        Spacer()
-                        FavoriteListDetails(favoriteProducts.count, totalPrice)
-                            .padding(.top, 20)
-                            .padding(.bottom, 20)
-                        ProceedCheckoutButton()
-                            .padding(.bottom, 20)
+                    }
+                    .listStyle(.plain)
+                    
+                    Spacer()
+                    FavoriteListDetails(favoriteProducts.count, totalPrice)
+                        .padding(.top, 20)
+                        .padding(.bottom, 20)
+                    ProceedCheckoutButton()
+                        .padding(.bottom, 20)
+                }
+                .fullScreenCover(isPresented: $cartIsEmpty) {
+                    EmptyCartScreen { tabText in
+                        tabSelection = tabText
                     }
                 }
             }
@@ -156,7 +160,7 @@ struct CartScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ZStack {
-                CartScreen()
+                CartScreen(tabSelection: .constant(.Home))
             }
             .navigationBarHidden(true)
         }
