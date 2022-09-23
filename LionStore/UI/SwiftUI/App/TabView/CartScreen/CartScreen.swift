@@ -152,12 +152,6 @@ struct ProceedCheckoutButton: View {
     }
 }
 
-struct EmptyCartScreen: View {
-    var body: some View {
-        Text("Empty Cart")
-    }
-}
-
 struct CartScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

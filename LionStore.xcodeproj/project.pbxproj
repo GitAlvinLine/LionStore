@@ -50,6 +50,7 @@
 		DB9F884A28CD8DE800B7887B /* ResetPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F884928CD8DE800B7887B /* ResetPasswordTextField.swift */; };
 		DBE6E77428DCE7D700F77C1D /* CartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77328DCE7D700F77C1D /* CartScreen.swift */; };
 		DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */; };
+		DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		DB9F884928CD8DE800B7887B /* ResetPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTextField.swift; sourceTree = "<group>"; };
 		DBE6E77328DCE7D700F77C1D /* CartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartScreen.swift; sourceTree = "<group>"; };
 		DBE6E77628DD21FE00F77C1D /* PaymentMethodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodScreen.swift; sourceTree = "<group>"; };
+		DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCartScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE6E77328DCE7D700F77C1D /* CartScreen.swift */,
+				DBE6E77828DD39EC00F77C1D /* EmptyCartScreen.swift */,
 				DBE6E77528DD21E800F77C1D /* PaymentMethodScreen */,
 			);
 			path = CartScreen;
@@ -588,6 +591,7 @@
 				DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB3ADC8028D0263500CFEC78 /* CategoryCell.swift in Sources */,
+				DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */,
 				DB3ADC8228D02FB700CFEC78 /* ProductCell.swift in Sources */,
 				DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
