@@ -7,29 +7,34 @@
 
 import XCTest
 
+struct LoginCredentials {
+    var email: String
+    var password: String
+}
+
 class FirebaseAuthLoader {
     let client: FirebaseAuthClient
+    let credentials: LoginCredentials
     
-    init(client: FirebaseAuthClient) {
+    init(credentials: LoginCredentials, client: FirebaseAuthClient) {
         self.client = client
+        self.credentials = credentials
     }
     
     func signIn() {
-        client.signIn(with: "abc@gmail.com", password: "Xjf(8949;")
+        client.signIn(with: credentials)
     }
 }
 
 protocol FirebaseAuthClient {
-    func signIn(with email: String, password: String)
+    func signIn(with credentials: LoginCredentials)
 }
 
 class FirebaseAuthClientSpy: FirebaseAuthClient {
-    var userEmail: String?
-    var userPassword: String?
+    var userCredentials: LoginCredentials?
     
-    func signIn(with email: String, password: String) {
-        userEmail = email
-        userPassword = password
+    func signIn(with credentials: LoginCredentials) {
+        userCredentials = credentials
     }
 }
 
@@ -37,20 +42,22 @@ class FirebaseAuthLoaderTests: XCTestCase {
     
     func test_init_doesNotRequestSignInFromFirebaseAuth() {
         let client = FirebaseAuthClientSpy()
-        let _ = FirebaseAuthLoader(client: client)
+        let credentials = LoginCredentials(email: "", password: "")
+        let _ = FirebaseAuthLoader(credentials: credentials, client: client)
         
-        XCTAssertNil(client.userEmail)
-        XCTAssertNil(client.userPassword)
+        XCTAssertNil(client.userCredentials?.email)
+        XCTAssertNil(client.userCredentials?.password)
     }
     
     func test_signIn_requestsSignInFromFirebaseAuth() {
         let client = FirebaseAuthClientSpy()
-        let sut = FirebaseAuthLoader(client: client)
+        let credentials = LoginCredentials(email: "", password: "")
+        let sut = FirebaseAuthLoader(credentials: credentials, client: client)
         
         sut.signIn()
         
-        XCTAssertNotNil(client.userEmail)
-        XCTAssertNotNil(client.userPassword)
+        XCTAssertNotNil(client.userCredentials?.email)
+        XCTAssertNotNil(client.userCredentials?.password)
     }
     
 }
