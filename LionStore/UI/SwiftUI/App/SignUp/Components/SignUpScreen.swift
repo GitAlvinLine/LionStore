@@ -12,40 +12,51 @@ struct SignUpScreen: View {
     @State private var phoneNumber: String = ""
     @State private var password: String = ""
     @State private var showPassword: Bool = false
+    @FocusState private var isInputActive: Bool
     
     let optionCompletion: (OnboardingOption) -> Void
     
     var body: some View {
-        VStack {
-            AppLogo(image: .appLogo)
-            
-            Spacer()
-            
-            EmailTextField(image: .email,
-                           placeholder: "Email",
-                           email: $email)
-            
-            PhoneTextField(image: .mobilePhone,
-                           placeholder: "Mobile Number",
-                           phoneNumber: $phoneNumber)
-            
-            PasswordTextField(image: .passwordLock,
-                              showPassword: $showPassword,
-                              password: $password)
-            
-            CustomButton(text: "Create an account",
-                         textColor: .white,
-                         bg: .lightPurple) {
-                optionCompletion(.homeScreen)
-            }
-            
-            Spacer()
+        NavigationView {
+            ZStack {
+                VStack {
+                    AppLogo(image: .appLogo)
+                    
+                    Spacer()
+                    
+                    EmailTextField(image: .email,
+                                   placeholder: "Email",
+                                   email: $email)
+                    .focused($isInputActive)
+                    
+                    PhoneTextField(image: .mobilePhone,
+                                   placeholder: "Mobile Number",
+                                   phoneNumber: $phoneNumber)
+                    .focused($isInputActive)
+                    
+                    PasswordTextField(image: .passwordLock,
+                                      showPassword: $showPassword,
+                                      password: $password)
+                    .focused($isInputActive)
+                    
+                    CustomButton(text: "Create an account",
+                                 textColor: .white,
+                                 bg: .lightPurple) {
+                        optionCompletion(.homeScreen)
+                    }
+                                 .opacity(isInputActive ? 0 : 1)
+                    
+                    Spacer()
 
-            AskAccountButton(text: "Already have an account?",
-                             textColor: .lightPurple) {
-                optionCompletion(.signIn)
+                    AskAccountButton(text: "Already have an account?",
+                                     textColor: .lightPurple) {
+                        optionCompletion(.signIn)
+                    }
+                                     .opacity(isInputActive ? 0 : 1)
+                }
+                .toolBarDoneButton(_isInputActive)
             }
-
+            .navigationBarHidden(true)
         }
     }
 }

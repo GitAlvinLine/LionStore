@@ -22,8 +22,8 @@ struct ResetPasswordTextField: View {
                         .bold()
                     Spacer()
                 }
-                TextField("",
-                          text: $text)
+                TextField("", text: $text)
+                    .keyboardType(.emailAddress)
             }
             .padding(.leading, 15)
         }

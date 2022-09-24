@@ -15,6 +15,7 @@ struct EditProfileScreen: View {
     @State private var zipCode: String = ""
     @State private var phoneNumber: String = ""
     @State private var checkedBox: Bool = false
+    @FocusState private var isInputActive: Bool
     
     var body: some View {
         ZStack {
@@ -22,6 +23,7 @@ struct EditProfileScreen: View {
                 BackButton(foregroundColor: .lightPurple) {
                     presentationMode.wrappedValue.dismiss()
                 }
+                .opacity(isInputActive ? 0 : 1)
                 
                 VStack(spacing: 40) {
                     VStack(spacing: 20) {
@@ -34,6 +36,7 @@ struct EditProfileScreen: View {
                         
                         TextField("Tanya Robinson", text: $name)
                             .font(.title3)
+                            .focused($isInputActive)
                             .padding(.leading, 45)
                             .padding(.trailing, 35)
                             .background(
@@ -55,6 +58,7 @@ struct EditProfileScreen: View {
                         
                         TextField("123 Main St", text: $address)
                             .font(.title3)
+                            .focused($isInputActive)
                             .padding(.leading, 45)
                             .padding(.trailing, 35)
                             .background(
@@ -72,6 +76,7 @@ struct EditProfileScreen: View {
                                 .font(.system(size: 14, weight: .medium, design: .default))
                             TextField("Big Rock", text: $address)
                                 .padding(.leading, 10)
+                                .focused($isInputActive)
                                 .font(.title3)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10)
@@ -86,6 +91,8 @@ struct EditProfileScreen: View {
                             Text("ZIP Code")
                                 .font(.system(size: 14, weight: .medium, design: .default))
                             TextField("738749", text: $address)
+                                .keyboardType(.numberPad)
+                                .focused($isInputActive)
                                 .padding(.leading, 10)
                                 .font(.title3)
                                 .background(
@@ -107,6 +114,8 @@ struct EditProfileScreen: View {
                         .padding(.leading, 35)
                         
                         TextField("+962 790 688 4798", text: $address)
+                            .keyboardType(.numberPad)
+                            .focused($isInputActive)
                             .font(.title3)
                             .padding(.leading, 45)
                             .padding(.trailing, 35)
@@ -142,6 +151,7 @@ struct EditProfileScreen: View {
                         Spacer()
                     }
                     .padding(.leading, 35)
+                    .opacity(isInputActive ? 0 : 1)
                 }
                 .padding(.top, 40)
                 
@@ -152,7 +162,9 @@ struct EditProfileScreen: View {
                              bg: .lightPurple) {
                     presentationMode.wrappedValue.dismiss()
                 }
+                             .opacity(isInputActive ? 0 : 1)
             }
+            .toolBarDoneButton(_isInputActive)
         }
         .navigationBarHidden(true)
     }
