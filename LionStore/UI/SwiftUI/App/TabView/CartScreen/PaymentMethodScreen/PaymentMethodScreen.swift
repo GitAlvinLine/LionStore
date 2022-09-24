@@ -123,7 +123,6 @@ struct PaymentMethodScreen: View {
             }
         }
         .navigationBarHidden(true)
-        .ignoresSafeArea(.keyboard)
     }
 }
 
