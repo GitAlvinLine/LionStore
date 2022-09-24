@@ -60,6 +60,7 @@
 		DBE6E78C28DF9EEB00F77C1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */; };
 		DBE6E78E28DFAE3C00F77C1D /* AuthLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */; };
 		DBE6E79028DFAF1900F77C1D /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78F28DFAF1900F77C1D /* AuthUser.swift */; };
+		DBE6E79528DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoader.swift; sourceTree = "<group>"; };
 		DBE6E78F28DFAF1900F77C1D /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
+		DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				DB51F91428C82566002D6A35 /* UI */,
+				DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */,
 			);
 			path = LionStoreTests;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB51F91828C825C5002D6A35 /* OnboardingStoreTests.swift in Sources */,
+				DBE6E79528DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
