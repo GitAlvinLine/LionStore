@@ -20,6 +20,7 @@ struct PaymentMethodScreen: View {
     
     @State private var showSuccessOrder: Bool = false
     
+    @FocusState private var isInputActive: Bool
     
     var body: some View {
         ZStack {
@@ -28,6 +29,7 @@ struct PaymentMethodScreen: View {
                     BackButton(foregroundColor: .lightPurple) {
                         presentationMode.wrappedValue.dismiss()
                     }
+                    .opacity(isInputActive ? 0 : 1)
                     
                     Spacer()
                     
@@ -53,6 +55,7 @@ struct PaymentMethodScreen: View {
                             .padding(10)
                     }
                     .foregroundColor(AppColor.lightPurple.value)
+                    .opacity(isInputActive ? 0 : 1)
                 }
                 .padding(.trailing, 20)
                 
@@ -61,6 +64,7 @@ struct PaymentMethodScreen: View {
                         .padding(.leading, 45)
                     TextField("Cardholder Name", text: $cardholderName)
                         .padding(.leading, 10)
+                        .focused($isInputActive)
                         .textFieldBorder(.lightPurple)
                 }
                 
@@ -68,6 +72,8 @@ struct PaymentMethodScreen: View {
                     Text("Card Number")
                         .padding(.leading, 45)
                     TextField("0000 0000 0000", text: $cardNumber)
+                        .focused($isInputActive)
+                        .keyboardType(.numberPad)
                         .padding(.leading, 10)
                         .textFieldBorder(.lightPurple)
                 }
@@ -77,6 +83,8 @@ struct PaymentMethodScreen: View {
                         Text("cvv/cvc")
                             .padding(.leading, 45)
                         TextField("000", text: $cvv)
+                            .focused($isInputActive)
+                            .keyboardType(.numberPad)
                             .padding(.leading, 50)
                             .padding(10)
                             .overlay(
@@ -92,12 +100,16 @@ struct PaymentMethodScreen: View {
                             .padding(.trailing, 45)
                         HStack {
                             TextField("00", text: $month)
+                                .focused($isInputActive)
+                                .keyboardType(.numberPad)
                                 .padding(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
                                         .stroke(AppColor.lightPurple.value, lineWidth: 2)
                                 )
                             TextField("00", text: $year)
+                                .focused($isInputActive)
+                                .keyboardType(.numberPad)
                                 .padding(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)
@@ -120,10 +132,11 @@ struct PaymentMethodScreen: View {
                                      tabSelection(tabText)
                                  }
                              }
+                             .opacity(isInputActive ? 0 : 1)
             }
+            .toolBarDoneButton(_isInputActive)
         }
         .navigationBarHidden(true)
-        .ignoresSafeArea(.keyboard)
     }
 }
 
