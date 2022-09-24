@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct LionStoreApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     @State private var screen: OnboardingOption?
     
     var body: some Scene {
