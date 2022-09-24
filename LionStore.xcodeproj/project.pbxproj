@@ -58,6 +58,7 @@
 		DBE6E78428DF9DF000F77C1D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DBE6E78328DF9DF000F77C1D /* FirebaseAnalytics */; };
 		DBE6E78628DF9DF000F77C1D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBE6E78528DF9DF000F77C1D /* FirebaseAuth */; };
 		DBE6E78828DF9DF000F77C1D /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = DBE6E78728DF9DF000F77C1D /* FirebaseCrashlytics */; };
+		DBE6E78C28DF9EEB00F77C1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		DBE6E77C28DD50F300F77C1D /* RemoveCardAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCardAlert.swift; sourceTree = "<group>"; };
 		DBE6E77E28DE6B9300F77C1D /* ToolBarDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarDoneButton.swift; sourceTree = "<group>"; };
 		DBE6E78028DF9D4800F77C1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +251,7 @@
 		DB51F8D628C7AE3B002D6A35 /* LionStore */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */,
+				DBE6E78928DF9E8700F77C1D /* Main */,
 				DB51F90128C7D7BE002D6A35 /* UI */,
 				DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */,
 				DBE6E78028DF9D4800F77C1D /* GoogleService-Info.plist */,
@@ -464,6 +466,15 @@
 			path = PaymentMethodScreen;
 			sourceTree = "<group>";
 		};
+		DBE6E78928DF9E8700F77C1D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */,
+				DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -621,6 +632,7 @@
 				DB3ADC8028D0263500CFEC78 /* CategoryCell.swift in Sources */,
 				DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */,
 				DB3ADC8228D02FB700CFEC78 /* ProductCell.swift in Sources */,
+				DBE6E78C28DF9EEB00F77C1D /* AppDelegate.swift in Sources */,
 				DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
 				DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */,
