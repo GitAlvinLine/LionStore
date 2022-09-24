@@ -260,8 +260,7 @@
 				DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */,
 				DBE6E78028DF9D4800F77C1D /* GoogleService-Info.plist */,
 				DB51F8DD28C7AE3B002D6A35 /* Preview Content */,
-				DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */,
-				DBE6E78F28DFAF1900F77C1D /* AuthUser.swift */,
+				DBE6E79128DFB12000F77C1D /* AuthenticateFeature */,
 			);
 			path = LionStore;
 			sourceTree = "<group>";
@@ -479,6 +478,15 @@
 				DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DBE6E79128DFB12000F77C1D /* AuthenticateFeature */ = {
+			isa = PBXGroup;
+			children = (
+				DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */,
+				DBE6E78F28DFAF1900F77C1D /* AuthUser.swift */,
+			);
+			path = AuthenticateFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
