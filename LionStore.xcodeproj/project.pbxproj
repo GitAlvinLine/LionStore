@@ -59,6 +59,7 @@
 		DBE6E78628DF9DF000F77C1D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBE6E78528DF9DF000F77C1D /* FirebaseAuth */; };
 		DBE6E78828DF9DF000F77C1D /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = DBE6E78728DF9DF000F77C1D /* FirebaseCrashlytics */; };
 		DBE6E78C28DF9EEB00F77C1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */; };
+		DBE6E78E28DFAE3C00F77C1D /* AuthLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		DBE6E77E28DE6B9300F77C1D /* ToolBarDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarDoneButton.swift; sourceTree = "<group>"; };
 		DBE6E78028DF9D4800F77C1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DBE6E78B28DF9EEB00F77C1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 				DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */,
 				DBE6E78028DF9D4800F77C1D /* GoogleService-Info.plist */,
 				DB51F8DD28C7AE3B002D6A35 /* Preview Content */,
+				DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */,
 			);
 			path = LionStore;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				DB51F91028C8207C002D6A35 /* OnboardingOptionButton.swift in Sources */,
 				DB3ADC8528D26B0500CFEC78 /* ProductDetailScreen.swift in Sources */,
 				DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */,
+				DBE6E78E28DFAE3C00F77C1D /* AuthLoader.swift in Sources */,
 				DB9F884A28CD8DE800B7887B /* ResetPasswordTextField.swift in Sources */,
 				DB51F94A28CBA906002D6A35 /* AppLogo.swift in Sources */,
 			);
