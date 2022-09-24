@@ -6,29 +6,7 @@
 //
 
 import XCTest
-
-struct LoginCredentials {
-    var email: String
-    var password: String
-}
-
-class FirebaseAuthLoader {
-    let client: FirebaseAuthClient
-    let credentials: LoginCredentials
-    
-    init(credentials: LoginCredentials, client: FirebaseAuthClient) {
-        self.client = client
-        self.credentials = credentials
-    }
-    
-    func signIn() {
-        client.signIn(with: credentials)
-    }
-}
-
-protocol FirebaseAuthClient {
-    func signIn(with credentials: LoginCredentials)
-}
+import LionStore
 
 class FirebaseAuthLoaderTests: XCTestCase {
     

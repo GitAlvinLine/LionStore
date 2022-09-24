@@ -61,6 +61,8 @@
 		DBE6E78E28DFAE3C00F77C1D /* AuthLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */; };
 		DBE6E79028DFAF1900F77C1D /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E78F28DFAF1900F77C1D /* AuthUser.swift */; };
 		DBE6E79528DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */; };
+		DBE6E79828DFC99600F77C1D /* FirebaseAuthLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */; };
+		DBE6E79A28DFCA7500F77C1D /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		DBE6E78D28DFAE3C00F77C1D /* AuthLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoader.swift; sourceTree = "<group>"; };
 		DBE6E78F28DFAF1900F77C1D /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthLoaderTests.swift; sourceTree = "<group>"; };
+		DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthLoader.swift; sourceTree = "<group>"; };
+		DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 				DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */,
 				DBE6E78028DF9D4800F77C1D /* GoogleService-Info.plist */,
 				DB51F8DD28C7AE3B002D6A35 /* Preview Content */,
+				DBE6E79628DFC94900F77C1D /* AuthenticateAPI */,
 				DBE6E79128DFB12000F77C1D /* AuthenticateFeature */,
 			);
 			path = LionStore;
@@ -489,6 +494,15 @@
 			path = AuthenticateFeature;
 			sourceTree = "<group>";
 		};
+		DBE6E79628DFC94900F77C1D /* AuthenticateAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */,
+				DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */,
+			);
+			path = AuthenticateAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -636,6 +650,7 @@
 				DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
+				DBE6E79828DFC99600F77C1D /* FirebaseAuthLoader.swift in Sources */,
 				DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */,
 				DB9F883B28CC50D600B7887B /* ResetPasswordScreen.swift in Sources */,
 				DB51F93C28CB91D9002D6A35 /* CustomButton.swift in Sources */,
@@ -655,6 +670,7 @@
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
 				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
 				DB9F884828CD899300B7887B /* RecoverAccountText.swift in Sources */,
+				DBE6E79A28DFCA7500F77C1D /* LoginCredentials.swift in Sources */,
 				DB51F94828CBA773002D6A35 /* AppImages.swift in Sources */,
 				DB3ADC4428CE96A200CFEC78 /* TabView.swift in Sources */,
 				DB51F93F28CB9E6B002D6A35 /* EmailTextField.swift in Sources */,
