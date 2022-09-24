@@ -20,7 +20,6 @@
 		DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */; };
 		DB51F8DC28C7AE3B002D6A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */; };
 		DB51F8DF28C7AE3B002D6A35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */; };
-		DB51F8E928C7AE3B002D6A35 /* LionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8E828C7AE3B002D6A35 /* LionStoreTests.swift */; };
 		DB51F8F328C7AE3B002D6A35 /* LionStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8F228C7AE3B002D6A35 /* LionStoreUITests.swift */; };
 		DB51F8F528C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8F428C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift */; };
 		DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90328C7D857002D6A35 /* OnboardingScreen.swift */; };
@@ -96,7 +95,6 @@
 		DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB51F8E428C7AE3B002D6A35 /* LionStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB51F8E828C7AE3B002D6A35 /* LionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreTests.swift; sourceTree = "<group>"; };
 		DB51F8EE28C7AE3B002D6A35 /* LionStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB51F8F228C7AE3B002D6A35 /* LionStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreUITests.swift; sourceTree = "<group>"; };
 		DB51F8F428C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				DB51F91428C82566002D6A35 /* UI */,
-				DB51F8E828C7AE3B002D6A35 /* LionStoreTests.swift */,
 			);
 			path = LionStoreTests;
 			sourceTree = "<group>";
@@ -680,7 +677,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB51F91828C825C5002D6A35 /* OnboardingStoreTests.swift in Sources */,
-				DB51F8E928C7AE3B002D6A35 /* LionStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
