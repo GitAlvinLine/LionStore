@@ -20,8 +20,6 @@
 		DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8D728C7AE3B002D6A35 /* LionStoreApp.swift */; };
 		DB51F8DC28C7AE3B002D6A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */; };
 		DB51F8DF28C7AE3B002D6A35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */; };
-		DB51F8F328C7AE3B002D6A35 /* LionStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8F228C7AE3B002D6A35 /* LionStoreUITests.swift */; };
-		DB51F8F528C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F8F428C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift */; };
 		DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90328C7D857002D6A35 /* OnboardingScreen.swift */; };
 		DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90928C81EA2002D6A35 /* OnboardingTitle.swift */; };
 		DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB51F90B28C81F85002D6A35 /* OnboardingImage.swift */; };
@@ -73,13 +71,6 @@
 			remoteGlobalIDString = DB51F8D328C7AE3B002D6A35;
 			remoteInfo = LionStore;
 		};
-		DB51F8EF28C7AE3B002D6A35 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DB51F8CC28C7AE3B002D6A35 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DB51F8D328C7AE3B002D6A35;
-			remoteInfo = LionStore;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -98,9 +89,6 @@
 		DB51F8DB28C7AE3B002D6A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB51F8DE28C7AE3B002D6A35 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB51F8E428C7AE3B002D6A35 /* LionStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB51F8EE28C7AE3B002D6A35 /* LionStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB51F8F228C7AE3B002D6A35 /* LionStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreUITests.swift; sourceTree = "<group>"; };
-		DB51F8F428C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB51F90328C7D857002D6A35 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		DB51F90928C81EA2002D6A35 /* OnboardingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTitle.swift; sourceTree = "<group>"; };
 		DB51F90B28C81F85002D6A35 /* OnboardingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingImage.swift; sourceTree = "<group>"; };
@@ -153,13 +141,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DB51F8E128C7AE3B002D6A35 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB51F8EB28C7AE3B002D6A35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,7 +222,6 @@
 			children = (
 				DB51F8D628C7AE3B002D6A35 /* LionStore */,
 				DB51F8E728C7AE3B002D6A35 /* LionStoreTests */,
-				DB51F8F128C7AE3B002D6A35 /* LionStoreUITests */,
 				DB51F8D528C7AE3B002D6A35 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -251,7 +231,6 @@
 			children = (
 				DB51F8D428C7AE3B002D6A35 /* LionStore.app */,
 				DB51F8E428C7AE3B002D6A35 /* LionStoreTests.xctest */,
-				DB51F8EE28C7AE3B002D6A35 /* LionStoreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,15 +264,6 @@
 				DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */,
 			);
 			path = LionStoreTests;
-			sourceTree = "<group>";
-		};
-		DB51F8F128C7AE3B002D6A35 /* LionStoreUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DB51F8F228C7AE3B002D6A35 /* LionStoreUITests.swift */,
-				DB51F8F428C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift */,
-			);
-			path = LionStoreUITests;
 			sourceTree = "<group>";
 		};
 		DB51F90128C7D7BE002D6A35 /* UI */ = {
@@ -546,24 +516,6 @@
 			productReference = DB51F8E428C7AE3B002D6A35 /* LionStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DB51F8ED28C7AE3B002D6A35 /* LionStoreUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DB51F8FE28C7AE3B002D6A35 /* Build configuration list for PBXNativeTarget "LionStoreUITests" */;
-			buildPhases = (
-				DB51F8EA28C7AE3B002D6A35 /* Sources */,
-				DB51F8EB28C7AE3B002D6A35 /* Frameworks */,
-				DB51F8EC28C7AE3B002D6A35 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DB51F8F028C7AE3B002D6A35 /* PBXTargetDependency */,
-			);
-			name = LionStoreUITests;
-			productName = LionStoreUITests;
-			productReference = DB51F8EE28C7AE3B002D6A35 /* LionStoreUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -578,10 +530,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					DB51F8E328C7AE3B002D6A35 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = DB51F8D328C7AE3B002D6A35;
-					};
-					DB51F8ED28C7AE3B002D6A35 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = DB51F8D328C7AE3B002D6A35;
 					};
@@ -605,7 +553,6 @@
 			targets = (
 				DB51F8D328C7AE3B002D6A35 /* LionStore */,
 				DB51F8E328C7AE3B002D6A35 /* LionStoreTests */,
-				DB51F8ED28C7AE3B002D6A35 /* LionStoreUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -622,13 +569,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DB51F8E228C7AE3B002D6A35 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB51F8EC28C7AE3B002D6A35 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -700,15 +640,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB51F8EA28C7AE3B002D6A35 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DB51F8F528C7AE3B002D6A35 /* LionStoreUITestsLaunchTests.swift in Sources */,
-				DB51F8F328C7AE3B002D6A35 /* LionStoreUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -716,11 +647,6 @@
 			isa = PBXTargetDependency;
 			target = DB51F8D328C7AE3B002D6A35 /* LionStore */;
 			targetProxy = DB51F8E528C7AE3B002D6A35 /* PBXContainerItemProxy */;
-		};
-		DB51F8F028C7AE3B002D6A35 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DB51F8D328C7AE3B002D6A35 /* LionStore */;
-			targetProxy = DB51F8EF28C7AE3B002D6A35 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -945,42 +871,6 @@
 			};
 			name = Release;
 		};
-		DB51F8FF28C7AE3B002D6A35 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5GQA38WHMY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LionMGT.LionStoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LionStore;
-			};
-			name = Debug;
-		};
-		DB51F90028C7AE3B002D6A35 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5GQA38WHMY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LionMGT.LionStoreUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LionStore;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1007,15 +897,6 @@
 			buildConfigurations = (
 				DB51F8FC28C7AE3B002D6A35 /* Debug */,
 				DB51F8FD28C7AE3B002D6A35 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DB51F8FE28C7AE3B002D6A35 /* Build configuration list for PBXNativeTarget "LionStoreUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DB51F8FF28C7AE3B002D6A35 /* Debug */,
-				DB51F90028C7AE3B002D6A35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
