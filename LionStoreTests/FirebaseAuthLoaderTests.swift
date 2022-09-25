@@ -42,10 +42,10 @@ class FirebaseAuthLoaderTests: XCTestCase {
         let (sut, client) = makeSUT()
         
         client.error = NSError(domain: "Test", code: 0)
-        var capturedError: FirebaseAuthLoader.Error?
-        sut.signIn { error in  capturedError = error }
+        var capturedErrors = [FirebaseAuthLoader.Error]()
+        sut.signIn { capturedErrors.append($0) }
         
-        XCTAssertEqual(capturedError, .connectivity)
+        XCTAssertEqual(capturedErrors, [.connectivity])
     }
     
     // MARK: - Helpers
