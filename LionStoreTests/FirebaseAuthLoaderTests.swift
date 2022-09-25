@@ -59,16 +59,22 @@ class FirebaseAuthLoaderTests: XCTestCase {
     }
     
     private class FirebaseAuthClientSpy: FirebaseAuthClient {
-        var requestedCredentials: [LoginCredentials] = []
-        var completions = [(Error) -> Void]()
+        
+        private var messages = [
+            (credentials: LoginCredentials,
+             completion: (Error) -> Void)
+        ]()
+        
+        var requestedCredentials: [LoginCredentials] {
+            return messages.map { $0.credentials }
+        }
         
         func signIn(with credentials: LoginCredentials, completion: @escaping (Error) -> Void) {
-            completions.append(completion)
-            requestedCredentials.append(credentials)
+            messages.append((credentials, completion))
         }
         
         func complete(with error: Error, at index: Int = 0) {
-            completions[index](error)
+            messages[index].completion(error)
         }
     }
     
