@@ -24,7 +24,7 @@ final public class FirebaseAuthLoader {
         self.credentials = credentials
     }
     
-    public func signIn(completion: @escaping (Error) -> Void = { _ in }) {
+    public func signIn(completion: @escaping (Error) -> Void) {
         client.signIn(with: credentials) { error in
             completion(.connectivity)
         }

@@ -20,7 +20,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
         let credentials = LoginCredentials(email: "", password: "")
         let (sut, client) = makeSUT(credentials: credentials)
         
-        sut.signIn()
+        sut.signIn { _ in }
         
         XCTAssertEqual(client.requestedCredentials, [credentials])
     }
@@ -29,8 +29,8 @@ class FirebaseAuthLoaderTests: XCTestCase {
         let credentials = LoginCredentials(email: "", password: "")
         let (sut, client) = makeSUT(credentials: credentials)
         
-        sut.signIn()
-        sut.signIn()
+        sut.signIn { _ in }
+        sut.signIn { _ in }
         
         XCTAssertEqual(client.requestedCredentials, [
             LoginCredentials(email: "", password: ""),
