@@ -41,9 +41,11 @@ class FirebaseAuthLoaderTests: XCTestCase {
     func test_signIn_deliversErrorOnClientError() {
         let (sut, client) = makeSUT()
         
-        client.error = NSError(domain: "Test", code: 0)
         var capturedErrors = [FirebaseAuthLoader.Error]()
         sut.signIn { capturedErrors.append($0) }
+        
+        let clientError = NSError(domain: "Test", code: 0)
+        client.completions[0](clientError)
         
         XCTAssertEqual(capturedErrors, [.connectivity])
     }
@@ -59,11 +61,10 @@ class FirebaseAuthLoaderTests: XCTestCase {
     private class FirebaseAuthClientSpy: FirebaseAuthClient {
         var requestedCredentials: [LoginCredentials] = []
         var error: Error?
+        var completions = [(Error) -> Void]()
         
         func signIn(with credentials: LoginCredentials, completion: @escaping (Error) -> Void) {
-            if let error = error {
-                completion(error)
-            }
+            completions.append(completion)
             requestedCredentials.append(credentials)
         }
     }
