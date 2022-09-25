@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LoginCredentials {
+public struct LoginCredentials: Equatable {
     public var email: String
     public var password: String
     

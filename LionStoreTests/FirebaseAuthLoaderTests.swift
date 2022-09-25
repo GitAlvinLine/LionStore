@@ -13,8 +13,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
     func test_init_doesNotRequestSignInFromFirebaseAuth() {
         let (_, client) = makeSUT()
         
-        XCTAssertNil(client.userCredentials?.email)
-        XCTAssertNil(client.userCredentials?.password)
+        XCTAssertTrue(client.requestedCredentials.isEmpty)
     }
     
     func test_signIn_requestsSignInFromFirebaseAuth() {
@@ -23,8 +22,20 @@ class FirebaseAuthLoaderTests: XCTestCase {
         
         sut.signIn()
         
-        XCTAssertNotNil(client.userCredentials?.email)
-        XCTAssertNotNil(client.userCredentials?.password)
+        XCTAssertEqual(client.requestedCredentials, [credentials])
+    }
+    
+    func test_signInTwice_requestsSignInFromFirebaseAuthTwice() {
+        let credentials = LoginCredentials(email: "", password: "")
+        let (sut, client) = makeSUT(credentials: credentials)
+        
+        sut.signIn()
+        sut.signIn()
+        
+        XCTAssertEqual(client.requestedCredentials, [
+            LoginCredentials(email: "", password: ""),
+            LoginCredentials(email: "", password: "")
+        ])
     }
     
     // MARK: - Helpers
@@ -36,10 +47,10 @@ class FirebaseAuthLoaderTests: XCTestCase {
     }
     
     private class FirebaseAuthClientSpy: FirebaseAuthClient {
-        var userCredentials: LoginCredentials?
+        var requestedCredentials: [LoginCredentials] = []
         
         func signIn(with credentials: LoginCredentials) {
-            userCredentials = credentials
+            requestedCredentials.append(credentials)
         }
     }
     
