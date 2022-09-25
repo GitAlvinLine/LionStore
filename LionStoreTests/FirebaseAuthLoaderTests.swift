@@ -45,7 +45,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
         sut.signIn { capturedErrors.append($0) }
         
         let clientError = NSError(domain: "Test", code: 0)
-        client.completions[0](clientError)
+        client.complete(with: clientError)
         
         XCTAssertEqual(capturedErrors, [.connectivity])
     }
@@ -66,6 +66,10 @@ class FirebaseAuthLoaderTests: XCTestCase {
         func signIn(with credentials: LoginCredentials, completion: @escaping (Error) -> Void) {
             completions.append(completion)
             requestedCredentials.append(credentials)
+        }
+        
+        func complete(with error: Error, at index: Int = 0) {
+            completions[index](error)
         }
     }
     
