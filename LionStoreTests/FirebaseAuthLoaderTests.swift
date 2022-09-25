@@ -60,7 +60,6 @@ class FirebaseAuthLoaderTests: XCTestCase {
     
     private class FirebaseAuthClientSpy: FirebaseAuthClient {
         var requestedCredentials: [LoginCredentials] = []
-        var error: Error?
         var completions = [(Error) -> Void]()
         
         func signIn(with credentials: LoginCredentials, completion: @escaping (Error) -> Void) {
