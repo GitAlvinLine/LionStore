@@ -29,7 +29,7 @@ final public class FirebaseAuthLoader {
         client.signIn(with: credentials) { result in
             switch result {
             case .success(let uid):
-                completion(.success(AuthUser(uid: uid)))
+                completion(AuthUserMapper.map(uid))
             case .failure:
                 completion(.failure(.firebaseAuthError))
             }

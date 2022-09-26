@@ -62,6 +62,7 @@
 		DBE6E79828DFC99600F77C1D /* FirebaseAuthLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */; };
 		DBE6E79A28DFCA7500F77C1D /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */; };
 		DBE6E79C28E20D0600F77C1D /* FirebaseAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */; };
+		DBE6E79E28E212F500F77C1D /* AuthUserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79D28E212F500F77C1D /* AuthUserMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthLoader.swift; sourceTree = "<group>"; };
 		DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthClient.swift; sourceTree = "<group>"; };
+		DBE6E79D28E212F500F77C1D /* AuthUserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +474,7 @@
 				DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */,
 				DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */,
 				DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */,
+				DBE6E79D28E212F500F77C1D /* AuthUserMapper.swift */,
 			);
 			path = AuthenticateAPI;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */,
 				DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */,
+				DBE6E79E28E212F500F77C1D /* AuthUserMapper.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
 				DB3ADC7D28D0204600CFEC78 /* HomeScreen.swift in Sources */,
 				DBE6E77F28DE6B9300F77C1D /* ToolBarDoneButton.swift in Sources */,
