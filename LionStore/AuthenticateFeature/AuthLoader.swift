@@ -7,13 +7,12 @@
 
 import Foundation
 
-public enum AuthResult<Error: Swift.Error> {
+public enum AuthResult {
     case success(AuthUser)
     case failure(Error)
 }
 
 
 protocol AuthLoader {
-    associatedtype Error: Swift.Error
-    func authenticateUser(completion: @escaping (AuthResult<Error>) -> Void)
+    func authenticateUser(completion: @escaping (AuthResult) -> Void)
 }

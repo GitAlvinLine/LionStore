@@ -16,7 +16,7 @@ public final class FirebaseAuthLoader: AuthLoader {
         case firebaseAuthError
     }
     
-    public typealias Result = AuthResult<Error>
+    public typealias Result = AuthResult
     
     public init(credentials: LoginCredentials, client: FirebaseAuthClient) {
         self.client = client
@@ -31,7 +31,7 @@ public final class FirebaseAuthLoader: AuthLoader {
             case .success(let uid):
                 completion(AuthUserMapper.map(uid))
             case .failure:
-                completion(.failure(.firebaseAuthError))
+                completion(.failure(Error.firebaseAuthError))
             }
         }
     }

@@ -41,7 +41,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
     func test_signIn_deliversErrorOnFirebaseAuthError() {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: .failure(.firebaseAuthError), when: {
+        expect(sut, toCompleteWith: .failure(FirebaseAuthLoader.Error.firebaseAuthError), when: {
             let firebaseAuthError = NSError(domain: "Auth Error Code", code: 0)
             client.complete(with: firebaseAuthError)
         })
@@ -103,7 +103,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
             switch (receivedResult, expectedResult) {
             case let (.success(receivedResultItems), .success(expectedResult)):
                 XCTAssertEqual(receivedResultItems, expectedResult, file: file, line: line)
-            case let (.failure(receivedResult), .failure(expectedResult)):
+            case let (.failure(receivedResult as FirebaseAuthLoader.Error), .failure(expectedResult as FirebaseAuthLoader.Error)):
                 XCTAssertEqual(receivedResult, expectedResult, file: file, line: line)
             default:
                 XCTFail("Expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
