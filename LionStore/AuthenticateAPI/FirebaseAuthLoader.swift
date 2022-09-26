@@ -22,7 +22,6 @@ final public class FirebaseAuthLoader {
     private let client: FirebaseAuthClient
     
     public enum Error: Swift.Error {
-        case connectivity
         case firebaseAuthError
     }
     
@@ -39,10 +38,10 @@ final public class FirebaseAuthLoader {
     public func signIn(completion: @escaping (Result) -> Void) {
         client.signIn(with: credentials) { result in
             switch result {
-            case .success:
-                completion(.failure(.firebaseAuthError))
+            case .success(let uid):
+                completion(.success(AuthUser(uid: uid)))
             case .failure:
-                completion(.failure(.connectivity))
+                completion(.failure(.firebaseAuthError))
             }
         }
     }

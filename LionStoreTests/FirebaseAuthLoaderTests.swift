@@ -38,33 +38,21 @@ class FirebaseAuthLoaderTests: XCTestCase {
         ])
     }
     
-    func test_signIn_deliversErrorOnClientError() {
-        let (sut, client) = makeSUT()
-        
-        expect(sut, toCompleteWithError: .connectivity, when: {
-            let clientError = NSError(domain: "Test", code: 0)
-            client.complete(with: clientError)
-        })
-    }
-    
     func test_signIn_deliversErrorOnFirebaseAuthError() {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWithError: .connectivity, when: {
+        expect(sut, toCompleteWith: .failure(.firebaseAuthError), when: {
             let firebaseAuthError = NSError(domain: "Auth Error Code", code: 0)
             client.complete(with: firebaseAuthError)
         })
     }
     
-    func test_signIn_deliversErrorOnAuthDataResultWithInvalidAuthUserModel() {
+    func test_signIn_deliversOnAuthDataResultWithAuthUID() {
         let (sut, client) = makeSUT()
         
-        var capturedResults = [FirebaseAuthLoader.Result]()
-        sut.signIn { capturedResults.append($0) }
-        
-        client.complete(withAuthDataResultUID: "fhkodfkj8his8hf")
-        
-        XCTAssertEqual(capturedResults, [.failure(.firebaseAuthError)])
+        expect(sut, toCompleteWith: .success(AuthUser(uid: "fhkodfkj8his8hf")), when: {
+            client.complete(withAuthDataResultUID: "fhkodfkj8his8hf")
+        })
     }
     
     // MARK: - Helpers
@@ -75,14 +63,14 @@ class FirebaseAuthLoaderTests: XCTestCase {
         return (sut, client)
     }
     
-    private func expect(_ sut: FirebaseAuthLoader, toCompleteWithError error: FirebaseAuthLoader.Error, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    private func expect(_ sut: FirebaseAuthLoader, toCompleteWith result: FirebaseAuthLoader.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         
         var capturedResults = [FirebaseAuthLoader.Result]()
         sut.signIn { capturedResults.append($0) }
         
         action()
         
-        XCTAssertEqual(capturedResults, [.failure(error)], file: file, line: line)
+        XCTAssertEqual(capturedResults, [result], file: file, line: line)
         
     }
     

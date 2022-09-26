@@ -9,4 +9,8 @@ import Foundation
 
 public struct AuthUser: Equatable {
     let uid: String
+    
+    public init(uid: String) {
+        self.uid = uid
+    }
 }
