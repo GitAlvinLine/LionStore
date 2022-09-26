@@ -12,7 +12,6 @@ public enum AuthResult<Error: Swift.Error> {
     case failure(Error)
 }
 
-extension AuthResult: Equatable where Error: Equatable {}
 
 protocol AuthLoader {
     associatedtype Error: Swift.Error

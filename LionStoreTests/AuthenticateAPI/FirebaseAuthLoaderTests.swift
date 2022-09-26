@@ -95,15 +95,26 @@ class FirebaseAuthLoaderTests: XCTestCase {
         }
     }
     
-    private func expect(_ sut: FirebaseAuthLoader, toCompleteWith result: FirebaseAuthLoader.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    private func expect(_ sut: FirebaseAuthLoader, toCompleteWith expectedResult: FirebaseAuthLoader.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         
-        var capturedResults = [FirebaseAuthLoader.Result]()
-        sut.authenticateUser { capturedResults.append($0) }
+        let exp = expectation(description: "Wait for load completion")
+        
+        sut.authenticateUser { receivedResult in
+            switch (receivedResult, expectedResult) {
+            case let (.success(receivedResultItems), .success(expectedResult)):
+                XCTAssertEqual(receivedResultItems, expectedResult, file: file, line: line)
+            case let (.failure(receivedResult), .failure(expectedResult)):
+                XCTAssertEqual(receivedResult, expectedResult, file: file, line: line)
+            default:
+                XCTFail("Expected result \(expectedResult) got \(receivedResult) instead", file: file, line: line)
+            }
+            
+            exp.fulfill()
+        }
         
         action()
         
-        XCTAssertEqual(capturedResults, [result], file: file, line: line)
-        
+        wait(for: [exp], timeout: 1.0)
     }
     
     private class FirebaseAuthClientSpy: FirebaseAuthClient {
