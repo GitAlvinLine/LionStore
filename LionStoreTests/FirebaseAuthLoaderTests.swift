@@ -41,24 +41,30 @@ class FirebaseAuthLoaderTests: XCTestCase {
     func test_signIn_deliversErrorOnClientError() {
         let (sut, client) = makeSUT()
         
-        var capturedErrors = [FirebaseAuthLoader.Error]()
-        sut.signIn { capturedErrors.append($0) }
-        
-        let clientError = NSError(domain: "Test", code: 0)
-        client.complete(with: clientError)
-        
-        XCTAssertEqual(capturedErrors, [.connectivity])
+        expect(sut, toCompleteWithError: .connectivity, when: {
+            let clientError = NSError(domain: "Test", code: 0)
+            client.complete(with: clientError)
+        })
     }
     
     func test_signIn_deliversErrorOnFirebaseAuthError() {
         let (sut, client) = makeSUT()
         
+        expect(sut, toCompleteWithError: .connectivity, when: {
+            let firebaseAuthError = NSError(domain: "Auth Error Code", code: 0)
+            client.complete(with: firebaseAuthError)
+        })
+    }
+    
+    func test_signIn_deliversErrorOnAuthDataResultWithInvalidAuthUserModel() {
+        let (sut, client) = makeSUT()
+        
         var capturedErrors = [FirebaseAuthLoader.Error]()
         sut.signIn { capturedErrors.append($0) }
         
-        client.complete(withFirebaseAuthError: NSError(domain: "Auth Error Code", code: 0))
+        client.complete(withAuthDataResultUID: "fhkodfkj8his8hf")
         
-        XCTAssertEqual(capturedErrors, [.connectivity])
+        XCTAssertEqual(capturedErrors, [.firebaseAuthError])
     }
     
     // MARK: - Helpers
@@ -67,6 +73,17 @@ class FirebaseAuthLoaderTests: XCTestCase {
         let client = FirebaseAuthClientSpy()
         let sut = FirebaseAuthLoader(credentials: credentials, client: client)
         return (sut, client)
+    }
+    
+    private func expect(_ sut: FirebaseAuthLoader, toCompleteWithError error: FirebaseAuthLoader.Error, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+        
+        var capturedErrors = [FirebaseAuthLoader.Error]()
+        sut.signIn { capturedErrors.append($0) }
+        
+        action()
+        
+        XCTAssertEqual(capturedErrors, [error], file: file, line: line)
+        
     }
     
     private class FirebaseAuthClientSpy: FirebaseAuthClient {
@@ -88,8 +105,8 @@ class FirebaseAuthLoaderTests: XCTestCase {
             messages[index].completion(.failure(error))
         }
         
-        func complete(withFirebaseAuthError error: Error, at index: Int = 0) {
-            messages[index].completion(.failure(error))
+        func complete(withAuthDataResultUID uid: String, at index: Int = 0) {
+            messages[index].completion(.success(uid))
         }
     }
     
