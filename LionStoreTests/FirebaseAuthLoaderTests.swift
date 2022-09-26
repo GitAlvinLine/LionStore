@@ -65,10 +65,19 @@ class FirebaseAuthLoaderTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(credentials: LoginCredentials = LoginCredentials(email: "", password: "")) -> (sut: FirebaseAuthLoader, client: FirebaseAuthClientSpy) {
+    private func makeSUT(credentials: LoginCredentials = LoginCredentials(email: "", password: ""), file: StaticString = #filePath, line: UInt = #line) -> (sut: FirebaseAuthLoader, client: FirebaseAuthClientSpy) {
         let client = FirebaseAuthClientSpy()
         let sut = FirebaseAuthLoader(credentials: credentials, client: client)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(client, file: file, line: line)
+        
         return (sut, client)
+    }
+    
+    private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
+        }
     }
     
     private func expect(_ sut: FirebaseAuthLoader, toCompleteWith result: FirebaseAuthLoader.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {

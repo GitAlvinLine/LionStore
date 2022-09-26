@@ -470,8 +470,8 @@
 			isa = PBXGroup;
 			children = (
 				DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */,
-				DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */,
 				DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */,
+				DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */,
 			);
 			path = AuthenticateAPI;
 			sourceTree = "<group>";
