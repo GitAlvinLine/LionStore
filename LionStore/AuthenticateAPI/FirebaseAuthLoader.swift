@@ -26,7 +26,9 @@ final public class FirebaseAuthLoader {
     }
     
     public func signIn(completion: @escaping (Result) -> Void) {
-        client.signIn(with: credentials) { result in
+        client.signIn(with: credentials) { [weak self] result in
+            guard self != nil else { return }
+            
             switch result {
             case .success(let uid):
                 completion(AuthUserMapper.map(uid))

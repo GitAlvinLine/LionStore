@@ -63,6 +63,21 @@ class FirebaseAuthLoaderTests: XCTestCase {
         })
     }
     
+    func test_signIn_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
+        let credentials = LoginCredentials(email: "abc123Test@gmail.com", password: "HFKionch9hf8h9ef")
+        let client = FirebaseAuthClientSpy()
+        var sut: FirebaseAuthLoader? = FirebaseAuthLoader(credentials: credentials,
+                                                          client: client)
+        
+        var capturedResults = [FirebaseAuthLoader.Result]()
+        sut?.signIn { capturedResults.append($0) }
+        
+        sut = nil
+        client.complete(withAuthDataResultUID: "8fh8jdiuf9")
+        
+        XCTAssertTrue(capturedResults.isEmpty)
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(credentials: LoginCredentials = LoginCredentials(email: "", password: ""), file: StaticString = #filePath, line: UInt = #line) -> (sut: FirebaseAuthLoader, client: FirebaseAuthClientSpy) {
