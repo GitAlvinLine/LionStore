@@ -264,8 +264,8 @@
 		DB51F8E728C7AE3B002D6A35 /* LionStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				DBE6E79F28E2151300F77C1D /* AuthenticateAPI */,
 				DB51F91428C82566002D6A35 /* UI */,
-				DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */,
 			);
 			path = LionStoreTests;
 			sourceTree = "<group>";
@@ -475,6 +475,14 @@
 				DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */,
 				DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */,
 				DBE6E79D28E212F500F77C1D /* AuthUserMapper.swift */,
+			);
+			path = AuthenticateAPI;
+			sourceTree = "<group>";
+		};
+		DBE6E79F28E2151300F77C1D /* AuthenticateAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */,
 			);
 			path = AuthenticateAPI;
 			sourceTree = "<group>";
