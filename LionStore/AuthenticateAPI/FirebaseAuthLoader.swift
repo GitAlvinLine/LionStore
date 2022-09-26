@@ -15,10 +15,7 @@ final public class FirebaseAuthLoader {
         case firebaseAuthError
     }
     
-    public enum Result: Equatable {
-        case success(AuthUser)
-        case failure(Error)
-    }
+    public typealias Result = AuthResult<Error>
     
     public init(credentials: LoginCredentials, client: FirebaseAuthClient) {
         self.client = client
