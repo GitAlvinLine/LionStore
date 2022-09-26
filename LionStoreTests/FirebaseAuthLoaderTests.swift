@@ -7,6 +7,7 @@
 
 import XCTest
 import LionStore
+import FirebaseAuth
 
 class FirebaseAuthLoaderTests: XCTestCase {
     
@@ -50,6 +51,17 @@ class FirebaseAuthLoaderTests: XCTestCase {
         XCTAssertEqual(capturedErrors, [.connectivity])
     }
     
+    func test_signIn_deliversErrorOnFirebaseAuthError() {
+        let (sut, client) = makeSUT()
+        
+        var capturedErrors = [FirebaseAuthLoader.Error]()
+        sut.signIn { capturedErrors.append($0) }
+        
+        client.complete(withFirebaseAuthError: AuthErrorCode(_nsError: NSError(domain: "Auth Error Code", code: 0)))
+        
+        XCTAssertEqual(capturedErrors, [.connectivity])
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(credentials: LoginCredentials = LoginCredentials(email: "", password: "")) -> (sut: FirebaseAuthLoader, client: FirebaseAuthClientSpy) {
@@ -62,19 +74,23 @@ class FirebaseAuthLoaderTests: XCTestCase {
         
         private var messages = [
             (credentials: LoginCredentials,
-             completion: (Error) -> Void)
+             completion: (FirebaseAuthClientResult) -> Void)
         ]()
         
         var requestedCredentials: [LoginCredentials] {
             return messages.map { $0.credentials }
         }
         
-        func signIn(with credentials: LoginCredentials, completion: @escaping (Error) -> Void) {
+        func signIn(with credentials: LoginCredentials, completion: @escaping (FirebaseAuthClientResult) -> Void) {
             messages.append((credentials, completion))
         }
         
         func complete(with error: Error, at index: Int = 0) {
-            messages[index].completion(error)
+            messages[index].completion(.failure(error))
+        }
+        
+        func complete(withFirebaseAuthError error: Error, at index: Int = 0) {
+            messages[index].completion(.failure(error))
         }
     }
     
