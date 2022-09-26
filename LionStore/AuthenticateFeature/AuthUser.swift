@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct AuthUser {
+public struct AuthUser: Equatable {
     let uid: String
 }

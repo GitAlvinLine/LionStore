@@ -59,12 +59,12 @@ class FirebaseAuthLoaderTests: XCTestCase {
     func test_signIn_deliversErrorOnAuthDataResultWithInvalidAuthUserModel() {
         let (sut, client) = makeSUT()
         
-        var capturedErrors = [FirebaseAuthLoader.Error]()
-        sut.signIn { capturedErrors.append($0) }
+        var capturedResults = [FirebaseAuthLoader.Result]()
+        sut.signIn { capturedResults.append($0) }
         
         client.complete(withAuthDataResultUID: "fhkodfkj8his8hf")
         
-        XCTAssertEqual(capturedErrors, [.firebaseAuthError])
+        XCTAssertEqual(capturedResults, [.failure(.firebaseAuthError)])
     }
     
     // MARK: - Helpers
@@ -77,12 +77,12 @@ class FirebaseAuthLoaderTests: XCTestCase {
     
     private func expect(_ sut: FirebaseAuthLoader, toCompleteWithError error: FirebaseAuthLoader.Error, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         
-        var capturedErrors = [FirebaseAuthLoader.Error]()
-        sut.signIn { capturedErrors.append($0) }
+        var capturedResults = [FirebaseAuthLoader.Result]()
+        sut.signIn { capturedResults.append($0) }
         
         action()
         
-        XCTAssertEqual(capturedErrors, [error], file: file, line: line)
+        XCTAssertEqual(capturedResults, [.failure(error)], file: file, line: line)
         
     }
     

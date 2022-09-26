@@ -26,18 +26,23 @@ final public class FirebaseAuthLoader {
         case firebaseAuthError
     }
     
+    public enum Result: Equatable {
+        case success(AuthUser)
+        case failure(Error)
+    }
+    
     public init(credentials: LoginCredentials, client: FirebaseAuthClient) {
         self.client = client
         self.credentials = credentials
     }
     
-    public func signIn(completion: @escaping (Error) -> Void) {
+    public func signIn(completion: @escaping (Result) -> Void) {
         client.signIn(with: credentials) { result in
             switch result {
             case .success:
-                completion(.firebaseAuthError)
+                completion(.failure(.firebaseAuthError))
             case .failure:
-                completion(.connectivity)
+                completion(.failure(.connectivity))
             }
         }
     }
