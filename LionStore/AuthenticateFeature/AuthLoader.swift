@@ -13,6 +13,6 @@ public enum AuthResult {
 }
 
 
-protocol AuthLoader {
+public protocol AuthLoader {
     func authenticateUser(completion: @escaping (AuthResult) -> Void)
 }
