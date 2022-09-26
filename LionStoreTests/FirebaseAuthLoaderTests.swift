@@ -47,11 +47,19 @@ class FirebaseAuthLoaderTests: XCTestCase {
         })
     }
     
+    func test_signIn_deliversOnAuthDataResultWithEmptyUID() {
+        let (sut, client) = makeSUT()
+        
+        expect(sut, toCompleteWith: .success(AuthUser(uid: "")), when: {
+            client.complete(withAuthDataResultUID: "")
+        })
+    }
+    
     func test_signIn_deliversOnAuthDataResultWithAuthUID() {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: .success(AuthUser(uid: "fhkodfkj8his8hf")), when: {
-            client.complete(withAuthDataResultUID: "fhkodfkj8his8hf")
+        expect(sut, toCompleteWith: .success(AuthUser(uid: "9f8hf8d8basfbx")), when: {
+            client.complete(withAuthDataResultUID: "9f8hf8d8basfbx")
         })
     }
     
