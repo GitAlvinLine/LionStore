@@ -7,7 +7,6 @@
 
 import XCTest
 import LionStore
-import FirebaseAuth
 
 class FirebaseAuthLoaderTests: XCTestCase {
     
@@ -57,7 +56,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
         var capturedErrors = [FirebaseAuthLoader.Error]()
         sut.signIn { capturedErrors.append($0) }
         
-        client.complete(withFirebaseAuthError: AuthErrorCode(_nsError: NSError(domain: "Auth Error Code", code: 0)))
+        client.complete(withFirebaseAuthError: NSError(domain: "Auth Error Code", code: 0))
         
         XCTAssertEqual(capturedErrors, [.connectivity])
     }
