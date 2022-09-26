@@ -61,6 +61,7 @@
 		DBE6E79528DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */; };
 		DBE6E79828DFC99600F77C1D /* FirebaseAuthLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */; };
 		DBE6E79A28DFCA7500F77C1D /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */; };
+		DBE6E79C28E20D0600F77C1D /* FirebaseAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		DBE6E79428DFB35D00F77C1D /* FirebaseAuthLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthLoaderTests.swift; sourceTree = "<group>"; };
 		DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthLoader.swift; sourceTree = "<group>"; };
 		DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
+		DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +471,7 @@
 			children = (
 				DBE6E79728DFC99600F77C1D /* FirebaseAuthLoader.swift */,
 				DBE6E79928DFCA7500F77C1D /* LoginCredentials.swift */,
+				DBE6E79B28E20D0600F77C1D /* FirebaseAuthClient.swift */,
 			);
 			path = AuthenticateAPI;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */,
 				DB9BA89328DA188200693AD1 /* FavoriteScreen.swift in Sources */,
 				DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */,
+				DBE6E79C28E20D0600F77C1D /* FirebaseAuthClient.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
 				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
 				DBE6E79828DFC99600F77C1D /* FirebaseAuthLoader.swift in Sources */,

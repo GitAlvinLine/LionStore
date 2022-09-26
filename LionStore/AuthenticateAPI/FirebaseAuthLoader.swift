@@ -7,16 +7,6 @@
 
 import Foundation
 
-public enum FirebaseAuthClientResult {
-    public typealias UID = String
-    case success(UID)
-    case failure(Error)
-}
-
-public protocol FirebaseAuthClient {
-    func signIn(with credentials: LoginCredentials, completion: @escaping (FirebaseAuthClientResult) -> Void)
-}
-
 final public class FirebaseAuthLoader {
     private let credentials: LoginCredentials
     private let client: FirebaseAuthClient
