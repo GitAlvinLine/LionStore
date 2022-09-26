@@ -7,7 +7,8 @@
 
 import Foundation
 
-final public class FirebaseAuthLoader {
+public final class FirebaseAuthLoader: AuthLoader {
+    
     private let credentials: LoginCredentials
     private let client: FirebaseAuthClient
     
@@ -22,7 +23,7 @@ final public class FirebaseAuthLoader {
         self.credentials = credentials
     }
     
-    public func signIn(completion: @escaping (Result) -> Void) {
+    public func authenticateUser(completion: @escaping (Result) -> Void) {
         client.signIn(with: credentials) { [weak self] result in
             guard self != nil else { return }
             

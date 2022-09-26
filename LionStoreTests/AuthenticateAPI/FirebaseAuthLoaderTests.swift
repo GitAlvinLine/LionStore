@@ -20,7 +20,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
         let credentials = LoginCredentials(email: "", password: "")
         let (sut, client) = makeSUT(credentials: credentials)
         
-        sut.signIn { _ in }
+        sut.authenticateUser { _ in }
         
         XCTAssertEqual(client.requestedCredentials, [credentials])
     }
@@ -29,8 +29,8 @@ class FirebaseAuthLoaderTests: XCTestCase {
         let credentials = LoginCredentials(email: "", password: "")
         let (sut, client) = makeSUT(credentials: credentials)
         
-        sut.signIn { _ in }
-        sut.signIn { _ in }
+        sut.authenticateUser { _ in }
+        sut.authenticateUser { _ in }
         
         XCTAssertEqual(client.requestedCredentials, [
             LoginCredentials(email: "", password: ""),
@@ -70,7 +70,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
                                                           client: client)
         
         var capturedResults = [FirebaseAuthLoader.Result]()
-        sut?.signIn { capturedResults.append($0) }
+        sut?.authenticateUser { capturedResults.append($0) }
         
         sut = nil
         client.complete(withAuthDataResultUID: "8fh8jdiuf9")
@@ -98,7 +98,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
     private func expect(_ sut: FirebaseAuthLoader, toCompleteWith result: FirebaseAuthLoader.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         
         var capturedResults = [FirebaseAuthLoader.Result]()
-        sut.signIn { capturedResults.append($0) }
+        sut.authenticateUser { capturedResults.append($0) }
         
         action()
         
