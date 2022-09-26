@@ -41,7 +41,7 @@ class FirebaseAuthLoaderTests: XCTestCase {
     func test_signIn_deliversErrorOnFirebaseAuthError() {
         let (sut, client) = makeSUT()
         
-        expect(sut, toCompleteWith: .failure(FirebaseAuthLoader.Error.firebaseAuthError), when: {
+        expect(sut, toCompleteWith: failure(.firebaseAuthError), when: {
             let firebaseAuthError = NSError(domain: "Auth Error Code", code: 0)
             client.complete(with: firebaseAuthError)
         })
@@ -87,6 +87,10 @@ class FirebaseAuthLoaderTests: XCTestCase {
         trackForMemoryLeaks(client, file: file, line: line)
         
         return (sut, client)
+    }
+    
+    private func failure(_ error: FirebaseAuthLoader.Error) -> FirebaseAuthLoader.Result {
+        return .failure(error)
     }
     
     private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
