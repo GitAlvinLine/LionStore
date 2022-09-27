@@ -12,6 +12,8 @@
 		DB1FC88128E3A7C500161FCC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88028E3A7C500161FCC /* SignUpViewModel.swift */; };
 		DB1FC88628E3B23200161FCC /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88528E3B23200161FCC /* LoginUser.swift */; };
 		DB1FC88828E3B27A00161FCC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88728E3B27A00161FCC /* SignInViewModel.swift */; };
+		DB1FC88B28E3B53400161FCC /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88A28E3B53400161FCC /* SettingsScreen.swift */; };
+		DB1FC89028E3B59300161FCC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88F28E3B59300161FCC /* SettingsViewModel.swift */; };
 		DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */; };
 		DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */; };
 		DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */; };
@@ -87,6 +89,8 @@
 		DB1FC88028E3A7C500161FCC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DB1FC88528E3B23200161FCC /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		DB1FC88728E3B27A00161FCC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		DB1FC88A28E3B53400161FCC /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		DB1FC88F28E3B59300161FCC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBar.swift; sourceTree = "<group>"; };
 		DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScreen.swift; sourceTree = "<group>"; };
 		DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabScreen.swift; sourceTree = "<group>"; };
@@ -214,6 +218,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DB1FC88928E3B50E00161FCC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DB1FC88E28E3B57100161FCC /* Model */,
+				DB1FC88D28E3B56B00161FCC /* ViewModel */,
+				DB1FC88C28E3B56700161FCC /* View */,
+				DB1FC88A28E3B53400161FCC /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DB1FC88C28E3B56700161FCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB1FC88D28E3B56B00161FCC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB1FC88F28E3B59300161FCC /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB1FC88E28E3B57100161FCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DB3ADC3B28CE7E2C00CFEC78 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,8 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */,
-				DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */,
 				DB3ADC4528CE9BD900CFEC78 /* Components */,
+				DB3ADC4828CEDB7B00CFEC78 /* EditProfileScreen */,
+				DB1FC88928E3B50E00161FCC /* Settings */,
 			);
 			path = ProfileTabScreen;
 			sourceTree = "<group>";
@@ -690,7 +728,9 @@
 				DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,
 				DB9F883528CC46AB00B7887B /* PhoneTextField.swift in Sources */,
+				DB1FC88B28E3B53400161FCC /* SettingsScreen.swift in Sources */,
 				DB51F94D28CBAEF8002D6A35 /* TextFieldBorder.swift in Sources */,
+				DB1FC89028E3B59300161FCC /* SettingsViewModel.swift in Sources */,
 				DB3ADC4728CE9BF200CFEC78 /* EditProfileImage.swift in Sources */,
 				DB51F90E28C81FF3002D6A35 /* OnboardingSelectPath.swift in Sources */,
 				DB51F94228CBA0E7002D6A35 /* ScreenSize.swift in Sources */,
