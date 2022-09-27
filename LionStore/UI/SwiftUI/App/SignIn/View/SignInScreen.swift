@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct SignInScreen: View {
-    @State private var email: String = ""
-    @State private var showPassword: Bool = false
-    @State private var password: String = ""
+    @StateObject var vm: SignInViewModel = SignInViewModel(FirebaseAuthService())
     @FocusState private var isInputActive: Bool
     
     let optionCompletion: (OnboardingOption) -> Void
@@ -26,12 +24,12 @@ struct SignInScreen: View {
                     VStack(spacing: 20) {
                         EmailTextField(image: .email,
                                        placeholder: "Email",
-                                       email: $email)
+                                       email: $vm.user.email)
                         .focused($isInputActive)
                         
                         PasswordTextField(image: .passwordLock,
-                                          showPassword: $showPassword,
-                                          password: $password)
+                                          showPassword: $vm.showPassword,
+                                          password: $vm.user.password)
                         .focused($isInputActive)
                     }
                     
@@ -51,6 +49,7 @@ struct SignInScreen: View {
                     CustomButton(text: "Sign In",
                                  textColor: .white,
                                  bg: .lightPurple) {
+                        vm.logIn()
                         optionCompletion(.homeScreen)
                     }
                                  .opacity(isInputActive ? 0 : 1)
