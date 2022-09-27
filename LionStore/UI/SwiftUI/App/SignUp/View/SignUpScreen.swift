@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct SignUpScreen: View {
-    @State private var email: String = ""
-    @State private var phoneNumber: String = ""
-    @State private var password: String = ""
-    @State private var showPassword: Bool = false
+    @StateObject var vm: SignUpViewModel = SignUpViewModel()
     @FocusState private var isInputActive: Bool
     
     let optionCompletion: (OnboardingOption) -> Void
@@ -26,17 +23,17 @@ struct SignUpScreen: View {
                     
                     EmailTextField(image: .email,
                                    placeholder: "Email",
-                                   email: $email)
+                                   email: $vm.user.email)
                     .focused($isInputActive)
                     
                     PhoneTextField(image: .mobilePhone,
                                    placeholder: "Mobile Number",
-                                   phoneNumber: $phoneNumber)
+                                   phoneNumber: $vm.user.phoneNumber)
                     .focused($isInputActive)
                     
                     PasswordTextField(image: .passwordLock,
-                                      showPassword: $showPassword,
-                                      password: $password)
+                                      showPassword: $vm.showPassword,
+                                      password: $vm.user.password)
                     .focused($isInputActive)
                     
                     CustomButton(text: "Create an account",
