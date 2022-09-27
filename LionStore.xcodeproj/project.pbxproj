@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB1FC87B28E3976600161FCC /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC87A28E3976600161FCC /* FirebaseAuthService.swift */; };
+		DB1FC87F28E3A69D00161FCC /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC87E28E3A69D00161FCC /* CreateUser.swift */; };
 		DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */; };
 		DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */; };
 		DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */; };
@@ -79,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		DB1FC87A28E3976600161FCC /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		DB1FC87E28E3A69D00161FCC /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
 		DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBar.swift; sourceTree = "<group>"; };
 		DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScreen.swift; sourceTree = "<group>"; };
 		DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabScreen.swift; sourceTree = "<group>"; };
@@ -164,6 +166,21 @@
 				DB1FC87A28E3976600161FCC /* FirebaseAuthService.swift */,
 			);
 			path = FirebaseAuthSDK;
+			sourceTree = "<group>";
+		};
+		DB1FC87C28E3A66900161FCC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB1FC87D28E3A66F00161FCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB1FC87E28E3A69D00161FCC /* CreateUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DB3ADC3B28CE7E2C00CFEC78 /* TabView */ = {
@@ -350,17 +367,19 @@
 		DB51F93628CAA9AE002D6A35 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				DB51F93928CB9189002D6A35 /* Components */,
+				DB1FC87D28E3A66F00161FCC /* Model */,
+				DB1FC87C28E3A66900161FCC /* ViewModel */,
+				DB51F93928CB9189002D6A35 /* View */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		DB51F93928CB9189002D6A35 /* Components */ = {
+		DB51F93928CB9189002D6A35 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				DB51F93728CAA9BD002D6A35 /* SignUpScreen.swift */,
 			);
-			path = Components;
+			path = View;
 			sourceTree = "<group>";
 		};
 		DB51F93A28CB91CB002D6A35 /* ReuseableViews */ = {
@@ -618,6 +637,7 @@
 				DBE6E77B28DD400400F77C1D /* SuccessfulPurchaseScreen.swift in Sources */,
 				DBE6E79C28E20D0600F77C1D /* FirebaseAuthClient.swift in Sources */,
 				DB51F8D828C7AE3B002D6A35 /* LionStoreApp.swift in Sources */,
+				DB1FC87F28E3A69D00161FCC /* CreateUser.swift in Sources */,
 				DB3ADC4A28CEDB8B00CFEC78 /* EditProfileScreen.swift in Sources */,
 				DBE6E79828DFC99600F77C1D /* FirebaseAuthLoader.swift in Sources */,
 				DBE6E77728DD21FE00F77C1D /* PaymentMethodScreen.swift in Sources */,
