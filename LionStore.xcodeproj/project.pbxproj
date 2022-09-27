@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB1FC87B28E3976600161FCC /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC87A28E3976600161FCC /* FirebaseAuthService.swift */; };
 		DB1FC87F28E3A69D00161FCC /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC87E28E3A69D00161FCC /* CreateUser.swift */; };
+		DB1FC88128E3A7C500161FCC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88028E3A7C500161FCC /* SignUpViewModel.swift */; };
 		DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */; };
 		DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */; };
 		DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */; };
@@ -81,6 +82,7 @@
 /* Begin PBXFileReference section */
 		DB1FC87A28E3976600161FCC /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		DB1FC87E28E3A69D00161FCC /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
+		DB1FC88028E3A7C500161FCC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBar.swift; sourceTree = "<group>"; };
 		DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScreen.swift; sourceTree = "<group>"; };
 		DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabScreen.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		DB1FC87C28E3A66900161FCC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DB1FC88028E3A7C500161FCC /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB51F91A28C84CCC002D6A35 /* OnboardingStore.swift in Sources */,
+				DB1FC88128E3A7C500161FCC /* SignUpViewModel.swift in Sources */,
 				DB9F883828CC4F6E00B7887B /* SignInScreen.swift in Sources */,
 				DB9F884528CD886200B7887B /* BackButton.swift in Sources */,
 				DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */,

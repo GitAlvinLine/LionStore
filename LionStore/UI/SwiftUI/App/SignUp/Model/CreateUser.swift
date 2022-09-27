@@ -12,4 +12,11 @@ struct CreateUser {
     var phoneNumber: String
     var password: String
     var verifyPassword: String
+    
+    init() {
+        self.email = ""
+        self.phoneNumber = ""
+        self.password = ""
+        self.verifyPassword = ""
+    }
 }
