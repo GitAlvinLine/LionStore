@@ -26,14 +26,14 @@ class SDKFirebaseAuthClient {
 // MARK: - TODO: Make Tests For Using FirebaseSDK Authentication services
 class SDKFirebaseAuthClientTests: XCTestCase {
     
-    func test() {
-        let credentials = LoginCredentials(email: "aeiosdev@gmail.com",
-                                           password: "Ronaldo10")
-        
-        let session = AuthSpy()
-        
-//        XCTAssertEqual(session.receivedCredentials, [credentials])
-    }
+//    func test() {
+//        let credentials = LoginCredentials(email: "aeiosdev@gmail.com",
+//                                           password: "Ronaldo10")
+//
+//        let session = AuthSpy()
+//
+////        XCTAssertEqual(session.receivedCredentials, [credentials])
+    //    }_
     
     class AuthSpy {
         
