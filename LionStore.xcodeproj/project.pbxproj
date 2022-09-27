@@ -10,6 +10,7 @@
 		DB1FC87B28E3976600161FCC /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC87A28E3976600161FCC /* FirebaseAuthService.swift */; };
 		DB1FC87F28E3A69D00161FCC /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC87E28E3A69D00161FCC /* CreateUser.swift */; };
 		DB1FC88128E3A7C500161FCC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88028E3A7C500161FCC /* SignUpViewModel.swift */; };
+		DB1FC88628E3B23200161FCC /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88528E3B23200161FCC /* LoginUser.swift */; };
 		DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */; };
 		DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */; };
 		DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */; };
@@ -83,6 +84,7 @@
 		DB1FC87A28E3976600161FCC /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		DB1FC87E28E3A69D00161FCC /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
 		DB1FC88028E3A7C500161FCC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		DB1FC88528E3B23200161FCC /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBar.swift; sourceTree = "<group>"; };
 		DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScreen.swift; sourceTree = "<group>"; };
 		DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabScreen.swift; sourceTree = "<group>"; };
@@ -182,6 +184,29 @@
 			isa = PBXGroup;
 			children = (
 				DB1FC87E28E3A69D00161FCC /* CreateUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB1FC88228E3AF3B00161FCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB9F883728CC4F6E00B7887B /* SignInScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB1FC88328E3AF4000161FCC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB1FC88428E3AF4500161FCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB1FC88528E3B23200161FCC /* LoginUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,7 +467,9 @@
 		DB9F883628CC4F6300B7887B /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				DB9F883728CC4F6E00B7887B /* SignInScreen.swift */,
+				DB1FC88428E3AF4500161FCC /* Model */,
+				DB1FC88328E3AF4000161FCC /* ViewModel */,
+				DB1FC88228E3AF3B00161FCC /* View */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -654,6 +681,7 @@
 				DB3ADC8028D0263500CFEC78 /* CategoryCell.swift in Sources */,
 				DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */,
 				DB3ADC8228D02FB700CFEC78 /* ProductCell.swift in Sources */,
+				DB1FC88628E3B23200161FCC /* LoginUser.swift in Sources */,
 				DBE6E78C28DF9EEB00F77C1D /* AppDelegate.swift in Sources */,
 				DB51F96A28CC3FE9002D6A35 /* PasswordTextField.swift in Sources */,
 				DB51F94428CBA3BE002D6A35 /* AppColor.swift in Sources */,

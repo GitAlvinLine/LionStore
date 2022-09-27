@@ -39,6 +39,7 @@ struct SignUpScreen: View {
                     CustomButton(text: "Create an account",
                                  textColor: .white,
                                  bg: .lightPurple) {
+                        vm.createUser()
                         optionCompletion(.homeScreen)
                     }
                                  .opacity(isInputActive ? 0 : 1)
