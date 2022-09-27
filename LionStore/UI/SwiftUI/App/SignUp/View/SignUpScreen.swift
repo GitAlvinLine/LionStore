@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpScreen: View {
-    @StateObject var vm: SignUpViewModel = SignUpViewModel()
+    @StateObject var vm: SignUpViewModel = SignUpViewModel(FirebaseAuthService())
     @FocusState private var isInputActive: Bool
     
     let optionCompletion: (OnboardingOption) -> Void

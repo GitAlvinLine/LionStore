@@ -11,4 +11,10 @@ import Combine
 final class SignUpViewModel: ObservableObject {
     @Published var user: CreateUser = CreateUser()
     @Published var showPassword: Bool = false
+    
+    private(set) var firebaseAuth: AuthService
+    
+    init(_ authService: AuthService) {
+        self.firebaseAuth = authService
+    }
 }
