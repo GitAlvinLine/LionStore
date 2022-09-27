@@ -224,7 +224,6 @@
 				DB1FC88E28E3B57100161FCC /* Model */,
 				DB1FC88D28E3B56B00161FCC /* ViewModel */,
 				DB1FC88C28E3B56700161FCC /* View */,
-				DB1FC88A28E3B53400161FCC /* SettingsScreen.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -232,6 +231,7 @@
 		DB1FC88C28E3B56700161FCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB1FC88A28E3B53400161FCC /* SettingsScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

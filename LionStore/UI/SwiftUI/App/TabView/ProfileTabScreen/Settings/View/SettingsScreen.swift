@@ -28,7 +28,6 @@ struct SettingsScreen: View {
                              textColor: .white,
                              bg: .lightPurple) {
                     vm.logOut()
-                    signOut(.signIn)
                 }
             }
         }

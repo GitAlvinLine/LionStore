@@ -40,7 +40,6 @@ struct SignUpScreen: View {
                                  textColor: .white,
                                  bg: .lightPurple) {
                         vm.createUser()
-                        optionCompletion(.homeScreen)
                     }
                                  .opacity(isInputActive ? 0 : 1)
                     

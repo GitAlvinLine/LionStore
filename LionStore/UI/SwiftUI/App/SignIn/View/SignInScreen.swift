@@ -50,7 +50,6 @@ struct SignInScreen: View {
                                  textColor: .white,
                                  bg: .lightPurple) {
                         vm.logIn()
-                        optionCompletion(.homeScreen)
                     }
                                  .opacity(isInputActive ? 0 : 1)
                     
