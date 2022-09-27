@@ -11,6 +11,7 @@ import SwiftUI
 struct LionStoreApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @StateObject var firebaseAuth = FirebaseAuthService()
     @State private var screen: OnboardingOption?
     
     var body: some Scene {

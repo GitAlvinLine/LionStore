@@ -21,7 +21,7 @@ protocol AuthService {
     func logOut() -> AnyPublisher<Void, Error>
 }
 
-final class FirebaseAuthService: AuthService {
+final class FirebaseAuthService: ObservableObject, AuthService {
     @Published var authState: AuthState = .loggedOut
     private let auth: Auth = Auth.auth()
     private var handle: AuthStateDidChangeListenerHandle?
