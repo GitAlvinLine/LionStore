@@ -42,6 +42,9 @@ struct SignUpScreen: View {
                         vm.createUser()
                     }
                                  .opacity(isInputActive ? 0 : 1)
+                                 .alert(isPresented: $vm.alert.showAlert) {
+                                     Alert(title: Text(vm.alert.alertMessage), message: nil, dismissButton: .default(Text("OK")))
+                                 }
                     
                     Spacer()
 
@@ -52,6 +55,9 @@ struct SignUpScreen: View {
                                      .opacity(isInputActive ? 0 : 1)
                 }
                 .toolBarDoneButton(_isInputActive)
+                .disabled(vm.isLoading)
+                
+                LoadingProgress($vm.isLoading)
             }
             .navigationBarHidden(true)
         }

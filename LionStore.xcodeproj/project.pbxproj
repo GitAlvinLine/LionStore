@@ -14,6 +14,8 @@
 		DB1FC88828E3B27A00161FCC /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88728E3B27A00161FCC /* SignInViewModel.swift */; };
 		DB1FC88B28E3B53400161FCC /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88A28E3B53400161FCC /* SettingsScreen.swift */; };
 		DB1FC89028E3B59300161FCC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC88F28E3B59300161FCC /* SettingsViewModel.swift */; };
+		DB1FC89228E3C80600161FCC /* LoadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC89128E3C80600161FCC /* LoadingProgress.swift */; };
+		DB1FC89428E3C83C00161FCC /* Alerting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1FC89328E3C83C00161FCC /* Alerting.swift */; };
 		DB3ADC3D28CE7E6800CFEC78 /* TabViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */; };
 		DB3ADC3F28CE8DB600CFEC78 /* TabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */; };
 		DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */; };
@@ -91,6 +93,8 @@
 		DB1FC88728E3B27A00161FCC /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		DB1FC88A28E3B53400161FCC /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		DB1FC88F28E3B59300161FCC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		DB1FC89128E3C80600161FCC /* LoadingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgress.swift; sourceTree = "<group>"; };
+		DB1FC89328E3C83C00161FCC /* Alerting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerting.swift; sourceTree = "<group>"; };
 		DB3ADC3C28CE7E6800CFEC78 /* TabViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBar.swift; sourceTree = "<group>"; };
 		DB3ADC3E28CE8DB600CFEC78 /* TabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabScreen.swift; sourceTree = "<group>"; };
 		DB3ADC4128CE91FC00CFEC78 /* ProfileTabScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabScreen.swift; sourceTree = "<group>"; };
@@ -462,6 +466,7 @@
 				DB51F96B28CC412D002D6A35 /* ShowPasswordButton.swift */,
 				DB9F883428CC46AB00B7887B /* PhoneTextField.swift */,
 				DB9F884428CD886200B7887B /* BackButton.swift */,
+				DB1FC89128E3C80600161FCC /* LoadingProgress.swift */,
 			);
 			path = ReuseableViews;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				DB51F94128CBA0E7002D6A35 /* ScreenSize.swift */,
 				DB51F94328CBA3BE002D6A35 /* AppColor.swift */,
 				DB51F94728CBA773002D6A35 /* AppImages.swift */,
+				DB1FC89328E3C83C00161FCC /* Alerting.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -719,6 +725,7 @@
 				DB51F90428C7D857002D6A35 /* OnboardingScreen.swift in Sources */,
 				DB1FC88828E3B27A00161FCC /* SignInViewModel.swift in Sources */,
 				DB51F94628CBA6B4002D6A35 /* AskAccountButton.swift in Sources */,
+				DB1FC89228E3C80600161FCC /* LoadingProgress.swift in Sources */,
 				DB51F93828CAA9BD002D6A35 /* SignUpScreen.swift in Sources */,
 				DB3ADC8028D0263500CFEC78 /* CategoryCell.swift in Sources */,
 				DBE6E77928DD39EC00F77C1D /* EmptyCartScreen.swift in Sources */,
@@ -743,6 +750,7 @@
 				DB1FC87B28E3976600161FCC /* FirebaseAuthService.swift in Sources */,
 				DB51F90C28C81F85002D6A35 /* OnboardingImage.swift in Sources */,
 				DB3ADC4228CE91FC00CFEC78 /* ProfileTabScreen.swift in Sources */,
+				DB1FC89428E3C83C00161FCC /* Alerting.swift in Sources */,
 				DBE6E77D28DD50F300F77C1D /* RemoveCardAlert.swift in Sources */,
 				DBE6E79E28E212F500F77C1D /* AuthUserMapper.swift in Sources */,
 				DB51F90A28C81EA2002D6A35 /* OnboardingTitle.swift in Sources */,
