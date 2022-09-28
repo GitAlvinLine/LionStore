@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct SignUpScreen: View {
-    @State private var email: String = ""
-    @State private var phoneNumber: String = ""
-    @State private var password: String = ""
-    @State private var showPassword: Bool = false
+    @StateObject var vm: SignUpViewModel = SignUpViewModel(FirebaseAuthService())
     @FocusState private var isInputActive: Bool
     
     let optionCompletion: (OnboardingOption) -> Void
@@ -26,25 +23,28 @@ struct SignUpScreen: View {
                     
                     EmailTextField(image: .email,
                                    placeholder: "Email",
-                                   email: $email)
+                                   email: $vm.user.email)
                     .focused($isInputActive)
                     
                     PhoneTextField(image: .mobilePhone,
                                    placeholder: "Mobile Number",
-                                   phoneNumber: $phoneNumber)
+                                   phoneNumber: $vm.user.phoneNumber)
                     .focused($isInputActive)
                     
                     PasswordTextField(image: .passwordLock,
-                                      showPassword: $showPassword,
-                                      password: $password)
+                                      showPassword: $vm.showPassword,
+                                      password: $vm.user.password)
                     .focused($isInputActive)
                     
                     CustomButton(text: "Create an account",
                                  textColor: .white,
                                  bg: .lightPurple) {
-                        optionCompletion(.homeScreen)
+                        vm.createUser()
                     }
                                  .opacity(isInputActive ? 0 : 1)
+                                 .alert(isPresented: $vm.alert.showAlert) {
+                                     Alert(title: Text(vm.alert.alertMessage), message: nil, dismissButton: .default(Text("OK")))
+                                 }
                     
                     Spacer()
 
@@ -55,6 +55,9 @@ struct SignUpScreen: View {
                                      .opacity(isInputActive ? 0 : 1)
                 }
                 .toolBarDoneButton(_isInputActive)
+                .disabled(vm.isLoading)
+                
+                LoadingProgress($vm.isLoading)
             }
             .navigationBarHidden(true)
         }
